@@ -45,7 +45,7 @@
     $('.tooltip-demo').tooltip({
       selector: "a[data-toggle=tooltip]"
     })
-
+    $(".tip").tooltip();
     $('.tooltip-test').tooltip()
     $('.popover-test').popover()
 
