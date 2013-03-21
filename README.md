@@ -10,7 +10,7 @@ To get started, checkout [http://getbootstrap.com](http://getbootstrap.com)!
 
 
 
-## Quick start
+## Quick starttest
 
 Three quick start options are available:
 
