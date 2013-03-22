@@ -235,3 +235,32 @@
   margin-top: 2px; // give it some space to breathe
   .border-radius(@baseBorderRadius);
 }
+
+//  2013-3-23 by TianLiang
+.dropdown-menu {
+  background: whitesmoke;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#fdfdfd),color-stop(100%,#f5f5f5));
+  background-image: -webkit-linear-gradient(top,#fdfdfd,#f5f5f5);
+  background-image: -moz-linear-gradient(top,#fdfdfd,#f5f5f5);
+  background-image: -o-linear-gradient(top,#fdfdfd,#f5f5f5);
+  background-image: linear-gradient(top,#fdfdfd,#f5f5f5);
+  box-shadow: 0 1px 2px #dadada;
+}
+.dropdown-menu{
+  > li > a{
+    text-shadow: 0 1px white;
+    color: #475967;
+     
+  }
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  background: #f2f2f2;
+  color: #404040
+}
+.dropdown-menu li a [class*="icon-"] {
+  color: #BCBECA;
+}
