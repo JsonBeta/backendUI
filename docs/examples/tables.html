@@ -26,9 +26,6 @@
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="../assets/ico/favicon.png">
 </head>
-
-
-
 <body>
 <div class="navbar navbar-top navbar-inverse">
   <div class="navbar-inner">
@@ -108,7 +105,8 @@
 
     </div>
   </div>
-</div><div class="sidebar-background">
+</div>
+<div class="sidebar-background">
   <div class="primary-sidebar-background"></div>
 </div>
 
@@ -281,16 +279,311 @@
 
   <!-- second sidebar -->
 </div>
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row-fluid">
 
+      <div class="area-top">
+        <div class="pull-left header">
+          <i class="icon-table icon-2x"></i>
+          <span class="title">Tables</span>
+        </div>
+
+        <ul class="num-stats pull-right">
+
+          <li class="stat-red">
+            <ul class="inline">
+              <li class="hidden-phone glyph">
+                <i class="icon-money"></i>
+              </li>
+              <li>
+                <span class="number">$44.233</span> balance
+              </li>
+            </ul>
+          </li>
+
+          <li class="stat-green">
+            <ul class="inline">
+              <li class="hidden-phone glyph">
+                <i class="icon-ok-circle"></i>
+              </li>
+              <li>
+                <span class="number">1513</span> orders
+              </li>
+            </ul>
+          </li>
+
+          <li class="stat-blue">
+            <ul class="inline">
+              <li class="hidden-phone glyph">
+                <i class="icon-plus"></i>
+              </li>
+              <li>
+                <span class="number">5305</span> visits
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="row-fluid">
+
+      <!-- Breadcrumb line -->
+
+      <div class="breadcrumb-line navbar">
+
+        <ul class="breadcrumbs pull-left">
+          <li><a href="#"><i class="icon-home"></i> Home</a></li>
+          
+              <li><a href="#"><i class="icon-beaker"></i> UI Lab</a></li>
+          
+          <li class="current"><i class="icon-table"></i> Tables</li>
+        </ul>
+
+        <ul class="nav nav-pills pull-right">
+          <li>
+            <a href="#" title="">
+              <i class="icon-user"></i>
+              <span>Users</span>
+              <span class="badge badge-red">+44</span>
+            </a>
+          </li>
+          <li><a href="#" title=""><i class="icon-list"></i><span>Orders</span> <span class="badge badge-green">+73</span></a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="icon-th"></i> Projects <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="icon-plus-sign"></i> New Project</a></li>
+              <li><a href="#"><i class="icon-folder-open-alt"></i> Open Project</a></li>
+              <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid hpadded">
+    <div class="row-fluid">
+  <div class="span6">
+    <!-- find me in partials/tasks_table -->
+
+<div class="box">
+  <div class="box-header"><span class="title">Here be your tasks</span></div>
+  <div class="box-content">
+    <table class="table table-normal">
+      <thead>
+      <tr>
+        <td></td>
+        <td>Task</td>
+        <td>Done</td>
+        <td style="width: 40px"></td>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr class="status-pending">
+        <td class="icon"><i class="icon-exchange"></i></td>
+        <td><a href="#">Doing the dew</a></td>
+        <td><b>0%</b></td>
+        <td>
+          <div class="btn-group">
+            <button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="status-info">
+        <td class="icon"><i class="icon-refresh"></i></td>
+        <td><a href="#">Doing some stuff</a></td>
+        <td><b>14%</b></td>
+        <td>
+          <div class="btn-group">
+            <button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="status-success">
+        <td class="icon"><i class="icon-ok"></i></td>
+        <td><a href="#">Build the prototype</a></td>
+        <td><b>100%</b></td>
+        <td>
+          <div class="btn-group">
+            <button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="status-info">
+        <td class="icon"><i class="icon-refresh"></i></td>
+        <td><a href="#">Fixing bugs</a></td>
+        <td><b>28%</b></td>
+        <td>
+          <div class="btn-group">
+            <button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+
+
+      </tbody>
+    </table>
+  </div>
+</div>
 
 
   </div>
 
+  <div class="span6">
+    <!-- find me in partials/stats_table -->
 
+<div class="box">
+  <div class="box-header"><span class="title">Here be your stats</span></div>
+  <div class="box-content">
+    <table class="table table-normal">
+      <thead>
+      <tr>
+        <td></td>
+        <td>Item</td>
+        <td>Stats</td>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <td style="width: 60px;"><div class="sparkline"><canvas style="display: inline-block; width: 59px; height: 18px; vertical-align: top;" width="59" height="18"></canvas></div></td>
+        <td style="text-align: center;"><i class="icon-user"></i> Visitors</td>
+        <td class="status-error"><i class="icon-circle-arrow-down"></i> -5%</td>
+      </tr>
+
+      <tr>
+        <td style="width: 60px;"><div class="sparkline" data-color="green"><canvas style="display: inline-block; width: 59px; height: 18px; vertical-align: top;" width="59" height="18"></canvas></div></td>
+        <td style="text-align: center;"><i class="icon-comments-alt"></i> Comments</td>
+        <td class="status-success"><i class="icon-circle-arrow-up"></i> +10%</td>
+      </tr>
+
+      <tr>
+        <td style="width: 60px;"><div class="sparkline"><canvas style="display: inline-block; width: 59px; height: 18px; vertical-align: top;" width="59" height="18"></canvas></div></td>
+        <td style="text-align: center;"><i class="icon-bell"></i> Events</td>
+        <td class="status-error"><i class="icon-circle-arrow-down"></i> -15%</td>
+      </tr>
+
+      <tr>
+        <td style="width: 60px;"><div class="sparkline" data-color="green"><canvas style="display: inline-block; width: 59px; height: 18px; vertical-align: top;" width="59" height="18"></canvas></div></td>
+        <td style="text-align: center;"><i class="icon-money"></i> Income</td>
+        <td class="status-success"><i class="icon-circle-arrow-up"></i> +20%</td>
+      </tr>
+
+      </tbody>
+    </table>
+
+
+  </div>
 </div>
 
 
+  </div>
+</div>
 
+<div class="row-fluid">
+  <div class="span12">
+    <div class="box">
+      <div class="box-header"><span class="title">Data Tables</span></div>
+      <div class="box-content">
+        <!-- find me in partials/data_tables_custom -->
+
+<div id="dataTables">
+
+<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline" role="grid"><div class="table-header"><div class="dataTables_filter" id="DataTables_Table_0_filter"><label>Search: <input type="text" aria-controls="DataTables_Table_0"></label></div><div id="DataTables_Table_0_length" class="dataTables_length"><label>Show <div class="selector" id="uniform-undefined"><span>10</span><select size="1" name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" style="opacity: 0;"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div> entries</label></div></div><table cellpadding="0" cellspacing="0" border="0" class="dTable responsive dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+<thead>
+<tr role="row"><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"><div>Rendering engine</div></th><th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"><div>Browser</div></th><th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"><div>Platform(s)</div></th><th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"><div>Engine version</div></th></tr>
+</thead>
+
+<tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd">
+  <td class="  sorting_1">Gecko</td>
+  <td class=" ">Firefox 1.0</td>
+  <td class=" ">Win 98+ / OSX.2+</td>
+  <td class="center ">1.7</td>
+</tr><tr class="even">
+  <td class="  sorting_1">Gecko</td>
+  <td class=" ">Firefox 1.5</td>
+  <td class=" ">Win 98+ / OSX.2+</td>
+  <td class="center ">1.8</td>
+</tr><tr class="odd">
+  <td class="  sorting_1">Gecko</td>
+  <td class=" ">Firefox 2.0</td>
+  <td class=" ">Win 98+ / OSX.2+</td>
+  <td class="center ">1.8</td>
+</tr><tr class="even">
+  <td class="  sorting_1">Gecko</td>
+  <td class=" ">Firefox 3.0</td>
+  <td class=" ">Win 2k+ / OSX.3+</td>
+  <td class="center ">1.9</td>
+</tr><tr class="odd">
+  <td class="  sorting_1">Gecko</td>
+  <td class=" ">Camino 1.0</td>
+  <td class=" ">OSX.2+</td>
+  <td class="center ">1.8</td>
+</tr><tr class="even">
+  <td class="  sorting_1">Gecko</td>
+  <td class=" ">Camino 1.5</td>
+  <td class=" ">OSX.3+</td>
+  <td class="center ">1.8</td>
+</tr><tr class="odd">
+  <td class="  sorting_1">Gecko</td>
+  <td class=" ">Netscape 7.2</td>
+  <td class=" ">Win 95+ / Mac OS 8.6-9.2</td>
+  <td class="center ">1.7</td>
+</tr><tr class="even">
+  <td class="  sorting_1">Gecko</td>
+  <td class=" ">Netscape Browser 8</td>
+  <td class=" ">Win 98SE+</td>
+  <td class="center ">1.7</td>
+</tr><tr class="odd">
+  <td class="  sorting_1">Gecko</td>
+  <td class=" ">Netscape Navigator 9</td>
+  <td class=" ">Win 98+ / OSX.2+</td>
+  <td class="center ">1.8</td>
+</tr><tr class="even">
+  <td class="  sorting_1">Gecko</td>
+  <td class=" ">Mozilla 1.0</td>
+  <td class=" ">Win 95+ / OSX.1+</td>
+  <td class="center ">1</td>
+</tr></tbody></table><div class="table-footer"><div class="dataTables_info" id="DataTables_Table_0_info">Showing 1 to 10 of 57 entries</div><div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_0_paginate"><a tabindex="0" class="first paginate_button paginate_button_disabled" id="DataTables_Table_0_first">First</a><a tabindex="0" class="previous paginate_button paginate_button_disabled" id="DataTables_Table_0_previous">Previous</a><span><a tabindex="0" class="paginate_active">1</a><a tabindex="0" class="paginate_button">2</a><a tabindex="0" class="paginate_button">3</a><a tabindex="0" class="paginate_button">4</a><a tabindex="0" class="paginate_button">5</a></span><a tabindex="0" class="next paginate_button" id="DataTables_Table_0_next">Next</a><a tabindex="0" class="last paginate_button" id="DataTables_Table_0_last">Last</a></div></div></div>
+</div>
       </div>
     </div>
   </div>
