@@ -227,3 +227,48 @@
 .btn-group-vertical > .btn-large:last-child {
   .border-radius(0 0 @borderRadiusLarge @borderRadiusLarge);
 }
+
+
+// 2013-3-23 by TianLiang
+.btn-group > .btn,
+.btn-group > .dropdown-menu{
+  font-size: @fontSizeSmall;
+}
+.btn-group > .btn:first-child {
+  margin-left: 0;
+  .border-top-left-radius(2px);
+  .border-bottom-left-radius(2px);
+}
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle {
+  .border-top-right-radius(2px);
+  .border-bottom-right-radius(2px);
+}
+.btn-group.open {
+ .btn.btn-default.dropdown-toggle {
+    background-color: #f8f8f8;
+  }
+  .btn.btn-red.dropdown-toggle {
+    background-color: #c57979;
+  }
+  .btn.btn-blue.dropdown-toggle {
+    background-color: #5ba5cb;
+  }
+  .btn.btn-green.dropdown-toggle {
+    background-color: #96c161;
+  }
+}
+.btn.btn-red .caret,
+.btn.btn-blue .caret,
+.btn.btn-green .caret {
+border-top: 4px solid #fff;
+}
+.btn.btn-default .caret {
+border-top: 4px solid #686868;
+}
+.btn-mini .caret,
+.btn-small .caret, 
+.btn-large .caret {
+margin-top: 8px;
+margin-left: 4px;
+}
