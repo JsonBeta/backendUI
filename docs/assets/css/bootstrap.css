@@ -7881,6 +7881,79 @@ form.fill-up textarea,
 form.fill-up select {
   width: 100%;
 }
+.input-append input[type="text"],
+.input-append input[type="password"],
+.input-append input[type="email"],
+.input-append input[type="number"],
+.input-prepend input[type="text"],
+.input-prepend input[type="password"],
+.input-prepend input[type="email"],
+.input-prepend input[type="number"] {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.input-prepend input[type="text"],
+.input-prepend input[type="password"],
+.input-prepend input[type="email"],
+.input-prepend input[type="number"] {
+  padding-left: 45px;
+}
+.input-append,
+.input-prepend {
+  height: 36px;
+  line-height: 36px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.input-append .add-on i,
+.input-prepend .add-on i {
+  line-height: 26px;
+}
+.input-prepend .add-on {
+  left: 0;
+}
+.input-append *,
+.input-prepend * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-append a.add-on,
+.input-append span.add-on,
+.input-prepend a.add-on,
+.input-prepend span.add-on {
+  min-width: 36px;
+  color: #5a6573;
+  position: absolute;
+  height: 100%;
+  z-index: 2;
+  -webkit-box-shadow: inset 0 1px 2px white;
+  -moz-box-shadow: inset 0 1px 2px white;
+  box-shadow: inset 0 1px 2px white;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  background-image: -moz-linear-gradient(top, #f8f8f8, #e8e8e8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8f8f8), to(#e8e8e8));
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #e8e8e8);
+  background-image: -o-linear-gradient(top, #f8f8f8, #e8e8e8);
+  background-image: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#ffe8e8e8', GradientType=0);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.box .input-append,
+.box .input-prepend {
+  margin-bottom: 0;
+}
 .btn i {
   vertical-align: middle;
 }
