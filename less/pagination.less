@@ -121,3 +121,40 @@
     font-size: @fontSizeMini;
   }
 }
+
+
+//by TianLiang
+.pagination > ul > li > a {
+  background: #eee;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#f9f9f9),color-stop(100%,#eeeeee));
+  background-image: -webkit-linear-gradient(top,#f9f9f9,#eeeeee);
+  background-image: -moz-linear-gradient(top,#f9f9f9,#eeeeee);
+  background-image: -o-linear-gradient(top,#f9f9f9,#eeeeee);
+  background-image: linear-gradient(top,#f9f9f9,#eeeeee);
+  border: 1px solid #ccc;
+  border-radius: @borderRadiusSmall;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #606060;
+  box-shadow: 0 1px 0 #fff inset
+}
+
+.pagination > ul > li > a:hover {
+  background: #e8e8e8;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#f6f6f6),color-stop(100%,#e8e8e8));
+  background-image: -webkit-linear-gradient(top,#f6f6f6,#e8e8e8);
+  background-image: -moz-linear-gradient(top,#f6f6f6,#e8e8e8);
+  background-image: -o-linear-gradient(top,#f6f6f6,#e8e8e8);
+  background-image: linear-gradient(top,#f6f6f6,#e8e8e8)
+}
+
+.pagination > ul > li.active a,.pagination > ul > li > a:active,.pagination > ul > li.active:hover a {
+  background: #6f6f6f;
+  color: #fff;
+  border-color: #646464;
+  box-shadow: 0 1px 2px #545454 inset,0 1px 0 #fff;
+  font-weight: 600;
+  text-shadow: none
+}
