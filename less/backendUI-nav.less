@@ -746,12 +746,11 @@ div.selector{
 		position: absolute;
 		opacity: 0;
 		height: 25px;
-		border: none;
 		background: none;
 		top: 0;
 		left: 0;
 		font-size: 12px;
-		border: solid 1px #fff;
+		border:1px solid #fff;
 	}
 }
 div.selector:after {
@@ -837,6 +836,12 @@ div.selector:after {
 	.secondary-sidebar-wrapper {
 		float: left;
 		width: 200px;
+	}
+	.tagsinput {
+		background: none;
+		border: none;
+		padding: 0 8px;
+		margin: -3px 0;
 	}
 }
 .area-top{
@@ -1198,9 +1203,6 @@ form.fill-up {
 		.box-sizing(border-box);
 	}
 }
-form.fill-up input, form.fill-up textarea, form.fill-up select {
-	width: 100%;
-}
 .input-append input[type="text"], .input-append input[type="password"], .input-append input[type="email"], .input-append input[type="number"], .input-prepend input[type="text"], .input-prepend input[type="password"], .input-prepend input[type="email"], .input-prepend input[type="number"] {
 	height: 100%;
 	width: 100%;
@@ -1241,13 +1243,255 @@ form.fill-up input, form.fill-up textarea, form.fill-up select {
 	padding-left: 10px;
 	padding-right: 10px;
 }
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	.box-shadow(~'0 1px 0 white');
+	.border-radius(0);
+	font-size: 11px;
+	color: #858585;
+	padding: 0 0 0 5px;
+	border: 1px solid #d7d7d7;
+	display: inline-block;
+	background: #fdfdfd;
+	height: 26px;
+}
+div.uploader {
+	position: relative;
+	overflow: hidden;
+	cursor: default;
+	width: 190px;
+	cursor: pointer;
+	width: 100%;
+	.box-shadow(~'0 1px 0 #f2f2f2');
+	border: 1px solid #ccc;
+	height: 28px;
+	background: #fff;
+	input{
+		width:190px;
+		.opacity(0);
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		float: right;
+		height: 25px;
+		border: none;
+		cursor: default;
+	}
+	span.filename {
+		color: #777;
+		font-size: 11px;
+		padding: 0 10px;
+		float: left;
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		cursor: default;
+		border-right: none;
+		width: 120px;
+		height: 24px;
+		margin: 2px 0 2px 2px;
+		line-height: 24px;
+	}
+	span.action {
+		background-color: #fff;
+		font-weight: 700;
+		display: inline;
+		padding: 2px 0;
+		overflow: hidden;
+		cursor: pointer;
+		float: right;
+		width: 22px;
+		text-align: center;
+		height: 22px;
+		margin-top: 2px;
+		margin-right: 2px;
+		margin-bottom: 2px;
+		.border-radius(2px);
+		#gradient > .vertical(@startColor: #78808a, @endColor: #5a6573);
+		color: white;
+		text-shadow: none;
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+form.fill-up {
+	input,textarea,select {
+		width: 100%;
+	}
+	.radio,.checkbox {
+		padding-left: 0;
+	}
+}
 .box .input-append, .box .input-prepend {
 	margin-bottom: 0;
+}
+div.checker {
+	position: relative;
+	margin-right: 5px;
+	width: 19px;
+	height: 19px;
+	span{
+		background-position: 0 -260px;
+		height: 19px;
+		width: 19px;
+		display: -moz-inline-box;
+		display: inline-block;
+		text-align: center;
+		&.checked{
+			background-position: -76px -260px;
+		}
+	}
+	input{
+		width: 19px;
+		height: 19px;
+		.opacity(0);
+		display: inline-block;
+		background: none;
+	}
+}
+
+div.radio {
+	position: relative;
+	width: 18px;
+	height: 18px;
+	margin-right: 3px;
+	span {
+		height: 18px;
+		width: 18px;
+		background-position: 0 -279px;
+		display: -moz-inline-box;
+		display: inline-block;
+		text-align: center;
+		&.checked{
+			background-position: -72px -279px;
+		}
+	}
+	input {
+		width: 18px;
+		height: 18px;
+		.opacity(0);
+		text-align: center;
+		display: inline-block;
+		background: none;
+	}
+}
+
+//select2
+.select2-container {
+	width: 100%;
+}
+.select2-container .select2-choice {
+	border: 1px solid #ccc;
+	.border-radius(0);
+	#gradient > .vertical(@startColor: #ffffff, @endColor: #f5f5f5);
+	color: #666666;
+	height: 28px;
+}
+.select2-container .select2-choice div {
+	border-left: 1px solid transparent;
+	.border-radius(0);
+	background:transparent;
+	width: 20px;
+}
+.select2-container .select2-choice div b:after {
+	content: "\f0dd";
+	top: 2px;
+	right: 2px;
+	font-family: FontAwesome;
+	font-weight: 400;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	pointer-events: none;
+	text-align: center;
+	line-height: 18px;
+	font-size: 14px;
+	color: #888;
+}
+.select2-search input {
+	border: 1px solid #ccc;
+	background: #fff;
+}
+.select2-search:after {
+	content: "\f002";
+	font-family: FontAwesome;
+	font-weight: 400;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	pointer-events: none;
+	text-align: center;
+	line-height: 18px;
+	font-size: 14px;
+	color: #888;
+	top: 5px;
+	right: 10px;
+}
+.select2-container-multi .select2-choices {
+	background: #fff;
+	border: 1px solid #d2d2d2;
+	.select2-search-choice {
+		.border-radius(2px);
+		.box-shadow(~'none');
+		#gradient > .vertical(@startColor: #fcfcfc, @endColor: #f2f2f2);
+		border: 1px solid #d2d2d2;
+	}
+}
+.select2-container-multi .select2-search-choice-close {
+	background: none;
+	&:after {
+		content: "\f00d";
+		top: -4px;
+		right: -2px;
+		font-family: FontAwesome;
+		font-weight: 400;
+		font-style: normal;
+		display: inline-block;
+		text-decoration: inherit;
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		pointer-events: none;
+		text-align: center;
+		line-height: 18px;
+		font-size: 14px;
+		color: #888;
+	}
+}
+textarea {
+	height: auto;
+}
+//datapicker
+.datepicker-inline {
+	width: auto;
+}
+.datepicker table {
+	width: 100%;
+	border: 1px solid #CDCDCD;
+	background: #fafafa;
+	.box-shadow(~'0 2px 2px -2px #cccccc');
+	thead tr:first-child {
+		#gradient > .vertical(@startColor: #f8f8f8, @endColor: #ececec);
+		border-bottom: 1px solid #CDCDCD;
+	}
 }
 //btn
 .btn {
 	i{
 		vertical-align: middle;
 	}
+}
+.note {
+	color: #909090;
+	font-style: italic;
+	font-size: 11px;
+	margin-bottom: 10px;
 }
 
