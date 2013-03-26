@@ -1200,6 +1200,10 @@
     <script src="../assets/js/jquery.tagsinput.js"></script>
     <script src="../assets/js/jquery.validationEngine.js"></script>
     <script src="../assets/js/jquery.validationEngine-zh_CN.js"></script>
+    <script src="../assets/js/jquery.easy-pie-chart.js"></script>
+    <script src="../assets/js/raphael.2.1.0.min.js"></script>
+    <script src="../assets/js/justgage.js"></script>
+    <script src="../assets/js/jquery.sparkline.js"></script>
     <!--<script src="../assets/js/application_test.js"></script>-->
     <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
    <!-- <script type="text/javascript" src="http://www.datatables.net/media/blog/bootstrap_2/DT_bootstrap.js"></script>-->
@@ -1211,6 +1215,49 @@
       $(".tags").tagsInput({width:"100%",height:""});
       $("form.validatable").validationEngine({promptPosition:"topLeft"});
       $(".datepicker").datepicker({todayBtn:!0});
+
+      //bar progress
+        $(".bar-progress .tip").each(function(){
+            var e,t;
+            return t=Math.floor(Math.random()*80)+20,
+            e=""+t+"%",
+            $(this).attr("title",e).attr("data-percent",t).attr("data-original-title",e).css({width:e})
+        })
+      //easypiechart
+      function getRandomInt(e,t){return Math.floor(Math.random()*(t-e+1))+e}
+      var Theme ={
+        colors:{
+          red:"#db6464",green:"#96c877",blue:"#6e97aa",orange:"#ff9f01",gray:"#ccc",lightBlue:"#D4E5DE"
+        }
+      };
+      var t=[];
+      $(".justgage").each(function(){
+        var e,n,r;
+        return r=$(this).attr("data-labels")||!0,e=$(this).attr("data-gauge-width-scale")||1,n=$(this).attr("data-animation-type")||"linear",t.push(new JustGage({id:$(this).attr("id"),min:0,max:100,title:$(this).attr("data-title"),value:getRandomInt(1,80),label:"",levelColorsGradient:!1,showMinMax:r,gaugeWidthScale:e,startAnimationTime:1e3,startAnimationType:">",refreshAnimationTime:1e3,refreshAnimationType:n,levelColors:[Theme.colors.green,Theme.colors.orange,Theme.colors.red]}))
+      });
+      setInterval(function(){
+            return $(t).each(function(){return this.refresh(getRandomInt(0,80))})
+        },2500)
+      $(".easy-pie-chart").each(function(){
+        var e;
+        return e=Theme.colors[$(this).attr("data-color")]||Theme.colors.red,$(this).easyPieChart({lineWidth:10,size:150,lineCap:"square",barColor:e,scaleColor:Theme.colors.gray,animate:1e3})
+      });
+      $(".easy-pie-chart-small").each(function(){
+        var e;
+        return e=Theme.colors[$(this).attr("data-color")]||Theme.colors.red,$(this).easyPieChart({lineWidth:4,size:40,lineCap:"square",barColor:e,animate:1e3})
+      });
+      setInterval(function(){
+        return $(".easy-pie-chart").each(function(){
+          var e;return e=getRandomInt(0,80),$(this).data("easyPieChart").update(e),$(this).find("span").text(""+e+"%")})
+      },2500);
+      //sparkline
+        return $(".sparkline").each(function(){
+            var e,t,n,r;
+            return n=$(this).attr("data-color")||"red",
+            r="18px",
+            $(this).hasClass("big")&&(t="5px",e="2px",r="30px"),
+            $(this).sparkline("html",{type:"bar",barColor:Theme.colors[n],height:r,barWidth:t,barSpacing:e,zeroAxis:!1})
+        })
     })
    </script>
 </body>
