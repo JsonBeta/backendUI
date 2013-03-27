@@ -39,6 +39,8 @@ label {
     line-height: 20px;
     padding:3px 10px;
     margin-right: 10px;
+    font-size:14px;
+    font-weight: 600;
   }
 
   .nav.full > li > a {
@@ -322,7 +324,31 @@ a [class*=" icon-"] {
 		color:#939ea4
 	}
 }
-
+.bs-docs-sidenav {
+	padding:5px 0;
+	> li > a {
+		display: block;
+		margin: 0 0 0;
+		padding: 8px 14px;
+		border: 1px solid #E5E5E5;
+		> .icon-chevron-right{
+			float: right;
+			margin-top: 2px;
+			margin-right: -6px;
+			.opacity(25);
+		}
+	}
+	> .active > a{
+		#gradient > .vertical(@startColor: #f8f8f8, @endColor: #e8e8e8);
+		text-shadow: 0 1px white;
+		border-bottom: 1px solid #CDCDCD;
+		color: #333;
+		.icon-chevron-right{
+			color:#78808A;
+			.opacity(70);
+		}
+	}
+}
 //面包屑
 .breadcrumb-line {
 	color: #666;
