@@ -1,0 +1,303 @@
+.color9 .line {
+  stroke: #0e2e42;
+}
+.color9 rect,
+.color9 circle {
+  fill: #0e2e42;
+}
+.color9 .fill {
+  fill: rgba(14, 46, 66, 0.1);
+}
+.color9.comp .line {
+  stroke: #2477ab;
+}
+.color9.comp rect {
+  fill: #2477ab;
+}
+.color9.comp .fill {
+  display: none;
+}
+.color9.comp circle,
+.color9.comp .pointer {
+  fill: #2477ab;
+}
+.color9.comp.lineshade .fill,
+.color9.comp.lineshadeup .fill {
+  display: block;
+  fill: rgba(14, 46, 66, 0.1);
+}
+.color8 .line {
+  stroke: #2eb9b4;
+}
+.color8 rect,
+.color8 circle {
+  fill: #2eb9b4;
+}
+.color8 .fill {
+  fill: rgba(46, 185, 180, 0.1);
+}
+.color8.comp .line {
+  stroke: #86e1de;
+}
+.color8.comp rect {
+  fill: #86e1de;
+}
+.color8.comp .fill {
+  display: none;
+}
+.color8.comp circle,
+.color8.comp .pointer {
+  fill: #86e1de;
+}
+.color8.comp.lineshade .fill,
+.color8.comp.lineshadeup .fill {
+  display: block;
+  fill: rgba(46, 185, 180, 0.1);
+}
+.color7 .line {
+  stroke: #754c24;
+}
+.color7 rect,
+.color7 circle {
+  fill: #754c24;
+}
+.color7 .fill {
+  fill: rgba(117, 76, 36, 0.1);
+}
+.color7.comp .line {
+  stroke: #c98c50;
+}
+.color7.comp rect {
+  fill: #c98c50;
+}
+.color7.comp .fill {
+  display: none;
+}
+.color7.comp circle,
+.color7.comp .pointer {
+  fill: #c98c50;
+}
+.color7.comp.lineshade .fill,
+.color7.comp.lineshadeup .fill {
+  display: block;
+  fill: rgba(117, 76, 36, 0.1);
+}
+.color6 .line {
+  stroke: #d9ce00;
+}
+.color6 rect,
+.color6 circle {
+  fill: #d9ce00;
+}
+.color6 .fill {
+  fill: rgba(217, 206, 0, 0.1);
+}
+.color6.comp .line {
+  stroke: #fff75a;
+}
+.color6.comp rect {
+  fill: #fff75a;
+}
+.color6.comp .fill {
+  display: none;
+}
+.color6.comp circle,
+.color6.comp .pointer {
+  fill: #fff75a;
+}
+.color6.comp.lineshade .fill,
+.color6.comp.lineshadeup .fill {
+  display: block;
+  fill: rgba(217, 206, 0, 0.1);
+}
+.color5 .line {
+  stroke: #ce1797;
+}
+.color5 rect,
+.color5 circle {
+  fill: #ce1797;
+}
+.color5 .fill {
+  fill: rgba(206, 23, 151, 0.1);
+}
+.color5.comp .line {
+  stroke: #f075cb;
+}
+.color5.comp rect {
+  fill: #f075cb;
+}
+.color5.comp .fill {
+  display: none;
+}
+.color5.comp circle,
+.color5.comp .pointer {
+  fill: #f075cb;
+}
+.color5.comp.lineshade .fill,
+.color5.comp.lineshadeup .fill {
+  display: block;
+  fill: rgba(206, 23, 151, 0.1);
+}
+.color4 .line {
+  stroke: #672d8b;
+}
+.color4 rect,
+.color4 circle {
+  fill: #672d8b;
+}
+.color4 .fill {
+  fill: rgba(103, 45, 139, 0.1);
+}
+.color4.comp .line {
+  stroke: #a869ce;
+}
+.color4.comp rect {
+  fill: #a869ce;
+}
+.color4.comp .fill {
+  display: none;
+}
+.color4.comp circle,
+.color4.comp .pointer {
+  fill: #a869ce;
+}
+.color4.comp.lineshade .fill,
+.color4.comp.lineshadeup .fill {
+  display: block;
+  fill: rgba(103, 45, 139, 0.1);
+}
+.color3 .line {
+  stroke: #c6080d;
+}
+.color3 rect,
+.color3 circle {
+  fill: #c6080d;
+}
+.color3 .fill {
+  fill: rgba(198, 8, 13, 0.1);
+}
+.color3.comp .line {
+  stroke: #f8555a;
+}
+.color3.comp rect {
+  fill: #f8555a;
+}
+.color3.comp .fill {
+  display: none;
+}
+.color3.comp circle,
+.color3.comp .pointer {
+  fill: #f8555a;
+}
+.color3.comp.lineshade .fill,
+.color3.comp.lineshadeup .fill {
+  display: block;
+  fill: rgba(198, 8, 13, 0.1);
+}
+.color2 .line {
+  stroke: #f26522;
+}
+.color2 rect,
+.color2 circle {
+  fill: #f26522;
+}
+.color2 .fill {
+  fill: rgba(242, 101, 34, 0.1);
+}
+.color2.comp .line {
+  stroke: #f9b99a;
+}
+.color2.comp rect {
+  fill: #f9b99a;
+}
+.color2.comp .fill {
+  display: none;
+}
+.color2.comp circle,
+.color2.comp .pointer {
+  fill: #f9b99a;
+}
+.color2.comp.lineshade .fill,
+.color2.comp.lineshadeup .fill {
+  display: block;
+  fill: rgba(242, 101, 34, 0.1);
+}
+.color1 .line {
+  stroke: #4da944;
+}
+.color1 rect,
+.color1 circle {
+  fill: #4da944;
+}
+.color1 .fill {
+  fill: rgba(77, 169, 68, 0.1);
+}
+.color1.comp .line {
+  stroke: #9dd597;
+}
+.color1.comp rect {
+  fill: #9dd597;
+}
+.color1.comp .fill {
+  display: none;
+}
+.color1.comp circle,
+.color1.comp .pointer {
+  fill: #9dd597;
+}
+.color1.comp.lineshade .fill,
+.color1.comp.lineshadeup .fill {
+  display: block;
+  fill: rgba(77, 169, 68, 0.1);
+}
+.color0 .line {
+  stroke: #3880aa;
+}
+.color0 rect,
+.color0 circle {
+  fill: #3880aa;
+}
+.color0 .fill {
+  fill: rgba(56, 128, 170, 0.1);
+}
+.color0.comp .line {
+  stroke: #89bbd8;
+}
+.color0.comp rect {
+  fill: #89bbd8;
+}
+.color0.comp .fill {
+  display: none;
+}
+.color0.comp circle,
+.color0.comp .pointer {
+  fill: #89bbd8;
+}
+.color0.comp.lineshade .fill,
+.color0.comp.lineshadeup .fill {
+  display: block;
+  fill: rgba(56, 128, 170, 0.1);
+}
+.line {
+  stroke-width: 3px;
+  fill: none;
+}
+.fill {
+  stroke-width: 0;
+}
+circle {
+  stroke: #FFF;
+  stroke-width: 3px;
+}
+.axis .domain {
+  fill: none;
+}
+.axis .tick {
+  stroke: #f1f5f7;
+  stroke-width: 1px;
+}
+.axis text {
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  fill: #7e97a6;
+  font-size: 12px;
+}

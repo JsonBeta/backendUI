@@ -1,0 +1,98 @@
+@color0: #3880AA;
+@lighten0: lighten(@color0, 25%);
+@fade0: fade(@color0, 10%);
+@color1: #4DA944;
+@lighten1: lighten(@color1, 25%);
+@fade1: fade(@color1, 10%);
+@color2: #F26522;
+@lighten2: lighten(@color2, 25%);
+@fade2: fade(@color2, 10%);
+@color3: #C6080D;
+@lighten3: lighten(@color3, 25%);
+@fade3: fade(@color3, 10%);
+@color4: #672D8B;
+@lighten4: lighten(@color4, 25%);
+@fade4: fade(@color4, 10%);
+@color5: #CE1797;
+@lighten5: lighten(@color5, 25%);
+@fade5: fade(@color5, 10%);
+@color6: #D9CE00;
+@lighten6: lighten(@color6, 25%);
+@fade6: fade(@color6, 10%);
+@color7: #754C24;
+@lighten7: lighten(@color7, 25%);
+@fade7: fade(@color7, 10%);
+@color8: #2EB9B4;
+@lighten8: lighten(@color8, 25%);
+@fade8: fade(@color8, 10%);
+@color9: #0E2E42;
+@lighten9: lighten(@color9, 25%);
+@fade9: fade(@color9, 10%);
+@colorFlorida: #3780AA;
+@colorSumo: #0E2E42;
+@colorHeavyweight: #1E4C66;
+@colorMiddleweight: #2A6587;
+@colorWelterweight: #7E97A6;
+@colorLightweight: #B6C9D4;
+@colorBantamweight: #D3DFE6;
+@colorFlyweight: #F1F5F7;
+
+.colorX(@index) when (@index > -1) {
+  (~'.color@{index}') {
+    @color: (~'@{color@{index}}');
+    @lightened: (~'@{lighten@{index}}');
+    @fade: (~'@{fade@{index}}');
+    .line { stroke: @color; }
+    rect,
+    circle { fill: @color; }
+    .fill { fill: @fade; }
+
+    &.comp {
+      .line { stroke: @lightened; }
+      rect { fill: @lightened; }
+      .fill { display: none; }
+      circle,
+      .pointer {
+        fill: @lightened;
+      }
+      &.lineshade,
+      &.lineshadeup {
+        .fill {
+          display: block;
+          fill: @fade;
+        }
+      }
+    }
+  }
+  .colorX(@index - 1);
+}
+.colorX(-1) {}
+.colorX(9);
+
+.line {
+  stroke-width: 3px;
+  fill: none;
+}
+.fill {
+  stroke-width: 0;
+}
+circle {
+  stroke: #FFF;
+  stroke-width: 3px;
+}
+
+
+.axis {
+  .domain {
+    fill: none;
+  }
+  .tick {
+    stroke: @colorFlyweight;
+    stroke-width: 1px;
+  }
+  text {
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    fill: @colorWelterweight;
+    font-size: 12px;
+  }
+}
