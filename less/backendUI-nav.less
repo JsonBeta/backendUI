@@ -349,6 +349,9 @@ a [class*=" icon-"] {
 			color:#78808A;
 			.opacity(70);
 		}
+		&:hover{
+			color: #333;
+		}
 	}
 }
 //面包屑
@@ -574,6 +577,21 @@ a [class*=" icon-"] {
 	}
 	.box-header:after,.box-footer:after {
 		clear: both;
+	}
+}
+
+.nav-tabs-wms{
+	> li{
+		position:relative; 
+		button.close{
+			float: none;
+			position: absolute;
+			right: 8px;
+			top: 9px;
+		}
+		> a{
+			padding-right:30px;
+		}
 	}
 }
 
@@ -1614,6 +1632,9 @@ textarea {
 	margin: 0;
 }
 
+.box-content{
+	line-height:22px;
+}
 //btn
 .btn {
 	i{

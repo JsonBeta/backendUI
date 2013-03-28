@@ -9389,6 +9389,9 @@ a [class*=" icon-"] {
   opacity: 0.7;
   filter: alpha(opacity=70);
 }
+.bs-docs-sidenav > .active > a:hover {
+  color: #333;
+}
 .breadcrumb-line {
   color: #666;
   height: 28px;
@@ -9670,6 +9673,18 @@ a [class*=" icon-"] {
 .box .box-header:after,
 .box .box-footer:after {
   clear: both;
+}
+.nav-tabs-wms > li {
+  position: relative;
+}
+.nav-tabs-wms > li button.close {
+  float: none;
+  position: absolute;
+  right: 8px;
+  top: 9px;
+}
+.nav-tabs-wms > li > a {
+  padding-right: 30px;
 }
 .table-normal {
   margin-bottom: 0;
@@ -11036,6 +11051,9 @@ textarea {
   -moz-box-shadow: none;
   box-shadow: none;
   margin: 0;
+}
+.box-content {
+  line-height: 22px;
 }
 .btn i {
   vertical-align: middle;
