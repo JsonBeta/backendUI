@@ -188,12 +188,13 @@
 		<div class="secondary-sidebar">
 			<div class="secondary-sidebar-wrapper">
 				<ul class="nav nav-list bs-docs-sidenav">
-		       		<li><a href="#" data-posid="1"><i class="icon-chevron-right"></i> 表单formS</a></li>
-		      		<li><a href="#" data-posid="2"><i class="icon-chevron-right"></i> 表格tables</a></li>
+		       		<li><a href="#" data-posid="1"><i class="icon-chevron-right"></i>表单formS</a></li>
+		      		<li><a href="#" data-posid="2"><i class="icon-chevron-right"></i>表格tables</a></li>
 		       		<li><a href="#" data-posid="3"><i class="icon-chevron-right"></i>按钮buttons</a></li>
 		      		<li><a href="#" data-posid="4"><i class="icon-chevron-right"></i>小图标icons</a></li>
-		     		<li><a href="#" data-posid="5"><i class="icon-chevron-right"></i> 布局grid</a></li>
-		     		<li><a href="#" data-posid="6"><i class="icon-chevron-right"></i> 通用元素general</a></li>
+		     		<li><a href="#" data-posid="5"><i class="icon-chevron-right"></i>布局grid</a></li>
+		     		<li><a href="#" data-posid="6"><i class="icon-chevron-right"></i>通用元素general</a></li>
+		     		<li><a href="#" data-posid="7"><i class="icon-chevron-right"></i>绘图charts</a></li>
 		        </ul>
 	            <div class="sparkline-box">
 					<div class="sparkline-row">
@@ -3744,6 +3745,57 @@
 			</ul>
 		</div>
 		<!-- E 主要内容区域__TAB切换 -->
+		<!-- S 主要内容区域__绘图charts -->
+		<a name="pageViewPop_7" class="pageViewPop_7"></a>
+		<div class="container-fluid padded">
+		    <div class="box">
+		      <div class="box-header"><span class="title">综合图</span></div>
+		      <div class="box-content padded">
+		        <div id="hightcharts_combin"></div>
+		      </div>
+		    </div>
+		    <div class="row-fluid">
+		      <div class="span6">
+		        <div class="box">
+		          <div class="box-header"><span class="title">饼图A</span></div>
+		          <div class="box-content padded">
+		            <div id="hightcharts_pieA"></div>
+		          </div>
+		        </div>
+		      </div>
+
+		      <div class="span6">
+		        <div class="box">
+		          <div class="box-header">
+		            <span class="title">饼图B</span>
+		            <ul class="box-toolbar">
+		              <li><a class="btn btn-blue btn-mini">占位占位啊!</a></li>
+		            </ul>
+		          </div>
+		          <div class="box-content padded">
+		            <div id="hightcharts_pieB"></div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="box">
+		      <div class="box-header"><span class="title">简单的饼图</span></div>
+		      <div class="box-content padded separate-sections" style="text-align: center">
+		        <div class="easy-pie-chart" style="display: inline-block; margin-left: 20px;" data-percent="89"><span>89%</span></div>
+		        <div class="easy-pie-chart" style="display: inline-block; margin-left: 20px;" data-percent="73" data-color="orange"><span>73%</span></div>
+		        <div class="easy-pie-chart" style="display: inline-block; margin-left: 20px;" data-percent="33" data-color="green"><span>33%</span></div>
+		        <div class="easy-pie-chart" style="display: inline-block; margin-left: 20px;" data-percent="64" data-color="blue"><span>64%</span></div>
+		      </div>
+		    </div>
+		    <div class="box">
+		      <div class="box-header"><span class="title">柱状图</span></div>
+		      <div class="box-content padded">
+		        <div id="hightcharts_column"></div>
+		      </div>
+		    </div>
+		</div>
+		<!-- E 主要内容区域__绘图charts -->
+
 	</div>
 	<!-- E 主要内容区域 -->
 
@@ -3779,6 +3831,8 @@
     <script src="../assets/js/jquery.dataTables.js"></script>
     <script src="../assets/js/touchTouch.jquery.js"></script>
     <script src="../assets/js/jquery.gritter.js"></script>
+    <script src="../assets/js/highcharts.js"></script>
+    <script src="../assets/js/exporting.js"></script>
 
    <script type="text/javascript">
     $(function(){
@@ -3906,7 +3960,234 @@
 
             });
 
-    	//sparkline
+    	
+
+        //绘图展示
+        $('#hightcharts_combin').highcharts({
+            chart: {
+            },
+            title: {
+                text: '综合绘图'
+            },
+            xAxis: {
+                categories: ['苹果', '橘子', '香蕉', '李子', '梨']
+            },
+            tooltip: {
+                formatter: function() {
+                    var s;
+                    if (this.point.name) { // the pie chart
+                        s = ''+
+                            this.point.name +': '+ this.y +' 消费水果占比';
+                    } else {
+                        s = ''+
+                            this.x  +': '+ this.y;
+                    }
+                    return s;
+                }
+            },
+            labels: {
+                items: [{
+                    html: '水果消费总量',
+                    style: {
+                        left: '40px',
+                        top: '8px',
+                        color: 'black'
+                    }
+                }]
+            },
+            series: [{
+                type: 'column',
+                name: '汤汤',
+                data: [3, 2, 1, 3, 4]
+            }, {
+                type: 'column',
+                name: '',
+                data: [2, 3, 5, 7, 6]
+            }, {
+                type: 'column',
+                name: '飞飞',
+                data: [4, 3, 3, 9, 0]
+            }, {
+                type: 'spline',
+                name: '平均',
+                data: [3, 2.67, 3, 6.33, 3.33],
+                marker: {
+                	lineWidth: 2,
+                	lineColor: Highcharts.getOptions().colors[3],
+                	fillColor: 'white'
+                }
+            }, {
+                type: 'pie',
+                name: 'Total consumption',
+                data: [{
+                    name: '汤汤',
+                    y: 13,
+                    color: Highcharts.getOptions().colors[0] // Jane's color
+                }, {
+                    name: '超超',
+                    y: 23,
+                    color: Highcharts.getOptions().colors[1] // John's color
+                }, {
+                    name: '飞飞',
+                    y: 19,
+                    color: Highcharts.getOptions().colors[2] // Joe's color
+                }],
+                center: [100, 80],
+                size: 100,
+                showInLegend: false,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
+        });
+		$('#hightcharts_pieA').highcharts({
+		            chart: {
+		                plotBackgroundColor: null,
+		                plotBorderWidth: null,
+		                plotShadow: false
+		            },
+		            title: {
+		                text: '某某网站用户浏览器统计-2012'
+		            },
+		            tooltip: {
+		        	    pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+		            	percentageDecimals: 1
+		            },
+		            plotOptions: {
+		                pie: {
+		                    allowPointSelect: true,
+		                    cursor: 'pointer',
+		                    dataLabels: {
+		                        enabled: true,
+		                        color: '#000000',
+		                        connectorColor: '#000000',
+		                        formatter: function() {
+		                            return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+		                        }
+		                    }
+		                }
+		            },
+		            series: [{
+		                type: 'pie',
+		                name: '占比',
+		                data: [
+		                    ['Firefox',   45.0],
+		                    ['IE',       26.8],
+		                    {
+		                        name: 'Chrome',
+		                        y: 12.8,
+		                        sliced: true,
+		                        selected: true
+		                    },
+		                    ['Safari',    8.5],
+		                    ['Opera',     6.2],
+		                    ['Others',   0.7]
+		                ]
+		            }]
+		        });
+			$('#hightcharts_pieB').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: '某某网站用户浏览器统计-2012'
+            },
+            tooltip: {
+        	    pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+            	percentageDecimals: 1
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: '占比',
+                data: [
+                    ['Firefox',   45.0],
+                    ['IE',       26.8],
+                    {
+                        name: 'Chrome',
+                        y: 12.8,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Safari',    8.5],
+                    ['Opera',     6.2],
+                    ['Others',   0.7]
+                ]
+            }]
+        });
+		$('#hightcharts_column').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Historic World Population by Region'
+            },
+            subtitle: {
+                text: 'Source: Wikipedia.org'
+            },
+            xAxis: {
+                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Population (millions)',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' millions'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -100,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FAFAFA',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Year 1800',
+                data: [107, 31, 635, 203, 2]
+            }, {
+                name: 'Year 1900',
+                data: [133, 156, 947, 408, 6]
+            }, {
+                name: 'Year 2008',
+                data: [973, 914, 4054, 732, 34]
+            }]
+        });
+//sparkline
         return $(".sparkline").each(function(){
             var e,t,n,r;
             return n=$(this).attr("data-color")||"red",
