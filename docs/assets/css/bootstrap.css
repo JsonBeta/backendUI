@@ -9237,7 +9237,7 @@ a [class*=" icon-"] {
 .sidebar-background {
   position: fixed;
   z-index: -1;
-  width: 290px;
+  width: 200px;
   background: #e8e8e8;
   top: 0;
   left: 0;
@@ -9253,7 +9253,7 @@ a [class*=" icon-"] {
   position: absolute;
 }
 .sidebar {
-  width: 290px;
+  width: 200px;
   position: absolute;
   display: block;
 }
@@ -9354,13 +9354,16 @@ a [class*=" icon-"] {
   color: #939ea4;
 }
 .bs-docs-sidenav {
-  padding: 5px 0;
+  padding: 0;
+  border-top: 1px solid #CCC;
 }
 .bs-docs-sidenav > li > a {
   display: block;
   margin: 0 0 0;
   padding: 8px 14px;
-  border: 1px solid #E5E5E5;
+  /*border: 1px solid #E5E5E5;
+		#gradient > .vertical(@startColor: #f8f8f8, @endColor: #e8e8e8);*/
+
 }
 .bs-docs-sidenav > li > a > .icon-chevron-right {
   float: right;
@@ -9369,7 +9372,9 @@ a [class*=" icon-"] {
   opacity: 0.25;
   filter: alpha(opacity=25);
 }
-.bs-docs-sidenav > .active > a {
+.bs-docs-sidenav > li > a:hover {
+  /*.box-shadow(~'0 1px 0 white,0 1px 0 white inset');*/
+
   background-color: #f2f2f2;
   background-image: -moz-linear-gradient(top, #f8f8f8, #e8e8e8);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8f8f8), to(#e8e8e8));
@@ -9378,17 +9383,28 @@ a [class*=" icon-"] {
   background-image: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#ffe8e8e8', GradientType=0);
+}
+.bs-docs-sidenav > .active > a,
+.bs-docs-sidenav > .active > a:hover {
+  /*.box-shadow(~'0 1px 0px #E29B1E, 0 1px 0 #F09900');*/
+
+  background-color: #ffcd62;
+  background-image: -moz-linear-gradient(top, #ffd972, #ffba49);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd972), to(#ffba49));
+  background-image: -webkit-linear-gradient(top, #ffd972, #ffba49);
+  background-image: -o-linear-gradient(top, #ffd972, #ffba49);
+  background-image: linear-gradient(to bottom, #ffd972, #ffba49);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffd972', endColorstr='#ffffba49', GradientType=0);
   text-shadow: 0 1px white;
   border-bottom: 1px solid #CDCDCD;
   color: #333;
 }
-.bs-docs-sidenav > .active > a .icon-chevron-right {
+.bs-docs-sidenav > .active > a .icon-chevron-right,
+.bs-docs-sidenav > .active > a:hover .icon-chevron-right {
   color: #78808A;
   opacity: 0.7;
   filter: alpha(opacity=70);
-}
-.bs-docs-sidenav > .active > a:hover {
-  color: #333;
 }
 .breadcrumb-line {
   color: #666;
@@ -9475,7 +9491,7 @@ a [class*=" icon-"] {
 }
 .main-content {
   position: relative;
-  margin-left: 291px;
+  margin-left: 201px;
 }
 .area-top {
   height: 60px;
@@ -10066,11 +10082,13 @@ div.selector:after {
 }
 .secondary-sidebar {
   position: relative;
-  padding-left: 90px;
+  /*padding-left: 90px;*/
+
 }
 .secondary-sidebar .secondary-sidebar-wrapper {
   float: left;
-  width: 200px;
+  /*width: 200px;*/
+
 }
 .secondary-sidebar .tagsinput {
   background: none;
