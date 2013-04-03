@@ -10584,21 +10584,12 @@ form.fill-up * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.input-append input[type="text"],
-.input-append input[type="password"],
-.input-append input[type="email"],
-.input-append input[type="number"],
-.input-prepend input[type="text"],
-.input-prepend input[type="password"],
-.input-prepend input[type="email"],
-.input-prepend input[type="number"] {
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
+/*.input-append input[type="text"], .input-append input[type="password"], .input-append input[type="email"], .input-append input[type="number"], .input-prepend input[type="text"], .input-prepend input[type="password"], .input-prepend input[type="email"], .input-prepend input[type="number"] {
+	height: 100%;
+	width: 100% - 200px;
+	z-index: 1;
+	.border-radius(4px);
+}*/
 .input-prepend input[type="text"],
 .input-prepend input[type="password"],
 .input-prepend input[type="email"],
@@ -10607,8 +10598,8 @@ form.fill-up * {
 }
 .input-append,
 .input-prepend {
-  height: 36px;
-  line-height: 36px;
+  height: 30px;
+  line-height: 30px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

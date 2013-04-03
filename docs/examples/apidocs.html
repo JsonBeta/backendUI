@@ -205,6 +205,12 @@
 				</div>
 		    </div>
   		</div>
+  		<form class="form-search span6">
+  			<div class="input-append">
+	  			<input type="text" class="search-query" placeholder="请输入您的订单号" />
+	  			<button type="submit" class="btn">Search</button>
+	  		</div>
+  		</form>
   		<!-- S 主要内容区域__表单forms -->
   		<div class="container-fluid hpadded">
 			<div class="row-fluid">
@@ -3742,7 +3748,12 @@
     $(function(){
 
     	//dataTables
-	    $(".dTable,.dTable-small").dataTable({bJQueryUI:!1,bAutoWidth:!1,sPaginationType:"full_numbers",sDom:'<"table-header"fl>t<"table-footer"ip>'});
+	    $(".dTable,.dTable-small").dataTable({
+	    	bJQueryUI:!1,
+	    	bAutoWidth:!1,
+	    	bSortClasses: true,
+	    	sPaginationType:"full_numbers",
+	    	sDom:'<"table-header"fl>t<"table-footer"ip>'});
 
 	    //dataTables build with json or array
 	    /*$(".dTabletest").dataTable({bJQueryUI:!1,bAutoWidth:!1,sPaginationType:"full_numbers",
