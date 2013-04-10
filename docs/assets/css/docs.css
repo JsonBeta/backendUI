@@ -182,7 +182,7 @@ hr.soften {
 @media (min-width: 980px) {
   .subnav-fixed {
     position: fixed;
-    top: 48px;
+    top: 44px;
     left: 0;
     right: 0;
     z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
@@ -335,7 +335,7 @@ hr.soften {
           border-radius: 3px;
 }
 .mini-layout .mini-layout-body {
-  background-color: #dceaf4;
+  background-color: #eaeaea;
   margin: 0 auto;
   width: 70%;
   height: 240px;
@@ -346,7 +346,7 @@ hr.soften {
   float: left;
 }
 .mini-layout.fluid .mini-layout-sidebar {
-  background-color: #bbd8e9;
+  background-color: #f2f2f2;
   width: 20%;
   height: 240px;
 }
