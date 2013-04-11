@@ -64,6 +64,7 @@
   </p>
   <div class="subnav">
     <ul class="nav nav-pills">
+      <li><a href="#wrapbox">包围</a></li>
       <li><a href="#typography">排版</a></li>
       <li><a href="#code">代码</a></li>
       <li><a href="#tables">表格</a></li>
@@ -74,7 +75,119 @@
   </div>
 </header>
 
+<!-- wrapbox
+================================================== -->
+<section id="wrapbox">
+    <div class="page-header">
+        <h1>包围 <small>box,box-header,box-content</small> </h1>
+    </div>
 
+    <h2>BackendUI 特定组件包围</h2>
+    <div class="row">
+        <div class="span6">
+            <h3>使用说明</h3>
+            <p>
+                使用包围的目的是保持整个项目视觉的一致性和整体性，一般要求同一组件模块如 TABLE FORM DATATABLE CHARTS 等必须使用；使用方法很简单：
+            </p>
+            <pre class="prettyprint linenums">
+&lt;div class="box"&gt;
+    &lt;div class="box-header"&gt;&lt;span class="title"&gt;这里是标题&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="box-content"&gt;这里是主体内容&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <div class="span6">
+            <h3>DEMO</h3>
+            <div class="box">
+                        <div class="box-header"><span class="title">日常任务</span></div>
+                        <div class="box-content">
+                            <table class="table table-normal">
+                              <thead>
+                                  <tr>
+                                    <td></td>
+                                    <td>任务类型</td>
+                                    <td>完成度</td>
+                                    <td style="width: 40px"></td>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                              <tr class="status-pending">
+                                <td class="icon"><i class="icon-exchange"></i></td>
+                                <td><a href="#">一个新开的任务进行中</a></td>
+                                <td><b>0%</b></td>
+                                <td>
+                                  <div class="btn-group">
+                                    <button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">Action</a></li>
+                                      <li><a href="#">Another action</a></li>
+                                      <li><a href="#">Something else here</a></li>
+                                      <li class="divider"></li>
+                                      <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="status-info">
+                                <td class="icon"><i class="icon-refresh"></i></td>
+                                <td><a href="#">某某网香港版</a></td>
+                                <td><b>14%</b></td>
+                                <td>
+                                  <div class="btn-group">
+                                    <button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">Action</a></li>
+                                      <li><a href="#">Another action</a></li>
+                                      <li><a href="#">Something else here</a></li>
+                                      <li class="divider"></li>
+                                      <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="status-success">
+                                <td class="icon"><i class="icon-ok"></i></td>
+                                <td><a href="#">建立一个新的服务站</a></td>
+                                <td><b>100%</b></td>
+                                <td>
+                                  <div class="btn-group">
+                                    <button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">Action</a></li>
+                                      <li><a href="#">Another action</a></li>
+                                      <li><a href="#">Something else here</a></li>
+                                      <li class="divider"></li>
+                                      <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="status-info">
+                                <td class="icon"><i class="icon-refresh"></i></td>
+                                <td><a href="#">修改BUG</a></td>
+                                <td><b>28%</b></td>
+                                <td>
+                                  <div class="btn-group">
+                                    <button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">Action</a></li>
+                                      <li><a href="#">Another action</a></li>
+                                      <li><a href="#">Something else here</a></li>
+                                      <li class="divider"></li>
+                                      <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+        </div>
+        <div class="span4">
+            <h3></h3>
+        </div>
+    </div>
+</section>
 <!-- Typography
 ================================================== -->
 <section id="typography">
@@ -848,7 +961,7 @@
 
   <h2>四种表单</h2>
   <p>
-    Bootstrap为四种常用表单提供了简单的标记和样式
+    原生的Bootstrap为四种常用表单提供了简单的标记和样式
   </p>
   <table class="table table-bordered table-striped">
     <thead>
@@ -885,77 +998,137 @@
   </table>
 
 
-  <h2>表单单例 <small>仅仅使用表单控件，无须额外标记</small></h2>
+  <h2>表单单例 <small>是统一使用uniform select2 等JS插件</small></h2>
   <div class="row">
     <div class="span3">
       <h3>基本表单</h3>
-      <p>2.0版本开始使用更为简洁灵活的表单默认样式，只使用表单控件，无须额外标记。</p>
-    </div>
-    <div class="span9">
-      <form class="well form-search">
-        <label>标签名称</label>
-        <input type="text" class="span3" placeholder="请输入文字..."> <span class="help-inline">相关提示信息</span>
-        <p class="help-block">块状帮助文字...</p>
-        <label class="checkbox">
-          <input type="checkbox"> 选我选我
-        </label>
-        <button type="submit" class="btn">提交</button>
-      </form>
-<pre class="prettyprint linenums">
-&lt;form class="well"&gt;
-  &lt;label&gt;标签名称&lt;/label&gt;
-  &lt;input type="text" class="span3" placeholder="请输入文字..."&gt;
-  &lt;span class="help-inline"&gt;相关提示信息&lt;/span&gt;
-  &lt;p class="help-block"&gt;块状帮助文字...&lt;/p&gt;
-  &lt;label class="checkbox"&gt;
-    &lt;input type="checkbox"&gt; 选我选我
-  &lt;/label&gt;
-  &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;
-</pre>
-    </div>
-  </div> 
-  <div class="row">
-    <div class="span3">
-      <h3>表单表单</h3>
       <p>
-	借鉴了Webkit的默认样式，使用 <code>.form-search</code> 圆化搜索文本框
+        html代码简洁，原则上要求整个FORM表单须放入包围BOX中；<br/>
+        复选框需用 <code>.input</code>CLASS包围；<br/>
+        submit区域需用 <code>.form-actions</code>class包围
+        提示信息请使用 <code>.note</code> class
       </p>
     </div>
     <div class="span9">
-      <form class="well form-search">
-        <input type="text" class="input-medium search-query">
-        <button type="submit" class="btn">搜索</button>
-      </form>
+      <div class="box">
+        <div class="box-header">
+            <span class="title">基本表单</span>
+        </div>
+        <div class="box-content padded">
+            <form class="form-search">
+                <label>标签名称</label>
+                <input type="text" class="span3" placeholder="请输入文字..."> <span class="help-inline">相关提示信息</span>
+                <div class="note">
+                    <i class="icon-warning-sign"></i> 提示：这是一个提示提示啊哈
+                </div>
+                <div class="input">
+                    <label class="checkbox">
+                        <input type="checkbox" class="check" checked="checked"> 我是选项1
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-blue">保存更改</button>
+                    <button type="button" class="btn btn-default">取消</button>
+                </div>
+              </form>
+        </div>
+      </div>
 <pre class="prettyprint linenums">
-&lt;form class="well form-search"&gt;
-  &lt;input type="text" class="input-medium search-query"&gt;
-  &lt;button type="submit" class="btn"&gt;搜索&lt;/button&gt;
+&lt;form class="form-search"&gt;
+  &lt;label&gt;标签名称&lt;/label&gt;
+  &lt;input type="text" class="span3" placeholder="请输入文字..."&gt;
+  &lt;span class="help-inline"&gt;相关提示信息&lt;/span&gt;
+  &lt;div class="note"&gt;
+        &lt;i class="icon-warning-sign"&gt;&lt;/i&gt; 提示：这是一个提示提示啊哈
+    &lt;/div&gt;
+&lt;div class="input"&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox" checked="checked" &gt; 我是选项1
+  &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-actions"&gt;
+        &lt;button type="submit" class="btn btn-blue">保存更改&lt;/button&gt;
+        &lt;button type="button" class="btn btn-default">取消&lt;/button&gt;
+    &lt;/div>
 &lt;/form&gt;
 </pre>
     </div>
   </div> 
   <div class="row">
     <div class="span3">
-      <h3>行级表单</h3>
+      <h3>搜索表单</h3>
+      <p>
+	   使用 <code>.form-search</code> 圆化搜索文本框;input 输入框的大小用以下的CLASS来控制：<br/>
+        <code>.input-mini</code> 60px
+        <code>.input-small</code> 90px
+        <code>.input-medium</code> 150px 
+        <code>.input-large</code> 210px
+        <code>.input-xlarge</code> 270px
+        <code>.input-xxlarge</code> 530px
+      </p>
+    </div>
+    <div class="span9">
+        
+    <div class="box">
+        <div class="box-header">
+            <span class="title">搜索表单</span>
+        </div>
+        <div class="box-content padded">
+            <form class="form-search">
+            <div class="input-append">
+                <input type="text" class="search-query input-medium" placeholder="请输入您的订单号">
+                <button type="submit" class="btn">Search</button>
+            </div>
+        </form>
+        </div>
+      </div>
+      <!-- <form class="well form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn">搜索</button>
+      </form> -->
+<pre class="prettyprint linenums">
+&lt;form class="form-search"&gt;
+&lt;div class="input-append"&gt;
+  &lt;input type="text" class="input-medium search-query"&gt;
+  &lt;button type="submit" class="btn"&gt;搜索&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+    </div>
+  </div> 
+  <div class="row">
+    <div class="span3">
+      <h3>内联表单、块级表单</h3>
       <p>使用 <code>.form-inline</code> 和 <code>.form-horizontal</code> 将原始的块状文本框样式变成 inline-block。</p>
     </div>
     <div class="span9">
-      <form class="well form-inline">
-        <input type="text" class="input-small" placeholder="邮件">
-        <input type="password" class="input-small" placeholder="密码">
-        <label class="checkbox">
-          <input type="checkbox"> 记住我
-        </label>
-        <button type="submit" class="btn">登录</button>
-      </form>
+        <div class="box">
+        <div class="box-header">
+            <span class="title">内联表单</span>
+        </div>
+        <div class="box-content padded">
+            <form class="form-inline">
+                <input type="text" class="input-small" placeholder="邮件">
+                <input type="password" class="input-small" placeholder="密码">
+                <span class="input">
+                    <label class="checkbox">
+                      <input type="checkbox" class="check"> 记住我
+                    </label>
+                </span>
+                <button type="submit" class="btn">登录</button>
+              </form>
+        </div>
+      </div>
+      
 <pre class="prettyprint linenums">
-&lt;form class="well form-inline"&gt;
+&lt;form class="form-inline"&gt;
   &lt;input type="text" class="input-small" placeholder="邮件"&gt;
   &lt;input type="password" class="input-small" placeholder="密码"&gt;
-  &lt;label class="checkbox"&gt;
-    &lt;input type="checkbox"&gt; 记住我
-  &lt;/label&gt;
+  &lt;span class="input"&gt;
+    &lt;label class="checkbox"&gt;
+      &lt;input type="checkbox" class="check"&gt; 记住我
+    &lt;/label&gt;
+&lt;/span&gt;
   &lt;button type="submit" class="btn"&gt;登录&lt;/button&gt;
 &lt;/form&gt;
 </pre>
@@ -967,121 +1140,165 @@
   <h2>水平布局表单</h2>
   <div class="row">
     <div class="span8">
-      <form class="form-horizontal">
-        <fieldset>
-          <legend>Bootstrap支持的控件</legend>
-          <div class="control-group">
-            <label class="control-label" for="input01">文本输入框</label>
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="input01">
-              p class="help-block">
-		除了文本域之外，任何HTML5输入框都是该样式
-	      </p>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="optionsCheckbox">复选框</label>
-            <div class="controls">
-              <label class="checkbox">
-                <input type="checkbox" id="optionsCheckbox" value="option1">
-		选择异或不许&mdash;使用时最好给出选择的理由
-              </label>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="select01">选择框</label>
-            <div class="controls">
-              <select id="select01">
-                <option>请选择</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="multiSelect">复选框</label>
-            <div class="controls">
-              <select multiple="multiple" id="multiSelect">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="fileInput">上传框</label>
-            <div class="controls">
-              <input class="input-file" id="fileInput" type="file">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="textarea">文本域</label>
-            <div class="controls">
-              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
-            </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">保存更改</button>
-            <button class="btn">取消</button>
-          </div>
-        </fieldset>
-      </form>
-      <h3>标记的例子</h3>
-      <p>
-	根据上面的例子，这里将展示如何标记一个控件组。
-	需要用到 <code>.control-group</code>, <code>.control-label</code>, 和 <code>.controls</code> 类。
-      </p>
-<pre class="prettyprint linenums">
-&lt;form class="form-horizontal"&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;完善资料&lt;/legend&gt;
-    &lt;div class="control-group"&gt;
-      &lt;label class="control-label" for="input01"&gt;您的尊姓大名&lt;/label&gt;
-      &lt;div class="controls"&gt;
-        &lt;input type="text" class="input-xlarge" id="input01"&gt;
-        &lt;p class="help-block"&gt;字母，数字，汉字皆可&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="control-group"&gt;
-      &lt;label class="control-label" for="input01"&gt;您的twitter网址&lt;/label&gt;
-      &lt;div class="controls"&gt;
-        &lt;input type="text" class="input-xlarge" id="input01"&gt;
-        &lt;p class="help-block"&gt;请输入您的twitter网址，以便我们收录&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;
-</pre>
-
-    <form class="form-horizontal">
-      <fieldset>
-	<legend>完善资料</legend>
-	<div class="control-group">
-	  <label class="control-label" for="input01">您的尊姓大名</label>
-	  <div class="controls">
-	    <input type="text" class="input-xlarge" id="input01">
-	    <p class="help-block">字母，数字，汉字皆可</p>
-	  </div>
-	</div>
-
-	<div class="control-group">
-	  <label class="control-label" for="input01">您的twitter网址</label>
-	  <div class="controls">
-	    <input type="text" class="input-xlarge" id="input01">
-	    <p class="help-block">请输入您的twitter网址，以便我们收录</p>
-	  </div>
-	</div>
-      </fieldset>
-    </form>
-
+        <div class="box">
+        <div class="box-header">
+            <span class="title">表单</span>
+        </div>
+        <div class="box-content">
+            <form class="fill-up">
+                <ul class="padded separate-sections">
+                        <li class="input">
+                          <input type="text" placeholder="邮箱"/>
+                        </li>
+                        <li class="input">
+                          <input type="text" placeholder="收货地址"/>
+                        </li>
+                        <li class="clearfix">
+                          <div class="note pull-right">请确保密码安全</div>
+                        </li>
+                        <li class="input">
+                          <input type="file" name="img">
+                        </li>
+                        <li>
+                        <label>下拉式搜索：</label>
+                        <select class="chzn-select" name="colors">
+                            <option value="0">城市/地区/自治州</option><option value="205">武汉市</option><option value="206">黄石市</option><option value="207">十堰市</option><option value="208">宜昌市</option><option value="209">襄阳市</option><option value="210">鄂州市</option><option value="211">荆门市</option><option value="212">孝感市</option><option value="213">荆州市</option><option value="214">黄冈市</option><option value="215">咸宁市</option><option value="216">随州市</option><option value="217">恩施土家族苗族自治州</option><option value="218">省直辖县级行政单位</option>
+                        </select>
+                        </li>
+                        <li>
+                            <label>下拉式选择：</label>
+                            <select class="uniform" name="colors">
+                                <option value="0">区/县</option><option value="1971">江岸区</option><option value="1972">江汉区</option><option value="1973">硚口区</option><option value="1974">汉阳区</option><option value="1975">武昌区</option><option value="1976">青山区</option><option value="1977">洪山区</option><option value="1978">东西湖区</option><option value="1979">汉南区</option><option value="1980">蔡甸区</option><option value="1981">江夏区</option><option value="1982">黄陂区</option><option value="1983">新洲区</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>下拉式多选：</label>
+                            <select multiple="multiple" name="colors[]" class="chzn-select">
+                                <option value="0">省份/自治区</option>
+                                <option value="2" selected="selected">北京</option>
+                                <option value="3">天津</option>
+                                <option value="4">河北</option>
+                                <option value="5">山西</option>
+                                <option value="6">内蒙古</option>
+                                <option value="7">辽宁</option>
+                                <option value="8">吉林</option>
+                                <option value="9">黑龙江</option>
+                                <option value="10">上海</option>
+                                <option value="11">江苏</option>
+                                <option value="12">浙江</option>
+                                <option value="13">安徽</option>
+                                <option value="14">福建</option>
+                                <option value="15" selected="selected">江西</option>
+                                <option value="16">山东</option>
+                                <option value="17">河南</option>
+                                <option value="18">湖北</option>
+                                <option value="19">湖南</option>
+                                <option value="20">广东</option>
+                                <option value="21" selected="selected">广西</option>
+                                <option value="22">海南</option>
+                                <option value="23">重庆</option>
+                                <option value="24">四川</option>
+                                <option value="25">贵州</option>
+                                <option value="26">云南</option>
+                                <option value="27">西藏</option>
+                                <option value="28">陕西</option>
+                                <option value="29">甘肃</option>
+                                <option value="30">青海</option>
+                                <option value="31">宁夏</option>
+                                <option value="32">新疆</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <ul class="padded separate-sections">
+                        <li class="input">
+                          <textarea placeholder="This is a textarea" rows="6"></textarea>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <div class="input">
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="check" checked="checked"> 我是选项1
+                                        </label>
+                                    </div>
+                                    <div class="input">
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="check"> 我是选项2
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="span6">
+                                    <div class="input">
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="check"> 我是选项3
+                                        </label>
+                                    </div>
+                                    <div class="input">
+                                        <label class="checkbox">
+                                            <input type="checkbox" class="check" disabled="disabled"> (我是不可选的)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <input class="datepicker fill-up" type="text" placeholder="请选择日期">
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <div class="input">
+                                        <label class="radio">
+                                            <input type="radio" name="optionsRadios" value="option1" checked="checked">我是选项1
+                                        </label>
+                                    </div>
+                                    <div class="input">
+                                        <label class="radio">
+                                            <input type="radio" name="optionsRadios" value="option2">我是选项2
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="span6">
+                                    <div class="input">
+                                        <label class="radio">
+                                            <input type="radio" name="optionsRadios" value="option3">我是选项3
+                                        </label>
+                                    </div>
+                                    <div class="input">
+                                        <label class="radio">
+                                            <input type="radio" name="optionsRadios" value="option4" disabled="disabled">(我是不可选的)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="note large">
+                                        <i class="icon-warning-sign"></i> 提示：这是一个提示提示啊哈
+                                    </div>
+                                    <p>我是一段文字说明说明啊很长很长的啊</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-blue">保存更改</button>
+                    <button type="button" class="btn btn-default">取消</button>
+                    <div class="pull-right">
+                      <label class="checkbox">
+                        <input type="checkbox" class="check"> 有更新时通知我!
+                      </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     </div>
     <div class="span4">
       <h3>包含哪些控件</h3>
-      <p>左侧即是bootstrap支持的所有默认表单控件:</p>
+      <p>左侧即是BackendUI支持的所有默认表单控件:</p>
       <ul>
         <li>文本输入框 (文本，密码，邮件等等)</li>
         <li>复选框</li>
@@ -1092,9 +1309,11 @@
         <li>文本域</li>
       </ul>
       <hr>
-      <h3>2.0版对表单默认布局的改变</h3>
+      <h3>我们对BOOTSTRAP默认控件做了修改</h3>
       <p>
-	1.4版之前，Bootstrap使用水平布局做为默认表单样式。从2.0版开始，我们不再默认水平布局，而采用更灵活更易扩展的垂直式布局做为默认布局。
+	   应用了UNIFORM SELECT2等插件来优化表单的UI、用户体验等；使用JQUEYR 插件 datepicker来提供日历支持；<br/>
+       <code>.chzn-select</code> 所有须优化的SELECT控件必须添加此CLASS;<br/>
+       我们统一给需要使用UNIFORM优化的input,checkbox,radio等表单项 ：select.uniform, .check, .check :checkbox, input:radio, input:file, .dataTables_length select 会调用 <code>.uniform()</code>方法
       </p>
     </div>
   </div>
@@ -1103,93 +1322,96 @@
 
   <div class="row">
     <div class="span8">
-      <form class="form-horizontal">
-        <fieldset>
-          <legend>表单控件状态</legend>
-          <div class="control-group">
-            <label class="control-label" for="focusedInput">已获得焦点的输入框</label>
-            <div class="controls">
-              <input class="input-xlarge focused" id="focusedInput" type="text" value="已获得焦点">
+        <div class="box">
+            <div class="box-header">
+                <span class="title">表单项的状态</span>
             </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">不可编辑的输入框</label>
-            <div class="controls">
-              <span class="input-xlarge uneditable-input">不可编辑，只读</span>
+            <div class="box-content padded">
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="focusedInput">已获得焦点的输入框</label>
+                        <div class="controls">
+                          <input class="input-xlarge focused" id="focusedInput" type="text" value="已获得焦点">
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label">不可编辑的输入框</label>
+                        <div class="controls">
+                          <span class="input-xlarge uneditable-input">不可编辑，只读</span>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="disabledInput">被禁用的输入框</label>
+                        <div class="controls">
+                          <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="输入框被禁用" disabled>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="optionsCheckbox2">被禁用的复选框</label>
+                        <div class="controls">
+                          <label class="checkbox">
+                            <input type="checkbox" id="optionsCheckbox2" value="option1" disabled>
+                            被禁用
+                          </label>
+                        </div>
+                      </div>
+                      <div class="control-group warning">
+                        <label class="control-label" for="inputWarning">Warning状态的输入框</label>
+                        <div class="controls">
+                          <input type="text" id="inputWarning">
+                          <span class="help-inline">警告信息</span>
+                        </div>
+                      </div>
+                      <div class="control-group error">
+                        <label class="control-label" for="inputError">Error状态的输入框</label>
+                        <div class="controls">
+                          <input type="text" id="inputError">
+                          <span class="help-inline">错误信息</span>
+                        </div>
+                      </div>
+                      <div class="control-group success">
+                        <label class="control-label" for="inputSuccess">Success状态的输入框</label>
+                        <div class="controls">
+                          <input type="text" id="inputSuccess">
+                          <span class="help-inline">耶！</span>
+                        </div>
+                      </div>
+                      <div class="control-group success">
+                        <label class="control-label" for="selectError">Success状态的下拉框</label>
+                        <div class="controls">
+                          <select id="selectError">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                          <span class="help-inline">耶！</span>
+                        </div>
+                      </div>
+                  </form>
             </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="disabledInput">被禁用的输入框</label>
-            <div class="controls">
-              <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="输入框被禁用" disabled>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="optionsCheckbox2">被禁用的复选框</label>
-            <div class="controls">
-              <label class="checkbox">
-                <input type="checkbox" id="optionsCheckbox2" value="option1" disabled>
-                被禁用
-              </label>
-            </div>
-          </div>
-          <div class="control-group warning">
-            <label class="control-label" for="inputWarning">Warning状态的输入框</label>
-            <div class="controls">
-              <input type="text" id="inputWarning">
-              <span class="help-inline">警告信息</span>
-            </div>
-          </div>
-          <div class="control-group error">
-            <label class="control-label" for="inputError">Error状态的输入框</label>
-            <div class="controls">
-              <input type="text" id="inputError">
-              <span class="help-inline">错误信息</span>
-            </div>
-          </div>
-          <div class="control-group success">
-            <label class="control-label" for="inputSuccess">Success状态的输入框</label>
-            <div class="controls">
-              <input type="text" id="inputSuccess">
-              <span class="help-inline">耶！</span>
-            </div>
-          </div>
-          <div class="control-group success">
-            <label class="control-label" for="selectError">Success状态的下拉框</label>
-            <div class="controls">
-              <select id="selectError">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-              <span class="help-inline">耶！</span>
-            </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">保存更改</button>
-            <button class="btn">取消</button>
-          </div>
-        </fieldset>
-      </form>
+        </div>
     </div>
     <div class="span4">
       <h3>重新设计的浏览器状态</h3>
       <p>
-	Bootstrap重新设计了浏览器本身所定义的 <code>focused</code> 和 <code>disabled</code> 状态。
+	BackendUI延用了Bootstrap重新设计浏览器本身所定义的 <code>focused</code> 和 <code>disabled</code> 状态。
 	我们去除了Webkit默认的 <code>outline</code> 并对 <code>:focus</code> 状态应用了 <code>box-shadow</code> 。
       </p>
       <hr>
       <h3>表单验证</h3>
       <p>
-	Bootstrap还包含error,warning,success的验证样式。使用时将error类添加到控件外层的 <code>.control-group</code> 元素上即可。
+	包含error,warning,success的验证样式。使用时将error类添加到控件外层的 <code>.control-group</code> 元素上即可。
       </p>
+      <div class="note">
+            <i class="icon-warning-sign"></i> 提示：建议应用此类表单时，使用原生的BOOTSTARP方法
+        </div>
 <pre class="prettyprint linenums">
-&lt;fieldset
+&lt;form&gt;
   class="control-group error"&gt;
   …
-&lt;/fieldset&gt;
+&lt;/form&gt;
 </pre>
     </div>
   </div>
@@ -1789,24 +2011,40 @@
 
     <!-- Le javascript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> --> 
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/google-code-prettify/prettify.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
-    <script src="assets/js/bootstrap-alert.js"></script>
-    <script src="assets/js/bootstrap-modal.js"></script>
-    <script src="assets/js/bootstrap-dropdown.js"></script>
-    <script src="assets/js/bootstrap-scrollspy.js"></script>
-    <script src="assets/js/bootstrap-tab.js"></script>
-    <script src="assets/js/bootstrap-tooltip.js"></script>
-    <script src="assets/js/bootstrap-popover.js"></script>
-    <script src="assets/js/bootstrap-button.js"></script>
-    <script src="assets/js/bootstrap-collapse.js"></script>
-    <script src="assets/js/bootstrap-carousel.js"></script>
-    <script src="assets/js/bootstrap-typeahead.js"></script>
-    <script src="assets/js/application.js"></script>
+    <!-- Placed at the end of the document so the pages load faster-->
+    <!-- 通过CAT合并 UGLIFY 压缩BOOTSTRAP内置JS插件 包含以下文件 
+    jquery.js bootstrap-transition.js bootstrap-alert.js bootstrap-modal.js bootstrap-dropdown.js bootstrap-scrollspy.js bootstrap-tab.js bootstrap-tooltip.js bootstrap-popover.js bootstrap-button.js bootstrap-collapse.js bootstrap-carousel.js bootstrap-typeahead.js bootstrap-datepicker.js bootstrap-datepicker.zh-CN.js-->
+    <script src="assets/js/bootstrap.min.js"></script>
 
+    <!-- 表单美化插件 -->
+    <script src="assets/js/jquery.uniform.js"></script>
+    <!-- 非常强大的SELECT插件 http://ivaynberg.github.io/select2/ -->
+    <script src="assets/js/select2.js"></script>
+    <!-- jquery 日历插件 -->
+    <script src="assets/js/jquery.validationEngine.js"></script>
+    <script src="assets/js/jquery.validationEngine-zh_CN.js"></script>
+    <!-- 用来生成静态或动态波谱图表效果 -->
+    <script src="assets/js/jquery.sparkline.js"></script>
+    <!-- 多功能表格插件 -->
+    <script src="assets/js/jquery.dataTables.js"></script>
+    <!-- 相册 支持TOUCH -->
+    <script src="assets/js/touchTouch.jquery.js"></script>
+    <!-- 泡泡消息 -->
+    <script src="assets/js/jquery.gritter.js"></script>
+    <!-- highcharts绘图 包含highcharts.js exporting.js -->
+    <script src="assets/js/highcharts.js"></script>
+    <script src="assets/js/exporting.js"></script>
+    <!-- googel代码美化 -->
+    <script src="assets/js/google-code-prettify/prettify.js"></script>  
+    <!-- 页面应用层JS文件 -->
+    <script src="assets/js/application.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("select.uniform, .check, .check :checkbox, input:radio, input:file, .dataTables_length select").uniform();
+            $(".chzn-select").select2();
+            $(".datepicker").datepicker({todayBtn:!0});
+        })
+    </script>
 
   </body>
 </html>

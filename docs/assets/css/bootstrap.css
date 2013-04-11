@@ -7734,7 +7734,8 @@ form {
 .input-prepend input[type="email"],
 .input-prepend input[type="number"] {
   height: 100%;
-  width: 100%;
+  /*width: 100%;
+*/
   z-index: 1;
   border-radius: 4px;
 }

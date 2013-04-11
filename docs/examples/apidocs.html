@@ -185,7 +185,7 @@
 				</div>
 		    </div>
   		</div>
-  		<form class="form-search span6">
+  		<form class="form-search">
   			<div class="input-append">
 	  			<input type="text" class="search-query" placeholder="请输入您的订单号" />
 	  			<button type="submit" class="btn">Search</button>
@@ -3683,7 +3683,7 @@
     <!-- 通过CAT合并 UGLIFY 压缩BOOTSTRAP内置JS插件 包含以下文件 
     jquery.js bootstrap-transition.js bootstrap-alert.js bootstrap-modal.js bootstrap-dropdown.js bootstrap-scrollspy.js bootstrap-tab.js bootstrap-tooltip.js bootstrap-popover.js bootstrap-button.js bootstrap-collapse.js bootstrap-carousel.js bootstrap-typeahead.js bootstrap-datepicker.js bootstrap-datepicker.zh-CN.js-->
     <script src="../assets/js/bootstrap.min.js"></script>
-    
+
     <!-- 表单美化插件 -->
     <script src="../assets/js/jquery.uniform.js"></script>
     <!-- 非常强大的SELECT插件 http://ivaynberg.github.io/select2/ -->
@@ -3713,35 +3713,7 @@
 	    	bSortClasses: true,
 	    	sPaginationType:"full_numbers",
 	    	sDom:'<"table-header"fl>t<"table-footer"ip>'});
-
-	    //dataTables build with json or array
-	    /*$(".dTabletest").dataTable({bJQueryUI:!1,bAutoWidth:!1,sPaginationType:"full_numbers",
-		    "aaData": [
-		      {
-		        "engine":   "Trident",
-		        "browser":  "Internet Explorer 4.0",
-		        "platform": "Win 95+",
-		        "version":  4,
-		        "grade":    "X"
-		      },
-		      {
-		        "engine":   "Trident",
-		        "browser":  "Internet Explorer 5.0",
-		        "platform": "Win 95+",
-		        "version":  5,
-		        "grade":    "C"
-		      }
-		    ],
-		    "aoColumns": [
-		      { "sTitle": "Engine",   "mData": "engine" },
-		      { "sTitle": "Browser",  "mData": "browser" },
-		      { "sTitle": "Platform", "mData": "platform" },
-		      { "sTitle": "Version",  "mData": "version" },
-		      { "sTitle": "Grade",    "mData": "grade" }
-		    ]
-  		});*/
-
-
+ 
 	    $("select.uniform, .check, .check :checkbox, input:radio, input:file, .dataTables_length select").uniform();
 	   	$(".chzn-select").select2();
 	   	$("form.validatable").validationEngine({promptPosition:"topLeft"});
