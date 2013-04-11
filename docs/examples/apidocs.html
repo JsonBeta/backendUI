@@ -111,17 +111,6 @@
 			    <div class="sparkline big" data-color="green"><!--6,27,28,11,7,5,22,4,11,14,16,28--></div>
 			</div>
 		</div>
-		<div class="divider"><span></span></div>
-		<div class="padded" style="text-align: center">
-		  <div class="easy-pie-chart" style="display: inline-block" data-percent="73"><span>73%</span></div>
-		  <div>CPU Load</div>
-		</div>
-		<div class="divider"><span></span></div>
-        <!-- Sidebar datepicker -->
-        <div class="datepicker"></div>
-        <div class="divider"><span></span></div>
-        <!-- Sidebar tags line -->
-        <input type="text" id="tags" name="tags" class="tags" value="锤子,小米,苹果" />
 	</div>
 	<!-- E 侧边栏导航 -->
 	<!-- S 主要内容区域 -->
@@ -281,10 +270,6 @@
 							                        <option value="31">宁夏</option>
 							                        <option value="32">新疆</option>
 							                    </select>
-							                </li>
-							                <li class="input">
-							                  <label>标签：</label>
-							                  <textarea class="tags" placeholder="This is a textarea">标签1,标签2,标签3</textarea>
 							                </li>
 							          	</ul>
 									</div>
@@ -3680,15 +3665,6 @@
 		      </div>
 		    </div>
 		    <div class="box">
-		      <div class="box-header"><span class="title">简单的饼图</span></div>
-		      <div class="box-content padded separate-sections" style="text-align: center">
-		        <div class="easy-pie-chart" style="display: inline-block; margin-left: 20px;" data-percent="89"><span>89%</span></div>
-		        <div class="easy-pie-chart" style="display: inline-block; margin-left: 20px;" data-percent="73" data-color="orange"><span>73%</span></div>
-		        <div class="easy-pie-chart" style="display: inline-block; margin-left: 20px;" data-percent="33" data-color="green"><span>33%</span></div>
-		        <div class="easy-pie-chart" style="display: inline-block; margin-left: 20px;" data-percent="64" data-color="blue"><span>64%</span></div>
-		      </div>
-		    </div>
-		    <div class="box">
 		      <div class="box-header"><span class="title">柱状图</span></div>
 		      <div class="box-content padded">
 		        <div id="hightcharts_column"></div>
@@ -3703,35 +3679,27 @@
 	<!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
-
     
-    <script src="../assets/js/bootstrap-datepicker.js"></script>
-    <script src="../assets/js/bootstrap-datepicker.zh-CN.js"></script>
+    <!-- 通过CAT合并 UGLIFY 压缩BOOTSTRAP内置JS插件 包含以下文件 
+    jquery.js bootstrap-transition.js bootstrap-alert.js bootstrap-modal.js bootstrap-dropdown.js bootstrap-scrollspy.js bootstrap-tab.js bootstrap-tooltip.js bootstrap-popover.js bootstrap-button.js bootstrap-collapse.js bootstrap-carousel.js bootstrap-typeahead.js bootstrap-datepicker.js bootstrap-datepicker.zh-CN.js-->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    
+    <!-- 表单美化插件 -->
     <script src="../assets/js/jquery.uniform.js"></script>
+    <!-- 非常强大的SELECT插件 http://ivaynberg.github.io/select2/ -->
     <script src="../assets/js/select2.js"></script>
-    <script src="../assets/js/jquery.tagsinput.js"></script>
+    <!-- jquery 日历插件 -->
     <script src="../assets/js/jquery.validationEngine.js"></script>
     <script src="../assets/js/jquery.validationEngine-zh_CN.js"></script>
-    <script src="../assets/js/jquery.easy-pie-chart.js"></script>
-    <script src="../assets/js/raphael.2.1.0.min.js"></script>
-    <script src="../assets/js/justgage.js"></script>
+    <!-- 用来生成静态或动态波谱图表效果 -->
     <script src="../assets/js/jquery.sparkline.js"></script>
+    <!-- 多功能表格插件 -->
     <script src="../assets/js/jquery.dataTables.js"></script>
+    <!-- 相册 支持TOUCH -->
     <script src="../assets/js/touchTouch.jquery.js"></script>
+    <!-- 泡泡消息 -->
     <script src="../assets/js/jquery.gritter.js"></script>
+    <!-- highcharts绘图 包含highcharts.js exporting.js -->
     <script src="../assets/js/highcharts.js"></script>
     <script src="../assets/js/exporting.js"></script>
 
@@ -3776,7 +3744,6 @@
 
 	    $("select.uniform, .check, .check :checkbox, input:radio, input:file, .dataTables_length select").uniform();
 	   	$(".chzn-select").select2();
-	    $(".tags").tagsInput({width:"100%",height:""});
 	   	$("form.validatable").validationEngine({promptPosition:"topLeft"});
 	    $(".datepicker").datepicker({todayBtn:!0});
 
@@ -3798,25 +3765,10 @@
         	}
     	};
     	var t=[];
-    	$(".justgage").each(function(){
-   			var e,n,r;
-    		return r=$(this).attr("data-labels")||!0,e=$(this).attr("data-gauge-width-scale")||1,n=$(this).attr("data-animation-type")||"linear",t.push(new JustGage({id:$(this).attr("id"),min:0,max:100,title:$(this).attr("data-title"),value:getRandomInt(1,80),label:"",levelColorsGradient:!1,showMinMax:r,gaugeWidthScale:e,startAnimationTime:1e3,startAnimationType:">",refreshAnimationTime:1e3,refreshAnimationType:n,levelColors:[Theme.colors.green,Theme.colors.orange,Theme.colors.red]}))
-    	});
+    	
    		setInterval(function(){
             return $(t).each(function(){return this.refresh(getRandomInt(0,80))})
         },2500)
-    	$(".easy-pie-chart").each(function(){
-    		var e;
-    		return e=Theme.colors[$(this).attr("data-color")]||Theme.colors.red,$(this).easyPieChart({lineWidth:10,size:150,lineCap:"square",barColor:e,scaleColor:Theme.colors.gray,animate:1e3})
-    	});
-    	$(".easy-pie-chart-small").each(function(){
-    		var e;
-    		return e=Theme.colors[$(this).attr("data-color")]||Theme.colors.red,$(this).easyPieChart({lineWidth:4,size:40,lineCap:"square",barColor:e,animate:1e3})
-    	});
-    	setInterval(function(){
-    		return $(".easy-pie-chart").each(function(){
-    		var e;return e=getRandomInt(0,80),$(this).data("easyPieChart").update(e),$(this).find("span").text(""+e+"%")})
-    	},2500);
 
     	//gritter growl plugin
 		var Growl=function(){

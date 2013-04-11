@@ -6884,67 +6884,6 @@ disabled look for already selected choices in the results dropdown
     background-position: 100% -21px !important;
   }
 }
-div.tagsinput {
-  border: 1px solid #CCC;
-  background: #FFF;
-  padding: 5px;
-  width: 300px;
-  height: 100px;
-  overflow-y: auto;
-}
-div.tagsinput span.tag {
-  /* border: 1px solid #a5d24a; -moz-border-radius:2px; -webkit-border-radius:2px; display: block; float: left; padding: 5px; text-decoration:none; background: #cde69c; color: #638421; margin-right: 5px; margin-bottom:5px;font-family: helvetica;  font-size:13px;*/
-
-  display: block;
-  float: left;
-  padding: 0 8px;
-  margin: 5px 5px 5px 5px;
-  line-height: 23px;
-  font-size: 11px;
-  border: 1px solid #d2d2d2;
-  background-color: #f8f8f8;
-  background-image: -moz-linear-gradient(top, #fcfcfc, #f2f2f2);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#f2f2f2));
-  background-image: -webkit-linear-gradient(top, #fcfcfc, #f2f2f2);
-  background-image: -o-linear-gradient(top, #fcfcfc, #f2f2f2);
-  background-image: linear-gradient(to bottom, #fcfcfc, #f2f2f2);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcfcfc', endColorstr='#fff2f2f2', GradientType=0);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-div.tagsinput span.tag a {
-  font-weight: 600;
-  font-size: 11px;
-  float: right;
-}
-div.tagsinput input {
-  width: 80px;
-  margin: 0px;
-  font-family: helvetica;
-  font-size: 13px;
-  border: 1px solid transparent;
-  padding: 5px;
-  background: transparent;
-  color: #000;
-  outline: 0px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-div.tagsinput div {
-  display: block;
-  float: left;
-}
-.tags_clear {
-  clear: both;
-  width: 100%;
-  height: 0px;
-}
-.not_valid {
-  background: #FBD8DB !important;
-  color: #90111A !important;
-}
 /* Z-INDEX */
 .formError {
   z-index: 990;
@@ -10090,12 +10029,6 @@ div.selector:after {
   /*width: 200px;*/
 
 }
-.secondary-sidebar .tagsinput {
-  background: none;
-  border: none;
-  padding: 0 8px;
-  margin: -3px 0;
-}
 .area-top .avatar img {
   border: 2px solid white;
   width: 40px;
@@ -10249,26 +10182,6 @@ div.selector:after {
   height: 9px;
   display: block;
   top: -4px;
-}
-.justgage.small {
-  width: 90px;
-  height: 70px;
-}
-.justgage {
-  width: 200px;
-  height: 160px;
-  display: inline-block;
-}
-.easyPieChart {
-  position: relative;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-}
-.easyPieChart canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .accordion {
   -webkit-border-radius: 4px;
@@ -10562,15 +10475,6 @@ div.selector:after {
   background-image: linear-gradient(to bottom, #83da05, #74c104);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff83da05', endColorstr='#ff74c104', GradientType=0);
-}
-.easyPieChart {
-  position: relative;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-}
-.easyPieChart.easy-pie-chart-small {
-  font-size: 10px;
 }
 form.fill-up {
   -webkit-box-sizing: border-box;
