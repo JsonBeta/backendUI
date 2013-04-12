@@ -26,16 +26,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="./index.html">Bootstrap</a>
+          <a class="brand" href="./index.html">BackendUI API</a>
           <div class="nav-collapse">
-	    <ul class="nav">
+            <ul class="nav">
               <li class="">
                 <a href="./index.html">概述</a>
               </li>
-              <li class="">
-                <a href="./scaffolding.html">框架</a>
+              <li>
+                <a href="./scaffolding.html">Layout</a>
               </li>
-              <li class="">
+              <li>
                 <a href="./base-css.html">基础CSS</a>
               </li>
               <li class="active">
@@ -47,7 +47,6 @@
               <li class="">
                 <a href="./less.html">使用LESS</a>
               </li>
-              
             </ul>
           </div>
         </div>
@@ -61,7 +60,7 @@
 <header class="jumbotron subhead" id="overview">
   <h1>组件</h1>
   <p class="lead">
-    Bootstrap内置几十种高可用的组件，以实现导航栏，通知，弹出框等功能。
+    BackendUI集成了Bootstrap内置几十种高可用的组件，以实现导航栏，通知，弹出框等功能。
   </p>
   <div class="subnav">
     <ul class="nav nav-pills">
@@ -133,16 +132,16 @@
       </p>
       <div class="">
         <div class="btn-group" style="margin: 9px 0;">
-          <button class="btn">左</button>
-          <button class="btn">中</button>
-          <button class="btn">右</button>
+          <button class="btn btn-green">左</button>
+          <button class="btn btn-green">中</button>
+          <button class="btn btn-green">右</button>
         </div>
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
-  &lt;button class="btn"&gt;1&lt;/button&gt;
-  &lt;button class="btn"&gt;2&lt;/button&gt;
-  &lt;button class="btn"&gt;3&lt;/button&gt;
+  &lt;button class="btn btn-green"&gt;左&lt;/button&gt;
+  &lt;button class="btn btn-green"&gt;中&lt;/button&gt;
+  &lt;button class="btn btn-green"&gt;右&lt;/button&gt;
 &lt;/div&gt;
 </pre>
       <h3>工具条的例子</h3>
@@ -151,10 +150,10 @@
       </p>
       <div class="btn-toolbar">
         <div class="btn-group">
-          <button class="btn">1</button>
-          <button class="btn">2</button>
-          <button class="btn">3</button>
-          <button class="btn">4</button>
+          <button class="btn btn-blue">1</button>
+          <button class="btn btn-blue">2</button>
+          <button class="btn btn-blue">3</button>
+          <button class="btn btn-blue">4</button>
         </div>
         <div class="btn-group">
           <button class="btn">5</button>
@@ -213,7 +212,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">动作 <span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -223,7 +222,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">危险 <span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -233,7 +232,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
       </div>
       <div class="btn-toolbar">
         <div class="btn-group">
@@ -245,7 +244,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">成功 <span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -255,7 +254,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">信息 <span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -265,7 +264,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">逆操作 <span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -275,8 +274,8 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
-      </div><!-- /btn-toolbar -->
+        </div>
+      </div>
     </div>
     <div class="span8">
       <h3>标记例子</h3>
@@ -312,7 +311,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">小按钮 <span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -322,7 +321,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">迷你按钮 <span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -332,8 +331,8 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
-      </div><!-- /btn-toolbar -->
+        </div>
+      </div>
     </div><!--/span-->
     <div class="span4">
       <h3>需要Javascript</h3>
@@ -347,7 +346,7 @@
   </div><!--/row-->
   <br>
 
-  <h2>带间隔的下拉按钮</h2>
+  <h2>按钮动作与下拉按钮动作集成</h2>
   <div class="row">
     <div class="span4">
       <h3>简介和例子</h3>
@@ -365,7 +364,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-primary">动作</button>
           <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
@@ -376,7 +375,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-danger">危险</button>
           <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
@@ -387,7 +386,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
       </div>
       <div class="btn-toolbar">
         <div class="btn-group">
@@ -400,7 +399,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-success">成功</button>
           <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
@@ -411,7 +410,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group">
           <button class="btn btn-info">信息</button>
           <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
@@ -422,7 +421,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
       </div>
       <div class="btn-toolbar">
         <div class="btn-group">
@@ -435,8 +434,8 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
-      </div><!-- /btn-toolbar -->
+        </div>
+      </div>
       <h3>尺寸</h3>
       <p>
 	使用 <code>.btn-mini</code>, <code>.btn-small</code>, 和 <code>.btn-large</code> 指定大小。
@@ -452,8 +451,8 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
-      </div><!-- /btn-toolbar -->
+        </div>
+      </div>
       <div class="btn-toolbar">
         <div class="btn-group">
           <button class="btn btn-small">小按钮</button>
@@ -465,8 +464,8 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
-      </div><!-- /btn-toolbar -->
+        </div>
+      </div>
       <div class="btn-toolbar">
         <div class="btn-group">
           <button class="btn btn-mini">迷你按钮</button>
@@ -478,8 +477,8 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
-      </div><!-- /btn-toolbar -->
+        </div>
+      </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
   ...
@@ -520,7 +519,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
         <div class="btn-group dropup">
           <button class="btn primary">上弹按钮(右对齐)</button>
           <button class="btn primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
@@ -531,7 +530,7 @@
             <li class="divider"></li>
             <li><a href="#">被间隔的链接</a></li>
           </ul>
-        </div><!-- /btn-group -->
+        </div>
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group dropup"&gt;

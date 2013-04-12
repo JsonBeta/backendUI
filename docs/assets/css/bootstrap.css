@@ -1066,7 +1066,8 @@ textarea::-webkit-input-placeholder {
 .radio,
 .checkbox {
   min-height: 24px;
-  padding-left: 20px;
+  /*padding-left: 20px;*/
+
 }
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {
@@ -1109,6 +1110,7 @@ textarea::-webkit-input-placeholder {
 input[class*="span"],
 select[class*="span"],
 textarea[class*="span"],
+div[class*="span"].select2-container,
 .uneditable-input[class*="span"],
 .row-fluid input[class*="span"],
 .row-fluid select[class*="span"],
@@ -7671,7 +7673,8 @@ form {
 .input-prepend span.add-on {
   min-width: 36px;
   color: #5a6573;
-  position: absolute;
+  /*position: absolute;*/
+
   height: 100%;
   z-index: 2;
   box-shadow: inset 0 1px 2px #fff;
@@ -7737,7 +7740,8 @@ form {
   /*width: 100%;
 */
   z-index: 1;
-  border-radius: 4px;
+  /*border-radius: @baseBorderRadius*/
+
 }
 .box .input-append,
 .box .input-prepend {
@@ -7878,32 +7882,6 @@ div.selector select {
   left: 0;
   font-size: 12px;
   border: solid 1px #ffffff;
-}
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
-  box-shadow: 0 1px 0 white;
-  border-radius: 0;
-  font-size: 12px;
-  color: #858585;
-  padding: 0 0 0 5px;
-  border: 1px solid #d7d7d7;
-  display: inline-block;
-  background: #fdfdfd;
-  height: 26px;
 }
 textarea:focus,
 input[type="text"]:focus,
@@ -10529,25 +10507,17 @@ form.fill-up * {
 .input-append span.add-on,
 .input-prepend a.add-on,
 .input-prepend span.add-on {
-  min-width: 36px;
-  color: #5a6573;
-  position: absolute;
-  height: 100%;
-  z-index: 2;
-  -webkit-box-shadow: inset 0 1px 2px white;
-  -moz-box-shadow: inset 0 1px 2px white;
-  box-shadow: inset 0 1px 2px white;
-  border: 1px solid #ccc;
-  background-color: #f2f2f2;
-  background-image: -moz-linear-gradient(top, #f8f8f8, #e8e8e8);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8f8f8), to(#e8e8e8));
-  background-image: -webkit-linear-gradient(top, #f8f8f8, #e8e8e8);
-  background-image: -o-linear-gradient(top, #f8f8f8, #e8e8e8);
-  background-image: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#ffe8e8e8', GradientType=0);
-  padding-left: 10px;
-  padding-right: 10px;
+  /*min-width: 36px;
+	color: #5a6573;
+	position: absolute;
+	height: 100%;
+	z-index: 2;
+	.box-shadow(~'inset 0 1px 2px white');
+	border: 1px solid #ccc;
+	#gradient > .vertical(@startColor: #f8f8f8, @endColor: #e8e8e8);
+	padding-left: 10px;
+	padding-right: 10px;*/
+
 }
 textarea,
 input[type="text"],
@@ -10568,9 +10538,8 @@ input[type="color"],
   -webkit-box-shadow: 0 1px 0 white;
   -moz-box-shadow: 0 1px 0 white;
   box-shadow: 0 1px 0 white;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  /*.border-radius(0 4px 4px 0);*/
+
   font-size: 11px;
   color: #858585;
   padding: 0 0 0 5px;

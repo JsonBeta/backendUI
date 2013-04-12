@@ -282,7 +282,7 @@ form {
 .input-append a.add-on,.input-append span.add-on,.input-prepend a.add-on,.input-prepend span.add-on {
 	min-width: 36px;
 	color: #5a6573;
-	position: absolute;
+	/*position: absolute;*/
 	height: 100%;
 	z-index: 2;
 	box-shadow: inset 0 1px 2px #fff;
@@ -335,7 +335,7 @@ form {
 	height: 100%;
 	/*width: 100%;
 */	z-index: 1;
-	border-radius: @baseBorderRadius
+	/*border-radius: @baseBorderRadius*/
 }
 
 .box .input-append,.box .input-prepend {
@@ -487,17 +487,6 @@ div.selector select {
 	border: solid 1px #fff
 }
 
-textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"],.uneditable-input {
-	box-shadow: 0 1px 0 white;
-	border-radius: 0;
-	font-size: 12px;
-	color: #858585;
-	padding: 0 0 0 5px;
-	border: 1px solid #d7d7d7;
-	display: inline-block;
-	background: #fdfdfd;
-	height: 26px
-}
 textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus,.uneditable-input:focus {
 	border-color: rgba(82,168,236,0.8);
 	outline: 0;
