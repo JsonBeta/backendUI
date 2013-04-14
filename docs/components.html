@@ -74,17 +74,17 @@
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">导航 <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#navs">导航，标签页，胶囊链接</a></li>
+          <li><a href="#navs">导航栏，TAB标签切换</a></li>
           <li><a href="#navbar">导航条</a></li>
-          <li><a href="#breadcrumbs">面包屑导航栏</a></li>
-          <li><a href="#pagination">分页</a></li>
+          <li><a href="#breadcrumbs">面包屑</a></li>
+          <li><a href="#pagination">翻页</a></li>
         </ul>
       </li>
-      <li><a href="#labels">标签</a></li>
-      <li><a href="#badges">标记</a></li>
+      <li><a href="#labels">内联标记标签</a></li>
+      <li><a href="#badges">标号</a></li>
       <li><a href="#typography">排版</a></li>
-      <li><a href="#thumbnails">缩略图</a></li>
-      <li><a href="#alerts">警告</a></li>
+<!--       <li><a href="#thumbnails">缩略图</a></li>
+ -->      <li><a href="#alerts">通知</a></li>
       <li><a href="#progress">进度条</a></li>
       <li><a href="#misc">杂项</a></li>
     </ul>
@@ -554,7 +554,7 @@
 ================================================== -->
 <section id="navs">
   <div class="page-header">
-    <h1>导航，标签页，胶囊链接 <small>定制性强的列表导航</small></h1>
+    <h1>导航栏，TAB标签切换<small>定制性强的列表导航</small></h1>
   </div>
 
   <h2>轻巧的默认项 <small>同样的标记，不同的类</small></h2>
@@ -562,11 +562,11 @@
     <div class="span4">
       <h3>强大的基类</h3>
       <p>
-	所有的导航组件，诸如标签页/胶囊链接/列表，<strong>使用同样的标记和样式</strong> - <code>.nav</code> 类。
+	所有的导航组件，TAB标签和带背景的链接/列表，<strong>使用同样的标记和样式</strong> - <code>.nav</code> 类。
       </p>
-      <h3>何时适用</h3>
+      <h3>应用场景</h3>
       <p>
-	标签页和胶囊链接非常适合内容片段的切换，或是相关内容的页面导航。
+	TAB标签和带背景的链接非常适合内容片段的切换，或是相关内容的页面导航。
       </p>
       <h3>组件对齐</h3>
       <p>
@@ -574,7 +574,7 @@
       </p>
     </div>
     <div class="span4">
-      <h3>基本的标签页</h3>
+      <h3>基本的TAB标签</h3>
       <p>
 	对存放链接的 <code>&lt;ul&gt;</code> 应用 <code>.nav-tabs</code> ：
       </p>
@@ -594,7 +594,7 @@
 </pre>
     </div>
     <div class="span4">
-      <h3>基本的胶囊链接</h3>
+      <h3>基本带背景的链接</h3>
       <p>
 	HTML不变，使用 <code>.nav-pills</code> ：
       </p>
@@ -615,16 +615,16 @@
     </div>
   </div>
 
-  <h2>叠放式导航 <small>竖直排放标签和胶囊链接</small></h2>
+  <h2>垂直导航</h2>
   <div class="row">
     <div class="span4">
-      <h3>如何叠放</h3>
+      <h3>如何垂直</h3>
       <p>
-	默认情况下标签和胶囊链接是水平排放的，使用 <code>.nav-stacked</code> 就可以将其变成竖直叠放。
+	默认情况下NAV标签和NAV链接是水平排放的，使用 <code>.nav-stacked</code> 就可以将其变成竖直叠放。
       </p>
     </div>
     <div class="span4">
-      <h3>叠放式标签</h3>
+      <h3>垂直nav导航</h3>
       <ul class="nav nav-tabs nav-stacked">
         <li class="active"><a href="#">首页</a></li>
         <li><a href="#">介绍</a></li>
@@ -637,7 +637,7 @@
 </pre>
     </div>
     <div class="span4">
-      <h3>叠放式胶囊链接</h3>
+      <h3>垂直nav导航-带背景</h3>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#">首页</a></li>
         <li><a href="#">介绍</a></li>
@@ -651,19 +651,10 @@
     </div>
   </div>
 
-  <h2>下拉项 <small>改良的导航组件</small></h2>
+  <h2>下拉项 <small>带下拉的导航组件；详见 <a href="./javascript.html#tabs">javascript插件初始化下拉项</a> 。</small></h2>
   <div class="row">
-    <div class="span4">
-      <h3>易用的富内容菜单</h3>
-      <p>
-	在Bootstrap中，创建标签和胶囊链接中的下拉菜单非常方便，仅需极少的HTML和一个轻巧的jQuery插件。
-      </p>
-      <p>
-	详见 <a href="./javascript.html#tabs">初始化下拉项</a> 。
-      </p>
-    </div>
-    <div class="span4">
-      <h3>带下拉项的标签页</h3>
+    <div class="span6">
+      <h3>带下拉项的导航</h3>
       <ul class="nav nav-tabs">
         <li class="active"><a href="#">首页</a></li>
         <li><a href="#">帮助</a></li>
@@ -704,8 +695,8 @@
 &lt;/ul&gt;
 </pre>
     </div>
-    <div class="span4">
-      <h3>带下拉的胶囊链接</h3>
+    <div class="span6">
+      <h3>带下拉的LAB标签导航</h3>
       <ul class="nav nav-pills">
         <li class="active"><a href="#">首页</a></li>
         <li><a href="#">帮助</a></li>
@@ -748,17 +739,10 @@
     </div>
   </div>
 
-  <h2>导航列表 <small>构建简单的叠放式导航，适用于侧边栏</small></h2>
+  <h2>垂直导航扩展 <small>构建简单的垂直导航，适用于侧边栏</small></h2>
   <div class="row">
     <div class="span4">
-      <h3>应用风格（application-style）的导航</h3>
-      <p>
-	导航列表可以便捷地创建带有标头(可选)的导航链接组，非常适合用做侧边栏（与OS X中的Finder类似）。
-      </p>
-      <p>
-	从结构上看，其与标签和胶囊链接无异，都使用同样的导航样式，所以用法和定制都一样简洁。
-      </p>
-      <hr>
+      <h3>应用风格的导航</h3>
       <h4>使用图标</h4>
       <p>
 	在导航列表中使用图标很容易。只须添加带有图标类的 <code>&lt;i&gt;</code> 标签即可。
@@ -840,13 +824,13 @@
   </div>
 
 
-  <h2>标签页切换导航 <small>通过javascript让标签生动起来</small></h2>
+  <h2>TAB切换标签 <small>通过javascript实现</small></h2>
   <div class="row">
     <div class="span4">
       <h3>包含哪些东西</h3>
       <p>
 	我们使用一个简单的插件切换标签页对应的内容，从而让标签页变得生动。
-	Bootstrap 提供了四种样式的标签页：置顶(默认)，居右，置底，居左。
+	默认提供四种样式的标签页：置顶(默认)，居右，置底，居左。
       </p>
       <p>
 	应用时只需修改很少的标记。
@@ -855,7 +839,8 @@
     <div class="span4">
       <h3>标签页切换的例子</h3>
       <p>
-	用带 <code>.tabbable</code> 的div将 <code>.nav-tabs</code> 嵌套起来：
+	用带 <code>.tabbable</code> 的div将 <code>.nav-tabs</code><code>.tab-content</code> 嵌套起来,<br/>
+    <code>.tab-content</code>包含的<code>.tab-pane</code>的ID属性与 <code>.nav-tabs</code>的A标签 HREF属性是对应的
       </p>
       <div class="tabbable" style="margin-bottom: 9px;">
         <ul class="nav nav-tabs">
@@ -885,9 +870,9 @@
     </div>
   </div>
 
-  <h3>简洁的标读</h3>
+  <h3>代码示例</h3>
   <p>
-    使用标签切换页，需要一个最外层的div，一组标签，以及一组存放内容的容器
+    使用标签切换页，需要一个最外层的div <code>.tabbable</code>，一组TAB标签 <code>.nav-tabs</code>，以及一组存放内容的容器 <code>.tab-content</code>
   </p>
 <pre class="prettyprint linenums">
 &lt;div class="tabbable"&gt;
@@ -1117,7 +1102,7 @@
 	附着导航条时，一定要留出一块空白区域，在 <code>&lt;body&gt;</code> 的顶端添加40px或是更多的padding。
 	要保证将这段样式加在Bootstrap核心CSS之后，在响应式CSS（可选的）之前。
       </p>
-      <h3>品牌名称</h3>
+      <h3>项目名称</h3>
       <p>
 	用于展示品牌或项目名称的一个简单链接，只需要一个锚标签。
       </p>
@@ -1135,7 +1120,7 @@
       </div>
 <pre class="prettyprint linenums">
 &lt;a class="brand" href="#"&gt;
-  品牌名称
+  项目名称
 &lt;/a&gt;
 </pre>
       <h3>导航条中的表单</h3>
@@ -1297,7 +1282,7 @@
 ================================================== -->
 <section id="breadcrumbs">
   <div class="page-header">
-    <h1>面包屑导航条 <small></small></h1>
+    <h1>面包屑 <small></small></h1>
   </div>
 
   <div class="row">
@@ -1351,30 +1336,38 @@
 ================================================== -->
 <section id="pagination">
   <div class="page-header">
-    <h1>页码 <small>使用两个参数对内容进行分页</small></h1>
+    <h1>翻页组件</h1>
   </div>
 
-  <h2>多页码分页</h2>
+  <h2>多页码翻页组件</h2>
   <div class="row">
     <div class="span4">
-      <h3>何时适用</h3>
-      <p>
-	受Rdio启发，我们设计了极为简致的页码样式，适用于应用和搜索结果。页码区域尺寸大，易于吸引注意力，易于扩展，易于点击。
-      </p>
       <h3>页码链接的状态</h3>
       <p>
-	Bootstrap使用一组样式类定制页码的状态，<code>.disabled</code> 用于不可点击链接，而 <code>.active</code> 用于表示当前页链接。
+	此组件依然是采用CLASS名样式类定制页码的状态，<code>.disabled</code> 用于不可点击链接，而 <code>.active</code> 用于表示当前页链接。
       </p>
       <h3>灵活的对齐方式</h3>
       <p>
-	使用 <code>.pagination-centered</code> 和 <code>.pagination-right</code> 可以改变页码的对齐方式，前者居中，后者居右。
+	默认是居左的哦；使用 <code>.pagination-centered</code> 和 <code>.pagination-right</code> 可以改变页码的对齐方式，前者居中，后者居右。
       </p>
+      <h3>自定义大小</h3>
+      <p>在默认大小之外，我们还定义了3级大小，分别使用 <code>.pagination-large</code>,<code>.pagination-small</code>, <code>.pagination-mini</code> </p>
     </div>
     <div class="span4">
       <h3>例子</h3>
       <p>
 	默认的页码组件非常灵活，有多种展示形式。
       </p>
+      <div class="pagination pagination-centered pagination-mini">
+                  <ul>
+                    <li><a href="#">Prev</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li class="active"><a href="#">4</a></li>
+                    <li><a href="#">Next</a></li>
+                  </ul>
+                </div>
       <div class="pagination">
         <ul>
           <li class="disabled"><a href="#">&laquo;</a></li>
@@ -1435,12 +1428,12 @@
     </div>
   </div><!-- /row -->
 
-  <h2>前后页 <small>简便的前一页/后一页链接</small></h2>
+  <h2>简易翻页组件 <small>简便的前一页/后一页链接</small></h2>
   <div class="row">
     <div class="span4">
-      <h3>前后页组件介绍</h3>
+      <h3>简易翻页组件介绍</h3>
       <p>
-	前后页组件是一组简便的分页实现，标记更少，样式更轻，适用于轻量级网站，如博客或网志。
+	简易翻页组件是一组简便的分页实现，标记更少，样式更轻。
       </p>
       <h4>禁用状态</h4>
       <p>
@@ -1494,7 +1487,7 @@
 ================================================== -->
 <section id="labels">
   <div class="page-header">
-    <h1>行内标签 <small>标签和注释文本</small></h1>
+    <h1>内联标记标签 <small>标签和注释文本</small></h1>
   </div>
   <table class="table table-bordered table-striped">
     <thead>
@@ -1565,14 +1558,7 @@
     <h1>标号 <small>标识和未读数量</small></h1>
   </div>
   <div class="row">
-    <div class="span4">
-      <h3>介绍</h3>
-      <p>
-	标号是用来显示标识或某某数量的简洁小组件。
-	比如邮件客户端(比如Mail.app)中的邮件数量或是手机应用中的通知数量。
-      </p>
-    </div><!-- /.span -->
-    <div class="span8">
+    <div class="span12">
       <h3>可用的类</h3>
       <table class="table table-bordered table-striped">
         <thead>
@@ -1649,6 +1635,69 @@
               <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
             </td>
           </tr>
+          <tr>
+            <td>
+              蓝色
+            </td>
+            <td>
+              <span class="badge badge-blue">10</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-blue"&gt;10&lt;/span&gt;</code>
+            </td>
+          </tr><tr>
+            <td>
+              灰色
+            </td>
+            <td>
+              <span class="badge badge-gray">10</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-gray"&gt;10&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              绿色
+            </td>
+            <td>
+              <span class="badge badge-green">10</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-green"&gt;10&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              红色
+            </td>
+            <td>
+              <span class="badge badge-red">10</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-red"&gt;10&lt;/span&gt;</code>
+            </td>
+          </tr><tr>
+            <td>
+              深红
+            </td>
+            <td>
+              <span class="badge badge-dark-red">10</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-dark-red"&gt;10&lt;/span&gt;</code>
+            </td>
+          </tr><tr>
+            <td>
+              黑色
+            </td>
+            <td>
+              <span class="badge badge-black">10</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-black"&gt;10&lt;/span&gt;</code>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div><!-- /.span -->
@@ -1661,16 +1710,15 @@
 ================================================== -->
 <section id="typography">
   <div class="page-header">
-    <h1>排版组件 <small>用以分割内容的页标题和主角单元</small></h1>
+    <h1>排版组件</h1>
   </div>
-  <h2>主角单元</h2>
+  <h2>主要内容展示</h2>
   <div class="row">
     <div class="span4">
       <p>
-	Bootstrap提供了一个轻巧又灵活的组件，用以在网站中着重展示内容，称之为"hero unit"/主角单元。
-	适用于市场类或强调内容的网站。
+	   "hero unit"/主要内容展示
       </p>
-      <h3>标记</h3>
+      <h3>代码示例</h3>
       <p>
 	将内容嵌套入应用 <code>.hero-unit</code>　的 <code>div</code> 中，如下:
       </p>
@@ -1688,11 +1736,11 @@
     </div>
     <div class="span8">
       <div class="hero-unit">
-        <h1>陈光诚，汉子！</h1>
+        <h1>小米手机，YES！</h1>
         <p>
-	  主角单元Hero Unit是一简单的大屏组件，用于增强内容或信息的吸引力
+	  Hero Unit主要内容展示是一简单的大屏组件，用于增强内容或信息的吸引力
 	</p>
-        <p><a class="btn btn-primary btn-large">了解更多</a></p>
+        <p><a class="btn btn-primary btn-large btn-green">了解更多</a></p>
       </div>
     </div>
   </div><!-- /row -->
@@ -1710,7 +1758,7 @@
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="page-header"&gt;
-  &lt;h1&gt;页面标题例子&lt;/h1&gt;
+  &lt;h1&gt;页面标题例子&lt;small&gt;子标题文字&lt;/small&gt;&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
     </div>
@@ -1718,171 +1766,6 @@
 </section>
 
 
-
-<!-- Thumbnails
-================================================== -->
-<section id="thumbnails">
-  <div class="page-header">
-    <h1>缩略项 <small>基于栅格的图象，视频，文字等等</small></h1>
-  </div>
-
-  <div class="row">
-    <div class="span6">
-      <h2>默认缩略项</h2>
-      <p>
-	默认情况下，Bootstrap的缩略项使用很少的标记来展示链接图象。
-      </p>
-      <ul class="thumbnails">
-        <li class="span3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x180" alt="">
-          </a>
-        </li>
-        <li class="span3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x180" alt="">
-          </a>
-        </li>
-        <li class="span3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x180" alt="">
-          </a>
-        </li>
-        <li class="span3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x180" alt="">
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="span6">
-      <h2>高可定制</h2>
-      <p>
-	使用少量其他标记就可以在缩略项中添加任何一种HTML内容，比如标题，段落，或按钮。
-      </p>
-      <ul class="thumbnails">
-        <li class="span3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/260x180" alt="">
-            <div class="caption">
-              <h5>缩略项标签</h5>
-              <p>
-		余华:文章怎么写很重要，怎么读也很重要。有时候将无耻的文章反过来读，也能读到真理的语句。比如陈光诚事件，官方媒体一律指责，可是陈光诚究竟做了什么，他们只字未提。今天《北京日报》发表《从陈光诚事件看美国政客的拙劣表演》的文章里说：“13亿中国人并没有那么好瞒哄”……这句话是真理。
-	      </p>
-              <p><a href="#" class="btn btn-primary">动作</a> <a href="#" class="btn">动作</a></p>
-            </div>
-          </div>
-        </li>
-        <li class="span3">
-          <div class="thumbnail">
-            <img src="http://placehold.it/260x180" alt="">
-            <div class="caption">
-              <h5>缩略项标签</h5>
-              <p>
-		张思之：曾以为一国家只要有好的外交或者强大的国防就有面子，后来才明白其实人权才是一个国家最大的面子。···一个政权如果关起门来都不能维护自己本国普通公民的权利，它有什么资格在国际舞台上维护这个国家的权利，它的合法性就会遭到质疑。
-	      </p>
-              <p><a href="#" class="btn btn-primary">动作</a> <a href="#" class="btn">动作</a></p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="span4">
-      <h3>为什么使用缩略项</h3>
-      <p>
-	缩略项（1.4版之前使用 <code>.media-grid</code> ）适用于栅格化的图片和视频，图片搜索结果，零售产品，文件夹等等。缩略项可以是链接，也可以是静态内容。
-      </p>
-    </div>
-    <div class="span4">
-      <h3>简洁灵活的标记</h3>
-      <p>
-	缩略项标记既简单又灵活&mdash;只须用一个 <code>ul</code> 嵌套多个 <code>li</code> 元素。缩略项内容可以是任何一种HTML内容，只须少许标记。
-      </p>
-    </div>
-    <div class="span4">
-      <h3>使用栅格列确定大小</h3>
-      <p>
-	新版本中，缩略项组件使用栅格类&mdash;诸如 <code>.span2</code> 或 <code>.span3</code> &mdash;确定缩略项的尺寸。
-      </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="span6">
-      <h2>标记</h2>
-      <p>
-	正如之前所提到的，缩略项所需的标记是很少的。下面就是一个 <strong>带链接图象</strong> 的默认设置：
-      </p>
-<pre class="prettyprint linenums">
-&lt;ul class="thumbnails"&gt;
-  &lt;li class="span3"&gt;
-    &lt;a href="#" class="thumbnail"&gt;
-      &lt;img src="http://placehold.it/260x180" alt=""&gt;
-    &lt;/a&gt;
-  &lt;/li&gt;
-  ...
-&lt;/ul&gt;
-</pre>
-      <p>
-	缩略项中的HTML内容仅须更改少许标记。将 <code>&lt;a&gt;</code> 变成 <code>&lt;div&gt;</code> 即可定制块状内容，如下：
-      </p>
-<pre class="prettyprint linenums">
-&lt;ul class="thumbnails"&gt;
-  &lt;li class="span3"&gt;
-    &lt;div class="thumbnail"&gt;
-      &lt;img src="http://placehold.it/260x180" alt=""&gt;
-      &lt;h5&gt;缩略项标签&lt;/h5&gt;
-      &lt;p&gt;缩略项标题介绍&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-  ...
-&lt;/ul&gt;
-</pre>
-    </div>
-    <div class="span6">
-      <h2>更多例子</h2>
-      <p>
-	尝试更多栅格类，混用不同的尺寸。
-      </p>
-      <ul class="thumbnails">
-        <li class="span4">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/360x268" alt="">
-          </a>
-        </li>
-        <li class="span2">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/160x120" alt="">
-          </a>
-        </li>
-        <li class="span2">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/160x120" alt="">
-          </a>
-        </li>
-        <li class="span2">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/160x120" alt="">
-          </a>
-        </li>
-        <li class="span2">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/160x120" alt="">
-          </a>
-        </li>
-        <li class="span2">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/160x120" alt="">
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-</section>
 
 
 
@@ -1898,7 +1781,7 @@
     <div class="span4">
       <h3>重写过的基类</h3>
       <p>
-	Bootstrap 2 简化了基类，用 <code>.alert</code> 代替了 <code>.alert-message</code> 。
+	BackendUI 使用最新的Bootstrap简化了基类，用 <code>.alert</code> 代替了 <code>.alert-message</code> 。
 	并对最低要求的标记也进行了精简&mdash;默认只使用 <code>&lt;div&gt;</code> ，而无须嵌套 <code>&lt;p&gt;</code> 。
       </p>
       <h3>统一后的通知消息</h3>
@@ -1907,10 +1790,7 @@
       </p>
       <hr>
       <h3>与javascript配合良好</h3>
-      <p>
-	Bootstrap用一个很好的jQuery插件驱动通知消息，方便用户快速地关闭通知。
-      </p>
-      <p><a class="btn js-btn" href="./javascript.html#alerts">Get the plugin &raquo;</a></p>
+      <p><a class="btn js-btn" href="./javascript.html#alerts">了解更多 &raquo;</a></p>
     </div>
     <div class="span8">
       <h3>通知的例子</h3>
@@ -1919,12 +1799,12 @@
       </p>
       <div class="alert">
         <a class="close" data-dismiss="alert">&times;</a>
-        <strong>外交部警告！</strong> 不要拿法律当挡箭牌。
+        <strong>强悍的四核之王！</strong> 搭载高通骁龙600 四核1.7G，整体性能提升25%。
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert"&gt;
   &lt;a class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;
-  &lt;strong&gt;警告！&lt;/strong&gt; 不要拿法律当挡箭牌。
+  &lt;strong&gt;强悍的四核之王！&lt;/strong&gt; 搭载高通骁龙600 四核1.7G，整体性能提升25%
 &lt;/div&gt;
 </pre>
       <p>
@@ -1933,10 +1813,9 @@
       </p>
       <div class="alert alert-block">
         <a class="close" data-dismiss="alert">&times;</a>
-        <h4 class="alert-heading">外交部警告！</h4>
+        <h4 class="alert-heading">强悍的四核之王！</h4>
         <p>
-	  中方强调，中国是法治国家，任何公民的合法权益都受宪法和法律保护，同时任何公民都有义务遵守宪法和法律。
-	</p>
+        搭载高通骁龙600 四核1.7G，整体性能提升25%。拥有1.7G芯片中最强执行效率，达到超越极限的运行能力。在性能提升的同时;</p>
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-block"&gt;
@@ -1954,7 +1833,8 @@
       <h3>危险/错误</h3>
       <div class="alert alert-error">
         <a class="close" data-dismiss="alert">&times;</a>
-        <strong>前进进！</strong> 紧密团结在以希特勒元首为核心的纳粹党中央周围，高举国家意志和民族利益的大旗，直达人间地狱。
+        <strong>强悍的四核之王！</strong>
+        搭载高通骁龙600 四核1.7G，整体性能提升25%。拥有1.7G芯片中最强执行效率，达到超越极限的运行能力。在性能提升的同时;
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-error"&gt;
@@ -1966,7 +1846,8 @@
       <h3>成功</h3>
       <div class="alert alert-success">
         <a class="close" data-dismiss="alert">&times;</a>
-        <strong>钱贱贱！</strong> 紧密团结在以胡锦涛同志为核心的党中央周围，高举科学发展观大旗，为建设有中国特色的社会主义事业前腐后继。
+        <strong>强悍的四核之王！</strong>
+        搭载高通骁龙600 四核1.7G，整体性能提升25%。拥有1.7G芯片中最强执行效率，达到超越极限的运行能力。在性能提升的同时;
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-success"&gt;
@@ -1978,7 +1859,8 @@
       <h3>信息</h3>
       <div class="alert alert-info">
         <a class="close" data-dismiss="alert">&times;</a>
-        <strong>杀尽尽！</strong> 紧密团结在以斯大林同志为核心的苏共中央周围，高举马列2B主义大旗，加速实现共产主义。
+        <strong>强悍的四核之王！</strong>
+        搭载高通骁龙600 四核1.7G，整体性能提升25%。拥有1.7G芯片中最强执行效率，达到超越极限的运行能力。在性能提升的同时;
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-info"&gt;
@@ -1997,6 +1879,9 @@
 <section id="progress">
   <div class="page-header">
     <h1>进度条 <small>用于载入，重定向或表示动作状态</small></h1>
+    <p>我们提供多种颜色的进度条，在 <code>.progress-info</code>的基类上添加CLASS名 <code>.progress-info,.progress-success,.progress-warning,.progress-danger</code>;<br/>
+        如果你需要条纹进度条你可以添加CLASS名 <code>.progress-striped</code>;<br/>
+        如果你还想他能跑动起来你可以添加CLASS名 <code>.active</code> </p>
   </div>
 
   <h2>例子和标记</h2>
@@ -2004,7 +1889,7 @@
     <div class="span4">
       <h3>基本效果</h3>
       <p>
-	默认的垂直渐变进度条。
+	默认的渐变进度条。
       </p>
       <div class="progress">
         <div class="bar" style="width: 60%;"></div>
@@ -2049,9 +1934,9 @@
     </div>
   </div>
 
-  <h2>选项和浏览器支持</h2>
+  <h2>进度条扩展</h2>
   <div class="row">
-    <div class="span3">
+    <div class="span4">
       <h3>其他颜色</h3>
       <p>
 	进度条使用和按钮/警告类相似的样式，提供一致的颜色风格。
@@ -2074,7 +1959,7 @@
         <div class="bar" style="width: 80%"></div>
       </div>
     </div>
-     <div class="span3">
+     <div class="span4">
       <h3>条纹滚动条</h3>
       <p>
 	与纯色相似，也可以使用多色的条纹进度条。
@@ -2096,22 +1981,13 @@
         <div class="bar" style="width: 80%"></div>
       </div>
     </div>
-    <div class="span3">
+    <div class="span4">
       <h3>行为</h3>
       <p>
 	进度条使用CSS3过渡效果，因此用javascript动态调整进度条宽度时，效果会非常平滑。
       </p>
       <p>
 	如果使用 <code>.active</code> ，那么 <code>.progress-striped</code> 导航栏就会呈现自左向右的条纹跑马灯动画效果。
-      </p>
-    </div>
-    <div class="span3">
-      <h3>浏览器支持</h3>
-      <p>
-	进度条使用CSS3渐变/过渡/动画以实现所有效果。IE7到IE9，以及某些老版本的Firefox还不能完全支持这些特性。
-      </p>
-      <p>
-	目前，Opera和IE还不支持动画效果。
       </p>
     </div>
   </div>

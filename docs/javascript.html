@@ -26,14 +26,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="./index.html">Bootstrap</a>
+          <a class="brand" href="./index.html">BackendUI API</a>
           <div class="nav-collapse">
-	    <ul class="nav">
+	       <ul class="nav">
               <li class="">
                 <a href="./index.html">概述</a>
               </li>
-              <li class="">
-                <a href="./scaffolding.html">框架</a>
+              <li>
+                <a href="./scaffolding.html">Layout</a>
               </li>
               <li class="">
                 <a href="./base-css.html">基础CSS</a>
@@ -47,7 +47,6 @@
               <li class="">
                 <a href="./less.html">使用LESS</a>
               </li>
-              
             </ul>
           </div>
         </div>
@@ -59,12 +58,22 @@
       <!-- Masthead
       ================================================== -->
       <header class="jumbotron subhead" id="overview">
-        <h1>Bootstrap的Javascript</h1>
-        <p class="lead">
-	  让Bootstrap的组件变得生动&mdash;提供了12种 <a href="http://jquery.com/" target="_blank">jQuery</a> 组件。
+        <h1>Javascript插件</h1>
         <div class="subnav">
           <ul class="nav nav-pills">
             <li><a href="#javascript">所有插件</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">BackendUI提供<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#uniform">表单UI优化</a></li>
+                  <li><a href="#select2">select下拉优化</a></li>
+                  <li><a href="#validationEngine">表单验证</a></li>
+                  <li><a href="#Sparkline">线状图插件Sparkline</a></li>
+                  <li><a href="#DataTables">DataTables表格插件</a></li>
+                  <li><a href="#gritter">gritter消息通知</a></li>
+                  <li><a href="#highcharts">绘图</a></li>
+                </ul>
+            </li>
             <li><a href="#modals">对话框</a></li>
             <li><a href="#dropdowns">下拉项</a></li>
             <li><a href="#scrollspy">滚动侦测</a></li>
@@ -81,11 +90,540 @@
       </header>
 
 
+
+      <section id="javascript">
+        <div class="page-header">
+          <h1>BackendUI提供的JS插件<small>7个插件的简短介绍，所有JS文件都是可自由拆卸的</small></h1>
+        </div>
+      <div class="row">
+        <div class="span3">
+          <label>
+            <h3><a href="./javascript.html#uniform">表单UI优化</a></h3>
+            <p>
+                对于纠结难看的表单项，如INPUT,CHECKBOX,RADIO,INPUTFILE等都做了统一的优化，保持视觉、操作体验的一致性。
+            </p>
+          </label>
+        </div>
+        <div class="span3">
+          <label>
+            <h3><a href="./javascript.html#select2">select下拉优化</a></h3>
+            <p>
+          它能让丑陋的、很长的select选择框变的更好看、更方便，支持搜索，远程数据集，以及无限滚动的结果。
+        </p>
+          </label>
+        </div>
+        <div class="span3">
+          <label>
+            <h3><a href="./javascript.html#validationEngine">表单验证</a></h3>
+            <p>
+          功能强大的 jQuery 表单验证插件，适用于日常表单验证及 Ajax 验证，除自身拥有丰富的验证规则外，还可以添加自定义的验证规则。
+        </p>
+          </label>
+        </div>
+        <div class="span3">
+          <label>
+            <h3><a href="./javascript.html#Sparkline">线状图插件Sparkline</a></h3>
+            <p>
+          可以用来生成静态或动态波谱图表效果，其特点是：凸现数据显示，设计简单，能提供文字大小图片。
+        </p>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3">
+          <label>
+            <h3><a href="./javascript.html#DataTables">DataTables表格插件</a></h3>
+            <p>
+               这是一个高度灵活的工具，依据的基础逐步增强，这将增加先进的互动控制，支持任何HTML表格。主要特点：自动分页处理、即时表格数据过滤、数据排序以及数据类型自动检测。。。<!-- 、自动处理列宽度、可通过CSS定制样式、支持隐藏列、易用、可扩展性和灵活性、国际化、动态创建表格、免费的 -->
+            </p>
+          </label>
+        </div>
+        <div class="span3">
+          <label>
+            <h3><a href="./javascript.html#gritter">gritter消息通知</a></h3>
+            <p>
+          Gritter 是一个小型的 jQuery 消息通知插件
+        </p>
+          </label>
+        </div>
+        <div class="span3">
+          <label>
+            <h3><a href="./javascript.html#highcharts">绘图</a></h3>
+            <p>
+          Highcharts 是一个用纯JavaScript编写的一个图表库, 能够很简单便捷的在web网站或是web应用程序添加有交互性的图表，并且免费提供给个人学习、个人网站和非商业用途使用。
+        </p>
+          </label>
+        </div>
+        <div class="span3">
+          
+        </div>
+      </div>
+    </section>
+    <!-- uniform
+    ================================================== -->
+    <section id="uniform">
+      <div class="page-header">
+        <h1>表单UI优化 <small>jquery.uniform.js</small></h1>
+      </div>
+      <div class="row">
+        <div class="span3 columns">
+          <h3>uniform介绍</h3>
+          <p>
+        Web表单是一个网站的重要方面，但在视觉方面往往被忽视。Uniforms可以帮助你增加一个华丽的外观和视觉效果。 例如单选按钮或选择下拉菜单，这些资源只能用简单的CSS，这通常是一件痛苦的事情。
+      </p>
+          <a href="assets/js/jquery.uniform.js" target="_blank" class="btn">Download file</a>
+        </div>
+        <div class="span9">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">uniform示例</span>
+                </div>
+                <div class="box-content">
+                    <form class="fill-up">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <ul class="padded separate-sections">
+                                    <li class="input">
+                                      <input type="file" name="img">
+                                    </li>
+                                    <li>
+                                   
+                                    </li>
+                                    <li>
+                                        <label>下拉式选择：</label>
+                                        <select class="uniform" name="colors">
+                                            <option value="0">区/县</option><option value="1971">江岸区</option><option value="1972">江汉区</option><option value="1973">硚口区</option><option value="1974">汉阳区</option><option value="1975">武昌区</option><option value="1976">青山区</option><option value="1977">洪山区</option><option value="1978">东西湖区</option><option value="1979">汉南区</option><option value="1980">蔡甸区</option><option value="1981">江夏区</option><option value="1982">黄陂区</option><option value="1983">新洲区</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <ul class="padded separate-sections">
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <div class="input">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" class="check" checked="checked"> 我是选项1
+                                                </label>
+                                            </div>
+                                            <div class="input">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" class="check"> 我是选项2
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="span6">
+                                            <div class="input">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" class="check"> 我是选项3
+                                                </label>
+                                            </div>
+                                            <div class="input">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" class="check" disabled="disabled"> (我是不可选的)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <div class="input">
+                                                <label class="radio">
+                                                    <input type="radio" name="optionsRadios" value="option1" checked="checked">我是选项1
+                                                </label>
+                                            </div>
+                                            <div class="input">
+                                                <label class="radio">
+                                                    <input type="radio" name="optionsRadios" value="option2">我是选项2
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="span6">
+                                            <div class="input">
+                                                <label class="radio">
+                                                    <input type="radio" name="optionsRadios" value="option3">我是选项3
+                                                </label>
+                                            </div>
+                                            <div class="input">
+                                                <label class="radio">
+                                                    <input type="radio" name="optionsRadios" value="option4" disabled="disabled">(我是不可选的)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <h2>使用 jquery.uniform.js</h2>
+            <p>通过javascript选择器来调用：</p>
+            <pre class="prettyprint linenums">$("select.uniform, .check, .check :checkbox, input:radio, input:file, .dataTables_length select").uniform();
+            </pre>
+            <div class="alert">
+            <strong>重置单选框的问题！</strong>
+                如果发现“重置”单选框不生效（设定了默认checked的前提下），通过脚本更改过FORM中的内容后，使用 <code>$.uniform.update()</code> 
+          </div>
+          <p>更多更详细的API请参考：  <a href="https://github.com/pixelmatrix/uniform" target="_blank">https://github.com/pixelmatrix/uniform</a> </p>
+        </div>
+    </section>
+    <!-- select2
+    ================================================== -->
+    <section id="select2">
+      <div class="page-header">
+        <h1>select下拉优化 <small>select2.js</small></h1>
+      </div>
+      <div class="row">
+        <div class="span3 columns">
+          <h3>select2介绍</h3>
+          <p>
+        下拉框美化插件chosen的扩展，它能让丑陋的、很长的select选择框变的更好看、更方便，支持搜索，远程数据集，以及无限滚动的结果。
+      </p>
+          <a href="assets/js/select2.js" target="_blank" class="btn">Download file</a>
+        </div>
+        <div class="span9">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">select2示例</span>
+                </div>
+                <div class="box-content">
+                    <form class="fill-up">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <ul class="padded separate-sections">
+                                     <li>
+                                        <label>下拉式多选：</label>
+                                        <select multiple="multiple" name="colors[]" class="chzn-select">
+                                            <option value="0">省份/自治区</option>
+                                            <option value="2" selected="selected">北京</option>
+                                            <option value="3">天津</option>
+                                            <option value="4">河北</option>
+                                            <option value="5">山西</option>
+                                            <option value="6">内蒙古</option>
+                                            <option value="7">辽宁</option>
+                                            <option value="8">吉林</option>
+                                            <option value="9">黑龙江</option>
+                                            <option value="10">上海</option>
+                                            <option value="11">江苏</option>
+                                            <option value="12">浙江</option>
+                                            <option value="13">安徽</option>
+                                            <option value="14">福建</option>
+                                            <option value="15" selected="selected">江西</option>
+                                            <option value="16">山东</option>
+                                            <option value="17">河南</option>
+                                            <option value="18">湖北</option>
+                                            <option value="19">湖南</option>
+                                            <option value="20">广东</option>
+                                            <option value="21" selected="selected">广西</option>
+                                            <option value="22">海南</option>
+                                            <option value="23">重庆</option>
+                                            <option value="24">四川</option>
+                                            <option value="25">贵州</option>
+                                            <option value="26">云南</option>
+                                            <option value="27">西藏</option>
+                                            <option value="28">陕西</option>
+                                            <option value="29">甘肃</option>
+                                            <option value="30">青海</option>
+                                            <option value="31">宁夏</option>
+                                            <option value="32">新疆</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>下拉式搜索：</label>
+                                          <select class="chzn-select" name="colors">
+                                            <option value="Amber">Amber</option>
+                                            <option value="Aero blue">Aero blue</option>
+                                            <option value="Air Force blue (RAF)">Air Force blue (RAF)</option>
+                                            <option value="Amethyst">Amethyst</option>
+                                            <option value="Antique fuchsia ">Antique fuchsia </option>
+                                            <option value="Antique brass">Antique brass</option>
+                                            <option value="Alizarin crimson">Alizarin crimson</option>
+                                            <option value="Alice blue">Alice blue</option>
+                                            <option value="Alabama Crimson">Alabama Crimson</option>
+                                            <option value="Android Green">Android Green</option>
+                                            <option value="American rose">American rose</option>
+                                            <option value="Anti-flash white">Anti-flash white</option>
+                                            <option value="Air Force blue (USAF)">Air Force blue (USAF)</option>
+                                            <option value="Amaranth">Amaranth</option>
+                                            <option value="SAE/ECE Amber (color)">SAE/ECE Amber (color)</option>
+                                            <option value="Air superiority blue">Air superiority blue</option>
+                                            <option value="Alloy orange">Alloy orange</option>
+                                            <option value="Antique bronze">Antique bronze</option>
+                                            <option value="Amazon">Amazon</option>
+                                            <option value="Almond">Almond</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>下拉式搜索：</label>
+                                        <select class="chzn-select" name="colors">
+                                            <option value="0">城市/地区/自治州</option><option value="205">武汉市</option><option value="206">黄石市</option><option value="207">十堰市</option><option value="208">宜昌市</option><option value="209">襄阳市</option><option value="210">鄂州市</option><option value="211">荆门市</option><option value="212">孝感市</option><option value="213">荆州市</option><option value="214">黄冈市</option><option value="215">咸宁市</option><option value="216">随州市</option><option value="217">恩施土家族苗族自治州</option><option value="218">省直辖县级行政单位</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <h2>使用 select2.js</h2>
+            <p>通过javascript选择器来调用：</p>
+            <pre class="prettyprint linenums">$(".chzn-select").select2();</pre>
+            <div class="alert">
+                <STRONG>强烈建议</STRONG>
+                如果您正在使用它，请详细阅读下面给出的链接地址，select2的功能远不止这些，支持搜索，远程数据集；它可以为你做更多让你惊讶的事情。
+            </div>
+          <p>更多更详细的API请参考：  <a href="http://ivaynberg.github.io/select2/" target="_blank">http://ivaynberg.github.io/select2/</a> </p>
+        </div>
+    </section>
+    <!-- validationEngine
+    ================================================== -->
+    <section id="validationEngine">
+      <div class="page-header">
+        <h1>表单验证validationEngine <small>jquery.validationEngine.js</small></h1>
+      </div>
+      <div class="row">
+        <div class="span3 columns">
+          <h3>表单验证validationEngine介绍</h3>
+          <p>jquery强大的表单验证插件<BR/>
+        jquery.validationEngine-zh_CN.js是语言文件，所有的提示都在这个文件找的到，可以很方便的转成其他语言，同时你也可以在这个文件内定制属于自己的验证规则。
+      </p>
+          <a href="assets/js/jquery.validationEngine.js" target="_blank" class="btn">Download file</a>
+        </div>
+        <div class="span9">
+            <div class="box">
+                  <div class="box-header">
+                    <span class="title"><i class="icon-warning-sign"></i> 带前台验证功能的表单</span>
+                  </div>
+
+                  <div class="box-content">
+
+                    <form class="form-horizontal fill-up separate-sections validatable">
+
+                      <div class="padded">
+
+                        <div class="control-group">
+                          <label class="control-label">邮箱：</label>
+                          <div class="controls">
+                            <input type="text" class="validate[required]" data-prompt-position="topLeft"/>
+                          </div>
+                        </div>
+
+                        <div class="control-group">
+                          <label class="control-label">地址：</label>
+                          <div class="controls">
+                            <input type="text" class="validate[required]" data-prompt-position="topLeft"/>
+                          </div>
+                        </div>
+
+                        <div class="control-group">
+                          <label class="control-label">用户名：</label>
+                          <div class="controls">
+                            <input type="text" class="validate[required]" data-prompt-position="topLeft"/>
+                          </div>
+                        </div>
+
+                        <div class="control-group">
+                          <label class="control-label">密码：</label>
+                          <div class="controls">
+                            <input type="password" id="password" class="validate[required,minSize[4]]">
+                            <span class="help-block note"><i class="icon-warning-sign"></i> 请确保密码安全。</span>
+                          </div>
+                        </div>
+
+                        <div class="control-group">
+                          <label class="control-label">密码确认：</label>
+                          <div class="controls">
+                            <input type="password" id="password_confirmation" class="validate[required,equals[password],minSize[4]]"/>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="form-actions">
+                        <button type="submit" class="btn btn-blue">保存更改</button>
+                        <button type="button" class="btn btn-default">取消</button>
+                        <div class="pull-right">
+                          <label class="checkbox">
+                            <input type="checkbox" class="check"> 有更新时通知我!
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+
+                  </div>
+            </div>
+            <h2>使用 jquery.validationEngine.js</h2>
+            <p>通过javascript选择器来调用：</p>
+            <pre class="prettyprint linenums">$("form.validatable").validationEngine({promptPosition:"topLeft"});</pre>
+            <P>验证规则是写在表单元素的class属性内。比如下面：</P>
+             <pre class="prettyprint linenums">&lt;input value="" class="validate[required,custom[noSpecialCaracters],length[0,20],ajax[ajaxUser]]" type="text" name="user" id="user" /&gt;</pre>         
+                 <p>验证规则非常多样，基本上包含了所有的数据类型的验证。
+                所有的验证规则写在validate[]内，有多种验证，用逗号隔开，这里简要说明下常用的验证规则。</br>
+                <code>required</code>：值不可以为空
+                <code>length[0,100] </code>：文字允许长度
+                <code>confirm[fieldID]</code> ：匹配其他的表单元素的值，fieldID就是其他表单元素的id，这个主要用于再次确认密码
+                <code>telephone</code> ：数据格式要求符合电话格式
+                <code>email</code> ： 数据格式要求符合email 格式
+                <code>onlyNumber</code> ：只允许输入数字
+                <code>noSpecialCaracters</code> ：不允许出现特殊字符
+                <code>onlyLetter</code> ： 只能是字母
+                <code>date</code> ：必须符合日期格式YYYY-MM-DD
+            </p>
+            <p>你还可以在点击提交按钮后才触发验证。</p>
+            <pre class="prettyprint linenums">$("#formID").validationEngine({ 
+inlineValidation: false,
+success :  false,
+failure : function() { callFailFunction()  } 
+})</pre>
+            <p>默认的是在鼠标失去焦点后才开始验证，也就是绑定的是blur事件，那如何改变呢？看下面的配置。</p>  
+            <pre class="prettyprint linenums">$("#formID").validationEngine({ 
+validationEventTriggers:"keyup blur",  //will validate on keyup and blur  
+success :  false,
+failure : function() { callFailFunction()  } 
+})</pre>    
+            <p>validationEventTriggers属性就是修改绑定事件，上面是增加了个keyup，也就是键盘按键起来就触发验证。</p>
+            <p>修改提示层的位置</p>
+            <pre class="prettyprint linenums">$("#formID").validationEngine({ 
+promptPosition: "topRight", // OPENNING BOX POSITION, IMPLEMENTED: topLeft, topRight, bottomLeft,  centerRight, bottomRight
+success :  false,
+failure : function() { 
+})</pre>
+            <p>promptPosition就是控制位置，有5种模式：topLeft, topRight, bottomLeft, centerRight, bottomRight<br/>
+            ajax验证模式</p>
+            <pre class="prettyprint linenums">
+                $("#formID").validationEngine({ 
+ ajaxSubmit: true,
+  ajaxSubmitFile: "ajaxSubmit.php",
+  ajaxSubmitMessage: "Thank you, we received your inscription!",
+ ajaxSubmitExtraData: "securityCode=38709238423&name=john",
+ success :  false,
+ failure : function() {} 
+})</pre>
+            <div class="alert">
+                <STRONG>强烈建议</STRONG>
+                如果您正在使用它，请详细阅读下面给出的链接地址，它可以为你做更多让你惊讶的事情。
+            </div>
+          <p>更多更详细的API请参考： <br/>
+            <a href="http://www.position-absolute.com/articles/jquery-form-validator-because-form-validation-is-a-mess/" target="_blank">http://www.position-absolute.com/articles/jquery-form-validator-because-form-validation-is-a-mess/</a> <br/>
+           <a href="https://github.com/posabsolute/jQuery-Validation-Engine" target="_blank">https://github.com/posabsolute/jQuery-Validation-Engine</a> </p>
+        </div>
+    </section>
+    <!-- Sparkline
+    ================================================== -->
+    <section id="Sparkline">
+      <div class="page-header">
+        <h1>线状图插件Sparkline <small>jquery.sparkline.js</small></h1>
+      </div>
+      <div class="row">
+        <div class="span3 columns">
+          <h3>线状图插件Sparkline介绍</h3>
+          <p>
+        Sparkline 非常适合于显示和比较一个或多个数据类别，常用于显示某个时间段内的数据。它类似于折线图，但它是在相互堆叠的各个轴上显示数据线。
+      </p>
+          <a href="assets/js/jquery.sparkline.js" target="_blank" class="btn">Download file</a>
+        </div>
+        <div class="span9">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">select2示例</span>
+                </div>
+                <div class="box-content">
+                    <form class="fill-up">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <ul class="padded separate-sections">
+                                     <li>
+                                        <label>下拉式多选：</label>
+                                        <select multiple="multiple" name="colors[]" class="chzn-select">
+                                            <option value="0">省份/自治区</option>
+                                            <option value="2" selected="selected">北京</option>
+                                            <option value="3">天津</option>
+                                            <option value="4">河北</option>
+                                            <option value="5">山西</option>
+                                            <option value="6">内蒙古</option>
+                                            <option value="7">辽宁</option>
+                                            <option value="8">吉林</option>
+                                            <option value="9">黑龙江</option>
+                                            <option value="10">上海</option>
+                                            <option value="11">江苏</option>
+                                            <option value="12">浙江</option>
+                                            <option value="13">安徽</option>
+                                            <option value="14">福建</option>
+                                            <option value="15" selected="selected">江西</option>
+                                            <option value="16">山东</option>
+                                            <option value="17">河南</option>
+                                            <option value="18">湖北</option>
+                                            <option value="19">湖南</option>
+                                            <option value="20">广东</option>
+                                            <option value="21" selected="selected">广西</option>
+                                            <option value="22">海南</option>
+                                            <option value="23">重庆</option>
+                                            <option value="24">四川</option>
+                                            <option value="25">贵州</option>
+                                            <option value="26">云南</option>
+                                            <option value="27">西藏</option>
+                                            <option value="28">陕西</option>
+                                            <option value="29">甘肃</option>
+                                            <option value="30">青海</option>
+                                            <option value="31">宁夏</option>
+                                            <option value="32">新疆</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>下拉式搜索：</label>
+                                          <select class="chzn-select" name="colors">
+                                            <option value="Amber">Amber</option>
+                                            <option value="Aero blue">Aero blue</option>
+                                            <option value="Air Force blue (RAF)">Air Force blue (RAF)</option>
+                                            <option value="Amethyst">Amethyst</option>
+                                            <option value="Antique fuchsia ">Antique fuchsia </option>
+                                            <option value="Antique brass">Antique brass</option>
+                                            <option value="Alizarin crimson">Alizarin crimson</option>
+                                            <option value="Alice blue">Alice blue</option>
+                                            <option value="Alabama Crimson">Alabama Crimson</option>
+                                            <option value="Android Green">Android Green</option>
+                                            <option value="American rose">American rose</option>
+                                            <option value="Anti-flash white">Anti-flash white</option>
+                                            <option value="Air Force blue (USAF)">Air Force blue (USAF)</option>
+                                            <option value="Amaranth">Amaranth</option>
+                                            <option value="SAE/ECE Amber (color)">SAE/ECE Amber (color)</option>
+                                            <option value="Air superiority blue">Air superiority blue</option>
+                                            <option value="Alloy orange">Alloy orange</option>
+                                            <option value="Antique bronze">Antique bronze</option>
+                                            <option value="Amazon">Amazon</option>
+                                            <option value="Almond">Almond</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>下拉式搜索：</label>
+                                        <select class="chzn-select" name="colors">
+                                            <option value="0">城市/地区/自治州</option><option value="205">武汉市</option><option value="206">黄石市</option><option value="207">十堰市</option><option value="208">宜昌市</option><option value="209">襄阳市</option><option value="210">鄂州市</option><option value="211">荆门市</option><option value="212">孝感市</option><option value="213">荆州市</option><option value="214">黄冈市</option><option value="215">咸宁市</option><option value="216">随州市</option><option value="217">恩施土家族苗族自治州</option><option value="218">省直辖县级行政单位</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <h2>使用 select2.js</h2>
+            <p>通过javascript选择器来调用：</p>
+            <pre class="prettyprint linenums">$(".chzn-select").select2();</pre>
+            <div class="alert">
+                <STRONG>强烈建议</STRONG>
+                如果您正在使用它，请详细阅读下面给出的链接地址，select2的功能远不止这些，支持搜索，远程数据集；它可以为你做更多让你惊讶的事情。
+            </div>
+          <p>更多更详细的API请参考：  <a href="http://ivaynberg.github.io/select2/" target="_blank">http://ivaynberg.github.io/select2/</a> </p>
+        </div>
+    </section>
       <!-- Using Javascript w/ Bootstrap
       ================================================== -->
       <section id="javascript">
         <div class="page-header">
-          <h1>jQuery插件 <small>12个Bootstrap插件的简短介绍</small></h1>
+          <h1>Bootstrap原生JS插件<small>12个插件的简短介绍，所有插件都集成在bootstraps.min.js文件中</small></h1>
         </div>
       <div class="row">
         <div class="span3">
@@ -268,7 +806,7 @@
               <a href="#" class="btn btn-primary">保存更改</a>
             </div>
           </div>
-          <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">点击演示</a>
+          <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large btn-green">点击演示</a>
 
           <hr>
 
@@ -385,8 +923,8 @@ $('#myModal').modal({
                <td>布尔值</td>
                <td>true</td>
                <td>
-		 为true时，显示对话框的遮蔽背景，鼠标点击背景即可关闭对话框。<a class="btn btn-primary btn-mini" id="backdroptrue">点击演示</a> <br />
-		 为false时，无背景。<a class="btn btn-primary btn-mini" id="backdropfalse">点击演示</a>
+		 为true时，显示对话框的遮蔽背景，鼠标点击背景即可关闭对话框。<a class="btn btn-primary btn-mini btn-green" id="backdroptrue">点击演示</a> <br />
+		 为false时，无背景。<a class="btn btn-primary btn-mini btn-green" id="backdropfalse">点击演示</a>
 	       </td>
              </tr>
              <tr>
@@ -394,8 +932,8 @@ $('#myModal').modal({
                <td>布尔值</td>
                <td>true</td>
                <td>
-		 为true时按下ESC键关闭模态对话框。<a class="btn btn-primary btn-mini" id="keyboardtrue">点击演示</a><br />
-		 为false时无效。<a class="btn btn-primary btn-mini" id="keyboardfalse">点击演示</a>
+		 为true时按下ESC键关闭模态对话框。<a class="btn btn-primary btn-mini btn-green" id="keyboardtrue">点击演示</a><br />
+		 为false时无效。<a class="btn btn-primary btn-mini btn-green" id="keyboardfalse">点击演示</a>
 	       </td>
              </tr>
              <tr>
@@ -414,7 +952,7 @@ $('#myModal').modal({
 	  <pre class="prettyprint linenums">&lt;a class="btn" data-toggle="modal" href="#myModal" &gt;点击触发对话框&lt;/a&gt;</pre>
           <p>
 	    如果需要带选项的对话框，可以在激发元素或是对话框元素的data-属性中设置选项值。
-	    <a class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-keyboard="false" data-backdrop="false">点击"无ESC关闭，无遮蔽背景"演示</a>
+	    <a class="btn btn-primary btn-green" data-toggle="modal" data-target="#myModal" data-keyboard="false" data-backdrop="false">点击"无ESC关闭，无遮蔽背景"演示</a>
 	    <pre class="prettyprint linenums">&lt;a class="btn" data-toggle="modal" href="#myModal"  data-keyboard="false" data-backdrop="false" &gt;点击"无ESC关闭，无遮蔽背景"演示&lt;/a&gt;</pre>
 	  </p>
 
@@ -434,7 +972,7 @@ $('#myModal').modal({
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
-          <div class="alert alert-info">
+          <div class="alert">
             <strong>强调！</strong>
 	    要实现对话框显示与消隐时的动画效果，必须包含 bootstrap-transition.js.，再对 <code>.modal</code> 元素应用 <code>.fade</code> ，即可实现淡入淡出。
           </div>
@@ -446,7 +984,7 @@ $('#myModal').modal({
   keyboard: false
 })</pre>
           <h4>.modal('toggle')</h4>
-          <p>手动切换对话框打开和关闭。<a class="btn btn-primary btn-mini" id="amodaltoggle">点击演示</a></p>
+          <p>手动切换对话框打开和关闭。<a class="btn btn-primary btn-mini btn-green" id="amodaltoggle">点击演示</a></p>
           <pre class="prettyprint linenums">$('#myModal').modal('toggle')</pre>
           <h4>.modal('show')</h4>
           <p>打开对话框</p>
@@ -656,9 +1194,6 @@ $('#myModal').on('hidden', function () {
     &lt;a data-toggle="dropdown" href="#menutest1"&gt;点击我看看&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</pre>
-          <h3>方法</h3>
-          <h4>$().dropdown()</h4>
-          <p>用于激活某个导航条/标签页导航栏下的菜单</p>
         </div>
       </div>
     </section>
@@ -686,15 +1221,15 @@ $('#myModal').on('hidden', function () {
               <div class="container" style="width: auto;">
                 <a class="brand" href="#">项目名称</a>
                 <ul class="nav">
-                  <li><a href="#fat">红利</a></li>
-                  <li><a href="#mdo">哈芬</a></li>
+                  <li><a href="#fat">硬件HDR</a></li>
+                  <li><a href="#mdo">前置相机</a></li>
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">党国大事 <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">小米手机 <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#one">遛狗</a></li>
-                      <li><a href="#two">失踪</a></li>
+                      <li><a href="#one">高清</a></li>
+                      <li><a href="#two">自拍</a></li>
                       <li class="divider"></li>
-                      <li><a href="#three">耳光</a></li>
+                      <li><a href="#three">画质</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -702,30 +1237,48 @@ $('#myModal').on('hidden', function () {
             </div>
           </div>
           <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example">
-            <h4 id="fat">红利</h4>
+            <h4 id="fat">硬件HDR</h4>
             <p>
-            中方向美方承诺提高国有企业红利上缴比例，增加上缴利润的中央国企和省级国企的数量，将国有资本经营预算纳入国家预算体系。还承诺，鼓励包括国有公司在内的上市公司增加红利支付。还承诺在信贷提供、税收优惠和监管政策等方面对各类所有制企业一视同仁。<br /><br />
+            全新高通骁龙600 四核1.7G CPU，性能巅峰搭载高通骁龙600 四核1.7G，整体性能提升25%。拥有1.7G芯片中最强执行效率，达到超越极限的
+运行能力。在性能提升的同时，更省电5%。打开应用、浏览网页、运行大型游戏、观看高清视频，
+极速体验，分秒必争，源自更强悍的四核之王！<br /><br />
 
-	    美方认为，提高国有企业分红比例带来的收入可用于资助政府的社保和养老开支，从而有可能降低中国人大量储蓄的必要性，让他们提高消费支出，从而达到刺激中国内需的目的。
+	    图形性能堪比XBOX游戏机
+Adreno 320图形处理芯片
+
+采用Adreno 320图形处理器，每秒渲染2亿个三角形、填充32
+亿个像素点。轻松运行最新大型3D游戏、流畅播放1080p高清
+视频，堪比专业游戏机与高清播放器！
             </p>
-            <h4 id="mdo">哈芬</h4>
+            <h4 id="mdo">前置相机</h4>
             <p>
-	      据估，中国高铁槽道市场约十几亿元，德国哈芬占70%。业内人士称，中铁设计院的铁道图纸，直接指定使用哈芬，而非技术标准。哈芬在德国使用成本高昂的不锈钢，在中国则是碳钢。更有业内人士证实，目前中国高铁用的实为国内生产，原产几乎不足四分之一。（财新）
+	      背照式2代相机，32GB版跃升至1300万像素。
+画质自然、清晰、细腻
+
+小米手机2S 16GB版配备全新800万像素相机，32GB版更采用索尼Exmor RS系列感光元件，在继承背照式传
+感器优异的感光性能同时，还使用堆栈式结构，让成像质量更加优秀。
             </p>
-            <h4 id="one">遛狗</h4>
+            <h4 id="one">高清</h4>
             <p>
-	      近日，拍摄于四川绵阳街头的一张照片引起热议，一辆在路上行驶的法院警车，车窗里伸出一个宠物狗的脑袋，四处张望。此情景被怀疑是公务人员私用警车带宠物狗兜风。经调查得知，这是我国新近引进的一批特殊品种警犬，为麻痹犯罪分子，故意化妆成宠物狗的样子。
+	      前置相机200万像素高清自拍，可以冲印10英寸照片。
+
+小米手机2S 同时配备200万像素背照式前置摄像头，兼可实现1080P高清摄像功能，全面革新自拍画质，带来前未
+有过的自拍体验。而且，前置摄像头同样支持1080p高清摄像！
             </p>
-            <h4 id="two">失踪</h4>
+            <h4 id="two">自拍</h4>
             <p>
-	      4月25日，19岁的韩耀在云南省昆明市晋宁县晋城镇南门村鑫云冷库附近失踪。家属在寻找时，竟然发现这一区域已先后有8名青少年失踪，其中近一年内就有6人。有一名青年雷玉生就在此地的大街上被人拖进了一面包车，被扔进黑砖窑强迫劳动，后逃离黑砖窑重获自由。
+	      DR（High Dynamic Range）能够让图像在强烈明暗对比下，依然保持更清晰的暗部细节与画面层次，在相机领域
+已广泛使用，但对于动态影像，只有专业级的摄像机才会配备。
             </p>
-            <h4 id="three">耳光</h4>
+            <h4 id="three">画质</h4>
             <p>
-	      30多岁女人直接吐东西在刚扫过的地上，环卫大姐上去说了两句，结果挨了三巴掌三脚。见到被打的环卫大姐时，她精神不好，坐在凳子上不说话，左脸的伤痕还很显眼，工友在一旁照料她。2012年5月4日，浙江省，杭州市。
+	      小米手机2S创新性支持HDR实时录像功能，通过同
+一帧内长短曝光结合，使动态范围提升24dB。即使是直面太阳，你也可以拍摄出光照处鲜活、阴影处清晰的录像！
             </p>
             <p>
-	      尹大姐说：“小孩子都知道不能在街上乱吐。”那女人说：那不就是你们环卫应该做的事情吗？尹大姐说：难道我们环卫工人就低人一等吗？”话音刚落，“啪”“啪”“啪”三个巴掌落在尹大姐脸上。
+	      分辨率高达1280x720，显示精度高达342PPI，超越iPhone 5。
+IPS视网膜大屏，突破人类肉眼识别极限，展现前所未有的清晰、锐
+利、鲜活、平滑。特有全贴合技术，消除光线折射
             </p>
           </div>
           <hr>
@@ -903,7 +1456,6 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
         <div class="span3 columns">
           <h3>工具提示介绍</h3>
           <p>
-	    受Jason Frame所写的出色的jQuery.tipsy插件所启发，我们编写了工具提示。做为前者的升级版，工具提示不依赖于图像，
 	    使用css3显示动画效果，利用data-属性对标题做本地化存储。
 	  </p>
           <a href="assets/js/bootstrap-tooltip.js" target="_blank" class="btn">下载文件</a>
@@ -913,7 +1465,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <p>鼠标经过下面链接时显示工具提示：</p>
           <div class="tooltip-demo well">
             <p class="muted" style="margin-bottom: 0;">
-	      “这是我的第一次英文访问,很抱歉它不够严谨,但是我不得不这么做,不只因为采访时间限制，更因为我面对的是卡梅隆，这个人喜爱挑战、从无畏惧，他也希望别人如此，他可以原谅不完美，但他无法接受一个人不去努力接近自己的极限。”
+	      “这是我的第一次英文访问,很抱歉它不够严谨,但是我不得不这么做,不只因采访限制，更因为我面对的是卡梅隆，这个人喜爱挑战、从无畏惧，他也希望别人如此，他可以原谅不完美，但他无法接受一个人不去努力接近自己的极限。”
 	      ——<a href="#" rel="tooltip" title="柴静始终站在离新闻最近的地方，她以她的犀利和敏锐、坚定与坚持，最终历练成为一名优秀的新闻工作者。 ">柴静</a>《看见》专访<a href="#" rel="tooltip" title="1954年8月16日生于加拿大的著名电影导演，擅长拍摄动作片以及科幻电影。">卡梅隆</a>
             </p>
           </div>
@@ -1030,7 +1582,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <h2>鼠标经过时的弹出提示例子</h2>
           <p>鼠标经过按钮时切换弹示提示的显示/隐藏。</p>
           <div class="well">
-            <a href="#" class="btn btn-danger" rel="popover" title="他是谁" data-content="他来自山东，是一名残疾人，因思想独立、指谪政弊而被政府迫害。地方政府和当权政要派专人看管他，调拨专款作为对他的看管费用，他每天都活在别人的监视和囚禁中，其遭遇只能用令人发指来形容。历尽万难，他终于成功逃离了当地，在外国使节的帮助和护送下去到了国外。他，就是孙膑。">鼠标经过弹出提示</a>
+            <a href="#" class="btn btn-danger" rel="popover" title="他是谁" data-content="他来自山东，是一名残疾人，因思想独立、指谪政弊而被政府迫害。地方政府和当权政要派专人看管他，调拨专款作为对他的看管费用，他每天都活在别人的监视和囚禁中，其遭遇只能用令人发指来形容。历尽万难，他终于成功逃离了当地，在外国使节的帮助和护送下去到了国外。他，就是孙膑。">鼠标点击弹出提示</a>
           </div>
           <hr>
           <h2>使用 bootstrap-popover.js</h2>
@@ -1247,7 +1799,7 @@ $('#my-alert').bind('closed', function () {
              <tr>
                <td>状态</td>
                <td>
-                  <button id="fat-btn" data-loading-text="loading..." class="btn btn-primary">
+                  <button id="fat-btn" data-loading-text="loading..." class="btn btn-primary btn-green">
                     载入状态
                   </button>
                 </td>
@@ -1284,10 +1836,7 @@ $('#my-alert').bind('closed', function () {
           <h2>使用 bootstrap-button.js</h2>
           <p>通过javascript触发按钮：</p>
           <pre class="prettyprint linenums">$('.tabs').button()</pre>
-            <h3>标记</h3>
-          <p>
-	    Data attributes are integral to the button plugin. Check out the example code below for the various markup types.
-	  </p>
+            <h3>代码示例</h3>
 <pre class="prettyprint linenums">
 &lt;!-- Add data-toggle="button" to activate toggling on a single button --&gt;
 &lt;button class="btn" data-toggle="button"&gt;单独开关&lt;/button&gt;
@@ -1311,7 +1860,7 @@ $('#my-alert').bind('closed', function () {
           <p>
 	    切换按下状态。改变按钮的外观为已经激活(按下)的样子。
 	  </p>
-          <div class="alert alert-info">
+          <div class="alert">
             <strong>强调！</strong>
 	    可以使用 <code>data-toggle</code> 属性自动设置按钮状态。
           </div>
@@ -1322,7 +1871,7 @@ $('#my-alert').bind('closed', function () {
 	    载入文本应该设置在按钮的 <code>data-loading-text</code> 的属性中。
           </p>
           <pre class="prettyprint linenums">&lt;button class="btn" data-loading-text="正在载入..." &gt;...&lt;/button&gt;</pre>
-          <div class="alert alert-info">
+          <div class="alert">
             <strong>强调！</strong>
             <a href="https://github.com/twitter/bootstrap/issues/793">Firefox在页面载入时会保持按钮无效状态</a>。
 	    变通方案是在按钮上应用 <code>autocomplete="off"</code> 。
@@ -1369,36 +1918,39 @@ $('#my-alert').bind('closed', function () {
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                  国土问题
+                  全新高通骁龙600
                 </a>
               </div>
               <div id="collapseOne" class="accordion-body collapse in">
                 <div class="accordion-inner">
-		  前一段时间一个段子说，某国的网民在因国土问题与中国网民争吵时说，我要打到北京，中国的网民非常淡然地回应，就你那经济水平，交得起过路费吗？这两天新的段子说，李白要是活在今天的话，估计一大半以上他的诗根本写不出来，因为名山大川的门票他根本买不起。
+		  四核1.7G CPU，性能巅峰搭载高通骁龙600 四核1.7G，整体性能提升25%。拥有1.7G芯片中最强执行效率，达到超越极限的运行能力。在性能提升的同时，更省电5%。打开应用、浏览网页、运行大型游戏、观看高清视频，极速体验，分秒必争，源自更强悍的四核之王！
                 </div>
               </div>
             </div>
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                  门票问题
+                  图形性能堪比XBOX游戏机
                 </a>
               </div>
               <div id="collapseTwo" class="accordion-body collapse">
                 <div class="accordion-inner">
-		  目前，中国半数5A级景区门票达到100元，黄山门票10年来由80元涨至230元。山东曲阜称，与同类景区相比收费较低，仅收150元，不涨票价就丢身价。曲阜的孔庙、孔府和孔林，年收入1.5亿元左右，全部上缴了地方财政，但景区维护成本从未公开。
+		  Adreno 320图形处理芯片采用Adreno 320图形处理器，每秒渲染2亿个三角形、填充32
+亿个像素点。轻松运行最新大型3D游戏、流畅播放1080p高清
+视频，堪比专业游戏机与高清播放器！
                 </div>
               </div>
             </div>
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                  超生罚款
+                  背照式2代相机，32GB版跃升至1300万像素
                 </a>
               </div>
               <div id="collapseThree" class="accordion-body collapse">
                 <div class="accordion-inner">
-		  学者杨支柱因生二胎被取消公职，并罚款24万余元。他称，计生罚款以前直接叫超生罚款，入世后改成“社会抚养费”。根据9省市超生罚款的平均数，全国31个省市每年征收的超生罚款可高达279亿元。其中大城市将该收入上缴财政，而地方则分配混乱，部分罚款去向成谜。
+		  画质自然、清晰、细腻小米手机2S 16GB版配备全新800万像素相机，32GB版更采用索尼Exmor RS系列感光元件，在继承背照式传
+感器优异的感光性能同时，还使用堆栈式结构，让成像质量更加优秀。
                 </div>
               </div>
             </div>
@@ -1545,27 +2097,31 @@ $('#myCollapsible').on('hidden', function () {
               <div class="item active">
                 <img src="assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
                 <div class="carousel-caption">
-                  <h4>即使杀光所有报晓的公鸡，天，还是会亮的</h4>
+                  <h4>前置相机200万</h4>
                   <p>
-		    @shifeike: 昨天是李尚平被枪杀10周年，我发的那条纪念微博，成为我的新浪微博账号最后一条微博。这个2010年1月为反对红中抢笔而注册的微博，两年多时间里发了14538条微博，加上被删除的差不多近200万字，积累了96269条粉丝，自此灰飞烟灭。
+		    画质自然、清晰、细腻小米手机2S 16GB版配备全新800万像素相机，32GB版更采用索尼Exmor RS系列感光元件，在继承背照式传
+感器优异的感光性能同时，还使用堆栈式结构，让成像质量更加优秀。
 		  </p>
                 </div>
               </div>
               <div class="item">
                 <img src="assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
                 <div class="carousel-caption">
-                  <h4>如果人民不欢迎我们，就该我们下台了</h4>
+                  <h4>背照式2代相机，32GB版跃升至1300万像素</h4>
                   <p>
-		    【胡耀邦语录】①历史是混不过去的。②民主、自由、平等、博爱等观念是人类精神的一大解放。③如果人民不欢迎我们，就该我们下台了。④不懂的不要装懂，不通的不要装通，不服的不要装服。⑤中国的出路是民主和科学。⑥一个精神上、组织上被禁锢被压制的不自由民族怎么可能与其他国家进行自由竞争呢？
+		    【像素高清自拍，可以冲印10英寸照片。小米手机2S 同时配备200万像素背照式前置摄像头，兼可实现1080P高清摄像功能，全面革新自拍画质，带来前未
+有过的自拍体验。而且，前置摄像头同样支持1080p高清摄像
 		  </p>
                 </div>
               </div>
               <div class="item">
                 <img src="assets/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
                 <div class="carousel-caption">
-                  <h4>国家像需要空气一样需要变革</h4>
+                  <h4>专业级硬件HDR实时录像</h4>
                   <p>
-		    据戈尔巴乔夫基金会新闻处通报，俄总统梅德韦杰夫今天向前苏联总统戈尔巴乔夫颁发圣徒安德烈·佩尔沃兹万内勋章。戈尔巴乔夫在受勋时表示感谢，并称很激动。他坦言，对自己做过的事情问心无愧。他强调，他进行改革不是为了赢得敬重和荣誉，而是因为认识到，“国家像需要空气一样需要变革”。他承认犯过错误，并至今还在为这些错误而烦恼。但他认为：“短短几年所走过的路，使专制的过去永远成为了历史。”
+		    现在小米手机也做得到。HDR（High Dynamic Range）能够让图像在强烈明暗对比下，依然保持更清晰的暗部细节与画面层次，在相机领域
+已广泛使用，但对于动态影像，只有专业级的摄像机才会配备。小米手机2S创新性支持HDR实时录像功能，通过同
+一帧内长短曝光结合，使动态范围提升24dB。即使是直面太阳，你也可以拍摄出光照处鲜活、阴影处清晰的录像！
 		  </p>
                 </div>
               </div>
@@ -1816,7 +2372,14 @@ $('.carousel').carousel({
     <script src="assets/js/google-code-prettify/prettify.js"></script>  
     <!-- 页面应用层JS文件 -->
     <script src="assets/js/application.js"></script>
-
+    <script type="text/javascript">
+        $(function(){
+            $("select.uniform, .check, .check :checkbox, input:radio, input:file, .dataTables_length select").uniform();
+            $(".chzn-select").select2();
+            $(".datepicker").datepicker({todayBtn:!0});
+            $("form.validatable").validationEngine({promptPosition:"topLeft"});
+        })
+    </script>
 
   </body>
 </html>
