@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>LAYOUT_框架 · BackendUI API DOCS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BackendUI,bootstrap,中文api">
+    <meta name="author" content="Jsonbeta">
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">BackendUI API</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./index.html">概述</a>
+              </li>
+              <li>
+                <a href="./scaffolding.html">Layout</a>
+              </li>
+              <li>
+                <a href="./base-css.html">基础CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">组件</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">Javascript插件</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <section id="wrapbox">
+            <div class="page-header">
+                <h1>BackendUI简介</h1>
+            </div>
+            <h2>什么是backendUI？</h2>
+            <p>
+backendUI是一套基于BOOTSTRAP源码编译，在不修改BOOTSTRAP原有API的基础上，提供WEB后台项目通用的UI组件；<br/>
+主要包括:LAYOUT TABLE FORM GRID BUTTONS ICONS CHARTS AND SO ON...</p>
+            <h2>backendUI的使用场景？</h2>
+            <p>web后台项目</p>
+            <h2>如何快速的应用backendUI?</h2>
+            <p>
+                首页需要到项目托管的GITHUB地址： <a href="https://github.com/JsonBeta/backendUI" target="_blank">https://github.com/JsonBeta/backendUI</a>,download一份源码;<br/></p>
+            <p>将项目中的两个CSS文件放于页面HEAD部分</p>
+            <pre class="prettyprint linenums">
+    &lt;link href="assets/css/bootstrap.css" rel="stylesheet"&gt;
+    &lt;link href="assets/css/bootstrap-responsive.css" rel="stylesheet"&gt;</pre>
+            <p>bootstrap原生JS插件合并压缩</p>
+            <pre class="prettyprint linenums">
+    &lt;script src="assets/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    </pre>
+            <p>BackendUI提供的JS插件</p>
+            <pre class="prettyprint linenums">
+    &lt;!-- 表单美化插件 --&gt;
+    &lt;script src="assets/js/jquery.uniform.js"&gt;&lt;/script&gt;
+    &lt;!-- 非常强大的SELECT插件 http://ivaynberg.github.io/select2/ --&gt;
+    &lt;script src="assets/js/select2.js"&gt;&lt;/script&gt;
+    &lt;!-- jquery 日历插件 --&gt;
+    &lt;script src="assets/js/jquery.validationEngine.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/jquery.validationEngine-zh_CN.js"&gt;&lt;/script&gt;
+    &lt;!-- 用来生成静态或动态波谱图表效果 --&gt;
+    &lt;script src="assets/js/jquery.sparkline.js"&gt;&lt;/script&gt;
+    &lt;!-- 多功能表格插件 --&gt;
+    &lt;script src="assets/js/jquery.dataTables.js"&gt;&lt;/script&gt;
+    &lt;!-- 相册 支持TOUCH --&gt;
+    &lt;script src="assets/js/touchTouch.jquery.js"&gt;&lt;/script&gt;
+    &lt;!-- 泡泡消息 --&gt;
+    &lt;script src="assets/js/jquery.gritter.js"&gt;&lt;/script&gt;
+    &lt;!-- highcharts绘图 包含highcharts.js exporting.js --&gt;
+    &lt;script src="assets/js/highcharts.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/exporting.js"&gt;&lt;/script&gt;
+    </pre>
+        <h2>你需要编辑源码？</h2>
+        <p>本地需要有LESS编译环境</p>
+        <p>JAVASCRIPT文件合并压缩(ubuntu),在这之前你需要有NODEJS的运行环境，并安装uglifyjs模块;执行以下2个命令：</p>
+        <pre class="prettyprint linenums">@cat js/bootstrap-transition.js js/bootstrap-alert.js js/bootstrap-button.js js/bootstrap-carousel.js js/bootstrap-collapse.js js/bootstrap-dropdown.js js/bootstrap-modal.js js/bootstrap-tooltip.js js/bootstrap-popover.js js/bootstrap-scrollspy.js js/bootstrap-tab.js js/bootstrap-typeahead.js js/bootstrap-affix.js > docs/assets/js/bootstrap.js
+
+@./node_modules/.bin/uglifyjs -nc docs/assets/js/bootstrap.js > docs/assets/js/bootstrap.min.js</pre>
+        </section>
+        <!-- Footer
+      ================================================== -->
+     <footer class="footer"> 
+        <p class="pull-right"><a href="#">回到顶端</a></p>
+        <p>BackendUI文档一部分翻译来源于<!-- <a href="http://www.bootcss.com/" target="_blank">BOOTSTRAP中文网</a> <a href="http://wrongwaycn.github.io/" target="_blank">http://wrongwaycn.github.io/</a> <a href="http://xiemin.me/bootstrap-2.2.2/" target="_blank">http://xiemin.me/bootstrap-2.2.2/</a> 等 -->互联网资源，请勿用于商业目的～！</p>
+      </footer>
+    </div>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- 表单美化插件 -->
+    <script src="assets/js/jquery.uniform.js"></script>
+    <!-- 非常强大的SELECT插件 http://ivaynberg.github.io/select2/ -->
+    <script src="assets/js/select2.js"></script>
+    <!-- jquery 日历插件 -->
+    <script src="assets/js/jquery.validationEngine.js"></script>
+    <script src="assets/js/jquery.validationEngine-zh_CN.js"></script>
+    <!-- 用来生成静态或动态波谱图表效果 -->
+    <script src="assets/js/jquery.sparkline.js"></script>
+    <!-- 多功能表格插件 -->
+    <script src="assets/js/jquery.dataTables.js"></script>
+    <!-- 相册 支持TOUCH -->
+    <script src="assets/js/touchTouch.jquery.js"></script>
+    <!-- 泡泡消息 -->
+    <script src="assets/js/jquery.gritter.js"></script>
+    <!-- highcharts绘图 包含highcharts.js exporting.js -->
+    <script src="assets/js/highcharts.js"></script>
+    <script src="assets/js/exporting.js"></script>
+    <!-- googel代码美化 -->
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <!-- 页面应用层JS文件 -->
+    <script src="assets/js/application.js"></script>
+  </body>
+</html>

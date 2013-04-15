@@ -44,9 +44,6 @@
               <li class="active">
                 <a href="./javascript.html">Javascript插件</a>
               </li>
-              <li class="">
-                <a href="./less.html">使用LESS</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -528,95 +525,926 @@ failure : function() {
         <div class="span9">
             <div class="box">
                 <div class="box-header">
-                    <span class="title">select2示例</span>
+                    <span class="title">线状图插件Sparkline示例</span>
                 </div>
-                <div class="box-content">
-                    <form class="fill-up">
-                        <div class="row-fluid">
-                            <div class="span12">
-                                <ul class="padded separate-sections">
-                                     <li>
-                                        <label>下拉式多选：</label>
-                                        <select multiple="multiple" name="colors[]" class="chzn-select">
-                                            <option value="0">省份/自治区</option>
-                                            <option value="2" selected="selected">北京</option>
-                                            <option value="3">天津</option>
-                                            <option value="4">河北</option>
-                                            <option value="5">山西</option>
-                                            <option value="6">内蒙古</option>
-                                            <option value="7">辽宁</option>
-                                            <option value="8">吉林</option>
-                                            <option value="9">黑龙江</option>
-                                            <option value="10">上海</option>
-                                            <option value="11">江苏</option>
-                                            <option value="12">浙江</option>
-                                            <option value="13">安徽</option>
-                                            <option value="14">福建</option>
-                                            <option value="15" selected="selected">江西</option>
-                                            <option value="16">山东</option>
-                                            <option value="17">河南</option>
-                                            <option value="18">湖北</option>
-                                            <option value="19">湖南</option>
-                                            <option value="20">广东</option>
-                                            <option value="21" selected="selected">广西</option>
-                                            <option value="22">海南</option>
-                                            <option value="23">重庆</option>
-                                            <option value="24">四川</option>
-                                            <option value="25">贵州</option>
-                                            <option value="26">云南</option>
-                                            <option value="27">西藏</option>
-                                            <option value="28">陕西</option>
-                                            <option value="29">甘肃</option>
-                                            <option value="30">青海</option>
-                                            <option value="31">宁夏</option>
-                                            <option value="32">新疆</option>
-                                        </select>
-                                    </li>
-                                    <li>
-                                        <label>下拉式搜索：</label>
-                                          <select class="chzn-select" name="colors">
-                                            <option value="Amber">Amber</option>
-                                            <option value="Aero blue">Aero blue</option>
-                                            <option value="Air Force blue (RAF)">Air Force blue (RAF)</option>
-                                            <option value="Amethyst">Amethyst</option>
-                                            <option value="Antique fuchsia ">Antique fuchsia </option>
-                                            <option value="Antique brass">Antique brass</option>
-                                            <option value="Alizarin crimson">Alizarin crimson</option>
-                                            <option value="Alice blue">Alice blue</option>
-                                            <option value="Alabama Crimson">Alabama Crimson</option>
-                                            <option value="Android Green">Android Green</option>
-                                            <option value="American rose">American rose</option>
-                                            <option value="Anti-flash white">Anti-flash white</option>
-                                            <option value="Air Force blue (USAF)">Air Force blue (USAF)</option>
-                                            <option value="Amaranth">Amaranth</option>
-                                            <option value="SAE/ECE Amber (color)">SAE/ECE Amber (color)</option>
-                                            <option value="Air superiority blue">Air superiority blue</option>
-                                            <option value="Alloy orange">Alloy orange</option>
-                                            <option value="Antique bronze">Antique bronze</option>
-                                            <option value="Amazon">Amazon</option>
-                                            <option value="Almond">Almond</option>
-                                        </select>
-                                    </li>
-                                    <li>
-                                        <label>下拉式搜索：</label>
-                                        <select class="chzn-select" name="colors">
-                                            <option value="0">城市/地区/自治州</option><option value="205">武汉市</option><option value="206">黄石市</option><option value="207">十堰市</option><option value="208">宜昌市</option><option value="209">襄阳市</option><option value="210">鄂州市</option><option value="211">荆门市</option><option value="212">孝感市</option><option value="213">荆州市</option><option value="214">黄冈市</option><option value="215">咸宁市</option><option value="216">随州市</option><option value="217">恩施土家族苗族自治州</option><option value="218">省直辖县级行政单位</option>
-                                        </select>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </form>
+                <div class="box-content padded">
+                    <div class="sparkline" data-color="#96c877"><!--4,6,9,6,13,22,26,23,13,15,23,18--></div>
+                    <div class="sparkline"><!--10,27,28,11,7,5,22,4,11,14,16,28--></div>
                 </div>
             </div>
-            <h2>使用 select2.js</h2>
+            <h2>使用 jquery.sparkline.js</h2>
             <p>通过javascript选择器来调用：</p>
-            <pre class="prettyprint linenums">$(".chzn-select").select2();</pre>
+            <pre class="prettyprint linenums">
+$(".sparkline").each(function(){
+    var color = $(this).attr("data-color")||"#db6464";
+    $(this).sparkline("html",{type:"bar",barColor:color,height:"18px",barWidth:"5px",barSpacing:"2px",zeroAxis:!1});
+})</pre>
+            <p>HTML代码：</p>
+            <pre class="prettyprint linenums">
+&lt;div class="sparkline" data-color="#96c877"&gt;&lt;!--4,6,9,6,13,22,26,23,13,15,23,18--&gt;&lt;/div&gt;
+&lt;div class="sparkline"&gt;&lt;!--10,27,28,11,7,5,22,4,11,14,16,28--&gt;&lt;/div&gt;
+            </pre>
             <div class="alert">
                 <STRONG>强烈建议</STRONG>
-                如果您正在使用它，请详细阅读下面给出的链接地址，select2的功能远不止这些，支持搜索，远程数据集；它可以为你做更多让你惊讶的事情。
+                如果您正在使用它，请详细阅读下面给出的链接地址，它可以为你做更多让你惊讶的事情。
             </div>
-          <p>更多更详细的API请参考：  <a href="http://ivaynberg.github.io/select2/" target="_blank">http://ivaynberg.github.io/select2/</a> </p>
+          <p>更多更详细的API请参考：  <a href="http://omnipotent.net/jquery.sparkline/" target="_blank">http://omnipotent.net/jquery.sparkline/</a> </p>
+        </div>
+    </section>
+    <!-- DataTables
+    ================================================== -->
+    <section id="DataTables">
+      <div class="page-header">
+        <h1>DataTables表格<small>jquery.dataTables.js</small></h1>
+      </div>
+      <div class="row">
+        <div class="span3 columns">
+          <h3>DataTables表格介绍</h3>
+          <p>DataTables特性：<br/>
+            自动分页处理<br/>
+            即时表格数据过滤<br/>
+            数据排序以及数据类型自动检测<br/>
+            自动处理列宽度<br/>
+            可通过CSS定制样式<br/>
+            支持隐藏列<br/>
+            易用<br/>
+            可扩展性和灵活性<br/>
+            国际化<br/>
+            动态创建表格<br/>
+      </p>
+          <a href="assets/js/jquery.dataTables.js" target="_blank" class="btn">Download file</a>
+        </div>
+        <div class="span9">
+            <div class="box">
+                        <div class="box-header"><span class="title">DataTables表格展示</span></div>
+                        <div class="box-content">
+                            <div id="dataTables">
+                                <table cellpadding="0" cellspacing="0" border="0" class="dTable responsive">
+                                <thead>
+                                <tr>
+                                  <th><div>渲染引擎</div></th>
+                                  <th><div>浏览器</div></th>
+                                  <th><div>系统平台</div></th>
+                                  <th><div>版本号</div></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                  <td>Trident</td>
+                                  <td>Internet
+                                    Explorer 4.0</td>
+                                  <td>Win 95+</td>
+                                  <td class="center">4</td>
+                                </tr>
+                                <tr>
+                                  <td>Trident</td>
+                                  <td>Internet
+                                    Explorer 5.0</td>
+                                  <td>Win 95+</td>
+                                  <td class="center">5</td>
+                                </tr>
+                                <tr>
+                                  <td>Trident</td>
+                                  <td>Internet
+                                    Explorer 5.5</td>
+                                  <td>Win 95+</td>
+                                  <td class="center">5.5</td>
+                                </tr>
+                                <tr>
+                                  <td>Trident</td>
+                                  <td>Internet
+                                    Explorer 6</td>
+                                  <td>Win 98+</td>
+                                  <td class="center">6</td>
+                                </tr>
+                                <tr>
+                                  <td>Trident</td>
+                                  <td>Internet Explorer 7</td>
+                                  <td>Win XP SP2+</td>
+                                  <td class="center">7</td>
+                                </tr>
+                                <tr>
+                                  <td>Trident</td>
+                                  <td>AOL browser (AOL desktop)</td>
+                                  <td>Win XP</td>
+                                  <td class="center">6</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Firefox 1.0</td>
+                                  <td>Win 98+ / OSX.2+</td>
+                                  <td class="center">1.7</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Firefox 1.5</td>
+                                  <td>Win 98+ / OSX.2+</td>
+                                  <td class="center">1.8</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Firefox 2.0</td>
+                                  <td>Win 98+ / OSX.2+</td>
+                                  <td class="center">1.8</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Firefox 3.0</td>
+                                  <td>Win 2k+ / OSX.3+</td>
+                                  <td class="center">1.9</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Camino 1.0</td>
+                                  <td>OSX.2+</td>
+                                  <td class="center">1.8</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Camino 1.5</td>
+                                  <td>OSX.3+</td>
+                                  <td class="center">1.8</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Netscape 7.2</td>
+                                  <td>Win 95+ / Mac OS 8.6-9.2</td>
+                                  <td class="center">1.7</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Netscape Browser 8</td>
+                                  <td>Win 98SE+</td>
+                                  <td class="center">1.7</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Netscape Navigator 9</td>
+                                  <td>Win 98+ / OSX.2+</td>
+                                  <td class="center">1.8</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Mozilla 1.0</td>
+                                  <td>Win 95+ / OSX.1+</td>
+                                  <td class="center">1</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Mozilla 1.1</td>
+                                  <td>Win 95+ / OSX.1+</td>
+                                  <td class="center">1.1</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Mozilla 1.2</td>
+                                  <td>Win 95+ / OSX.1+</td>
+                                  <td class="center">1.2</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Mozilla 1.3</td>
+                                  <td>Win 95+ / OSX.1+</td>
+                                  <td class="center">1.3</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Mozilla 1.4</td>
+                                  <td>Win 95+ / OSX.1+</td>
+                                  <td class="center">1.4</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Mozilla 1.5</td>
+                                  <td>Win 95+ / OSX.1+</td>
+                                  <td class="center">1.5</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Mozilla 1.6</td>
+                                  <td>Win 95+ / OSX.1+</td>
+                                  <td class="center">1.6</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Mozilla 1.7</td>
+                                  <td>Win 98+ / OSX.1+</td>
+                                  <td class="center">1.7</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Mozilla 1.8</td>
+                                  <td>Win 98+ / OSX.1+</td>
+                                  <td class="center">1.8</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Seamonkey 1.1</td>
+                                  <td>Win 98+ / OSX.2+</td>
+                                  <td class="center">1.8</td>
+                                </tr>
+                                <tr>
+                                  <td>Gecko</td>
+                                  <td>Epiphany 2.20</td>
+                                  <td>Gnome</td>
+                                  <td class="center">1.8</td>
+                                </tr>
+                                <tr>
+                                  <td>Webkit</td>
+                                  <td>Safari 1.2</td>
+                                  <td>OSX.3</td>
+                                  <td class="center">125.5</td>
+                                </tr>
+                                <tr>
+                                  <td>Webkit</td>
+                                  <td>Safari 1.3</td>
+                                  <td>OSX.3</td>
+                                  <td class="center">312.8</td>
+                                </tr>
+                                <tr>
+                                  <td>Webkit</td>
+                                  <td>Safari 2.0</td>
+                                  <td>OSX.4+</td>
+                                  <td class="center">419.3</td>
+                                </tr>
+                                <tr>
+                                  <td>Webkit</td>
+                                  <td>Safari 3.0</td>
+                                  <td>OSX.4+</td>
+                                  <td class="center">522.1</td>
+                                </tr>
+                                <tr>
+                                  <td>Webkit</td>
+                                  <td>OmniWeb 5.5</td>
+                                  <td>OSX.4+</td>
+                                  <td class="center">420</td>
+                                </tr>
+                                <tr>
+                                  <td>Webkit</td>
+                                  <td>iPod Touch / iPhone</td>
+                                  <td>iPod</td>
+                                  <td class="center">420.1</td>
+                                </tr>
+                                <tr>
+                                  <td>Webkit</td>
+                                  <td>S60</td>
+                                  <td>S60</td>
+                                  <td class="center">413</td>
+                                </tr>
+                                <tr>
+                                  <td>Presto</td>
+                                  <td>Opera 7.0</td>
+                                  <td>Win 95+ / OSX.1+</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Presto</td>
+                                  <td>Opera 7.5</td>
+                                  <td>Win 95+ / OSX.2+</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Presto</td>
+                                  <td>Opera 8.0</td>
+                                  <td>Win 95+ / OSX.2+</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Presto</td>
+                                  <td>Opera 8.5</td>
+                                  <td>Win 95+ / OSX.2+</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Presto</td>
+                                  <td>Opera 9.0</td>
+                                  <td>Win 95+ / OSX.3+</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Presto</td>
+                                  <td>Opera 9.2</td>
+                                  <td>Win 88+ / OSX.3+</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Presto</td>
+                                  <td>Opera 9.5</td>
+                                  <td>Win 88+ / OSX.3+</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Presto</td>
+                                  <td>Opera for Wii</td>
+                                  <td>Wii</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Presto</td>
+                                  <td>Nokia N800</td>
+                                  <td>N800</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Presto</td>
+                                  <td>Nintendo DS browser</td>
+                                  <td>Nintendo DS</td>
+                                  <td class="center">8.5</td>
+                                </tr>
+                                <tr>
+                                  <td>KHTML</td>
+                                  <td>Konqureror 3.1</td>
+                                  <td>KDE 3.1</td>
+                                  <td class="center">3.1</td>
+                                </tr>
+                                <tr>
+                                  <td>KHTML</td>
+                                  <td>Konqureror 3.3</td>
+                                  <td>KDE 3.3</td>
+                                  <td class="center">3.3</td>
+                                </tr>
+                                <tr>
+                                  <td>KHTML</td>
+                                  <td>Konqureror 3.5</td>
+                                  <td>KDE 3.5</td>
+                                  <td class="center">3.5</td>
+                                </tr>
+                                <tr>
+                                  <td>Tasman</td>
+                                  <td>Internet Explorer 4.5</td>
+                                  <td>Mac OS 8-9</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Tasman</td>
+                                  <td>Internet Explorer 5.1</td>
+                                  <td>Mac OS 7.6-9</td>
+                                  <td class="center">1</td>
+                                </tr>
+                                <tr>
+                                  <td>Tasman</td>
+                                  <td>Internet Explorer 5.2</td>
+                                  <td>Mac OS 8-X</td>
+                                  <td class="center">1</td>
+                                </tr>
+                                <tr>
+                                  <td>Misc</td>
+                                  <td>NetFront 3.1</td>
+                                  <td>Embedded devices</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Misc</td>
+                                  <td>NetFront 3.4</td>
+                                  <td>Embedded devices</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Misc</td>
+                                  <td>Dillo 0.8</td>
+                                  <td>Embedded devices</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Misc</td>
+                                  <td>Links</td>
+                                  <td>Text only</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Misc</td>
+                                  <td>Lynx</td>
+                                  <td>Text only</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Misc</td>
+                                  <td>IE Mobile</td>
+                                  <td>Windows Mobile 6</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Misc</td>
+                                  <td>PSP browser</td>
+                                  <td>PSP</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                  <td>Other browsers</td>
+                                  <td>All others</td>
+                                  <td>-</td>
+                                  <td class="center">-</td>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+            </div>
+            <h2>使用 jquery.dataTables.js</h2>
+            <p>通过javascript选择器来调用：</p>
+            <pre class="prettyprint linenums">
+$(".dTable").dataTable({
+    bJQueryUI:!1,
+    bAutoWidth:!1,
+    bSortClasses: true,
+    sPaginationType:"full_numbers",
+    sDom:'&lt;"table-header"fl&gt;t&lt;"table-footer"ip&gt;'
+});</pre>
+            <h2>参数</h2>
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr>
+                        <td>属性名称</td>
+                        <td>取值范围</td>
+                        <td>解释</td>
+                    </tr>
+                    <tr>
+                        <td>bAutoWidth</td>
+                        <td>true or false, default true</td>
+                        <td>是否自动计算表格各列宽度</td>
+                    </tr>
+                    <tr>
+                        <td>bDeferRender</td>
+                        <td>true or false, default false</td>
+                        <td>用于渲染的一个参数</td>
+                    </tr>
+                    <tr>
+                        <td>bFilter</td>
+                        <td>true or false, default true</td>
+                        <td>开关，是否启用客户端过滤功能</td>
+                    </tr>
+                    <tr>
+                        <td>bInfo</td>
+                        <td>true or false, default true</td>
+                        <td>开关，是否显示表格的一些信息</td>
+                    </tr>
+                    <tr>
+                        <td>bJQueryUI</td>
+                        <td>true or false, default false</td>
+                        <td>是否使用jquery ui themeroller的风格</td>
+                    </tr>
+                    <tr>
+                        <td>bLengthChange</td>
+                        <td>true or false, default true</td>
+                        <td>开关，是否显示一个每页长度的选择条（需要分页器支持）</td>
+                    </tr>
+                    <tr>
+                        <td>bPaginate</td>
+                        <td>true or false, default true</td>
+                        <td>开关，是否显示（使用）分页器</td>
+                    </tr>
+                    <tr>
+                        <td>bProcessing</td>
+                        <td>true or false, defualt false</td>
+                        <td>开关，以指定当正在处理数据的时候，是否显示“正在处理”这个提示信息</td>
+                    </tr>
+                    <tr>
+                        <td>bScrollInfinite</td>
+                        <td>true or false, default false</td>
+                        <td>开关，以指定是否无限滚动（与sScrollY配合使用），在大数据量的时候很有用。当这个标志为true的时候，分页器就默认关闭</td>
+                    </tr>
+                    <tr>
+                        <td>bSort</td>
+                        <td>true or false, default true</td>
+                        <td>开关，是否让各列具有按列排序功能</td>
+                    </tr>
+                    <tr>
+                        <td>bSortClasses</td>
+                        <td>true or false, default true</td>
+                        <td>开关，指定当当前列在排序时，是否增加classes 'sorting_1', 'sorting_2' and 'sorting_3'，打开后，在处理大数据时，性能有所损失</td>
+                    </tr>
+                    <tr>
+                        <td>bStateSave</td>
+                        <td>true or false, default false</td>
+                        <td>开关，是否打开客户端状态记录功能。这个数据是记录在cookies中的，打开了这个记录后，即使刷新一次页面，或重新打开浏览器，之前的状态都是保存下来的</td>
+                    </tr>
+                    <tr>
+                        <td>sScrollX</td>
+                        <td>'disabled' or&nbsp; '100%' 类似的字符串</td>
+                        <td>是否开启水平滚动，以及指定滚动区域大小</td>
+                    </tr>
+                    <tr>
+                        <td>sScrollY</td>
+                        <td>'disabled' or '200px' 类似的字符串</td>
+                        <td>是否开启垂直滚动，以及指定滚动区域大小</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>选项</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>aaSorting</td>
+                        <td>array array[int,string], 如[], [[0,'asc'], [0,'desc']]</td>
+                        <td>指定按多列数据排序的依据</td>
+                    </tr>
+                    <tr>
+                        <td>aaSortingFixed</td>
+                        <td>同上</td>
+                        <td>同上。唯一不同点是不能被用户的自定义配置冲突</td>
+                    </tr>
+                    <tr>
+                        <td>aLengthMenu</td>
+                        <td>default [10, 25, 50, 100]，可以为一维数组，也可为二维数组，比如：[[10, 25, 50, -1], [10, 25, 50, "All"]]</td>
+                        <td>这个为选择每页的条目数，当使用一个二维数组时，二维层面只能有两个元素，第一个为显示每页条目数的选项，第二个是关于这些选项的解释</td>
+                    </tr>
+                    <tr>
+                        <td>aoSearchCols</td>
+                        <td>default null, 类似：[null, {"sSearch": "My filter"}, null,{"sSearch": "^[0-9]", "bEscapeRegex": false}]</td>
+                        <td>给每个列单独定义其初始化搜索列表特性（这一块还没搞懂）</td>
+                    </tr>
+                    <tr>
+                        <td>asStripClasses</td>
+                        <td>default ['odd', 'even'], 比如['strip1', 'strip2', 'strip3']</td>
+                        <td>指定要被应用到各行的class风格，会自动循环</td>
+                    </tr>
+                    <tr>
+                        <td>bDestroy</td>
+                        <td>true or false, default false</td>
+                        <td>用于当要在同一个元素上执行新的dataTable绑定时，将之前的那个数据对象清除掉，换以新的对象设置</td>
+                    </tr>
+                    <tr>
+                        <td>bRetrieve</td>
+                        <td>true or false, default false</td>
+                        <td>用于指明当执行dataTable绑定时，是否返回DataTable对象</td>
+                    </tr>
+                    <tr>
+                        <td>bScrollCollapse</td>
+                        <td>true or false, default false</td>
+                        <td>指定适当的时候缩起滚动视图</td>
+                    </tr>
+                    <tr>
+                        <td>bSortCellsTop</td>
+                        <td>true or false, default false</td>
+                        <td>（未知的东东）</td>
+                    </tr>
+                    <tr>
+                        <td>iCookieDuration</td>
+                        <td>整数，默认7200，单位为秒</td>
+                        <td>指定用于存储客户端信息到cookie中的时间长度，超过这个时间后，自动过期</td>
+                    </tr>
+                    <tr>
+                        <td>iDeferLoading</td>
+                        <td>整数，默认为null</td>
+                        <td>延迟加载，它的参数为要加载条目的数目，通常与bServerSide，sAjaxSource等配合使用</td>
+                    </tr>
+                    <tr>
+                        <td>iDisplayLength</td>
+                        <td>整数，默认为10</td>
+                        <td>用于指定一屏显示的条数，需开启分页器</td>
+                    </tr>
+                    <tr>
+                        <td>iDisplayStart</td>
+                        <td>整数，默认为0</td>
+                        <td>用于指定从哪一条数据开始显示到表格中去</td>
+                    </tr>
+                    <tr>
+                        <td>iScrollLoadGap</td>
+                        <td>整数，默认为100</td>
+                        <td>用于指定当DataTable设置为滚动时，最多可以一屏显示多少条数据</td>
+                    </tr>
+                    <tr>
+                        <td>oSearch</td>
+                        <td>默认{ "sSearch": "", "bRegex": false, "bSmart": true }</td>
+                        <td>又是初始时指定搜索参数相关的，有点复杂，没搞懂目前</td>
+                    </tr>
+                    <tr>
+                        <td>sAjaxDataProp</td>
+                        <td>字符串，default 'aaData'</td>
+                        <td>指定当从服务端获取表格数据时，数据项使用的名字</td>
+                    </tr>
+                    <tr>
+                        <td>sAjaxSource</td>
+                        <td>URL字符串，default null</td>
+                        <td>指定要从哪个URL获取数据</td>
+                    </tr>
+                    <tr>
+                        <td>sCookiePrefix</td>
+                        <td>字符串，default 'SpryMedia_DataTables_'</td>
+                        <td>当打开状态存储特性后，用于指定存储在cookies中的字符串的前缀名字</td>
+                    </tr>
+                    <tr>
+                        <td>sDom</td>
+                        <td>default lfrtip (when bJQueryUI is false) or &lt;"H"lfr&gt;t&lt;"F"ip&gt; (when bJQueryUI is true)</td>
+                        <td>这是用于定义DataTable布局的一个强大的属性，另开专门文档来补充说明吧</td>
+                    </tr>
+                    <tr>
+                        <td>sPaginationType</td>
+                        <td>'full_numbers' or 'two_button', default 'two_button'</td>
+                        <td>用于指定分页器风格</td>
+                    </tr>
+                    <tr>
+                        <td>sScrollXInner</td>
+                        <td>string default 'disabled'</td>
+                        <td>又是水平滚动相关的，没搞懂啥意思</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>支持的回调函数</h2>
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr>
+                        <td>回调函数名称</td>
+                        <td>参数</td>
+                        <td>返回值</td>
+                        <td>默认</td>
+                        <td>功能</td>
+                    </tr>
+                    <tr>
+                        <td>fnCookieCallback</td>
+                        <td>1.string:  Name of the cookie defined by DataTables 2.object: Data to be stored in  the cookie 3.string: Cookie expires string 4.string: Path of the cookie  to set</td>
+                        <td>string: cookie formatted string (which should be encoded by using encodeURIComponent())</td>
+                        <td>null</td>
+                        <td>当每次cookies改变时，会触发这个函数调用</td>
+                    </tr>
+                    <tr>
+                        <td>fnDrawCallback</td>
+                        <td>无</td>
+                        <td>无</td>
+                        <td>无</td>
+                        <td>在每次table被draw完后调用，至于做什么就看着办吧</td>
+                    </tr>
+                    <tr>
+                        <td>fnFooterCallback</td>
+                        <td>1.node  : "TR" element for the footer 2.array array strings : Full table data  (as derived from the original HTML) 3.int : Index for the current  display starting point in the display array&lt; 4.int : Index for the  current display ending point in the display array 5.array int : Index  array to translate the visual position to the full data array</td>
+                        <td>无</td>
+                        <td>无</td>
+                        <td>用于在每次重画的时候修改表格的脚部</td>
+                    </tr>
+                    <tr>
+                        <td>fnFormatNumber</td>
+                        <td>1.int : number to be formatted</td>
+                        <td>String : formatted string for DataTables to show the number</td>
+                        <td>有默认的</td>
+                        <td>用于在大数字上，自动加入一些逗号，分隔开</td>
+                    </tr>
+                    <tr>
+                        <td>fnHeaderCallback</td>
+                        <td>1.node  : "TR" element for the header 2.array array strings : Full table data  (as derived from the original HTML) 3.int : Index for the current  display starting point in the display array 4.int : Index for the  current display ending point in the display array 5.array int : Index  array to translate the visual position to the full data array</td>
+                        <td>无</td>
+                        <td>无</td>
+                        <td>用于在每次draw发生时，修改table的header</td>
+                    </tr>
+                    <tr>
+                        <td>fnInfoCallback</td>
+                        <td>1.object:  DataTables settings object 2.int: Starting position in data for the  draw 3.int: End position in data for the draw 4.int: Total number of  rows in the table (regardless of filtering) 5.int: Total number of rows  in the data set, after filtering 6.string: The string that DataTables  has formatted using it's own rules</td>
+                        <td>string: The string to be displayed in the information element.</td>
+                        <td>无</td>
+                        <td>用于传达table信息</td>
+                    </tr>
+                    <tr>
+                        <td>fnInitComplete</td>
+                        <td>1.object:oSettings - DataTables settings object</td>
+                        <td>无</td>
+                        <td>无</td>
+                        <td>表格初始化完成后调用</td>
+                    </tr>
+                    <tr>
+                        <td>fnPreDrawCallback</td>
+                        <td>1.object:oSettings - DataTables settings object</td>
+                        <td>Boolean</td>
+                        <td>无</td>
+                        <td>用于在开始绘制之前调用，返回false的话，会阻止draw事件发生；返回其它值，draw可以顺利执行</td>
+                    </tr>
+                    <tr>
+                        <td>fnRowCallback</td>
+                        <td>1.node  : "TR" element for the current row 2.array strings : Raw data array for  this row (as derived from the original HTML) 3.int : The display index  for the current table draw 4.int : The index of the data in the full  list of rows (after filtering)</td>
+                        <td>node : "TR" element for the current row</td>
+                        <td>无</td>
+                        <td>当创建了行，但还未绘制到屏幕上的时候调用，通常用于改变行的class风格</td>
+                    </tr>
+                    <tr>
+                        <td>fnServerData</td>
+                        <td>1.string:  HTTP source to obtain the data from (i.e. sAjaxSource) 2.array objects:  A key/value pair object containing the data to send to the server  3.function: Function to be called on completion of the data get process  that will draw the data on the page.</td>
+                        <td>void</td>
+                        <td>$.getJSON</td>
+                        <td>用于替换默认发到服务端的请求操作</td>
+                    </tr>
+                    <tr>
+                        <td>fnStateLoadCallback</td>
+                        <td>1.object:oSettings  - DataTables settings object 2.object:oData - Object containing  information retrieved from the state saving cookie which should be  restored. For the exact properties please refer to the DataTables code.</td>
+                        <td>Boolean - false if the state should not be loaded, true otherwise</td>
+                        <td>无</td>
+                        <td>在cookies中的数据被加载前执行，可以方便地修改这些数据</td>
+                    </tr>
+                    <tr>
+                        <td>fnStateSaveCallback</td>
+                        <td>1.object:oSettings  - DataTables settings object 2.String:sValue - a JSON string (without  the final closing brace) which should be stored in the state saving  cookie.</td>
+                        <td>String - the full string that should be used to save the state</td>
+                        <td>无</td>
+                        <td>在状态数据被存储到cookies前执行，可以方便地做一些预操作</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="alert">
+                <STRONG>强烈建议</STRONG>
+                如果您正在使用它，请详细阅读下面给出的链接地址，它可以为你做更多让你惊讶的事情。
+            </div>
+          <p>更多更详细的API请参考：  <a href="http://www.datatables.net/" target="_blank">http://www.datatables.net/</a> </p>
+        </div>
+    </section>
+    <!-- gritter
+    ================================================== -->
+    <section id="gritter">
+      <div class="page-header">
+        <h1>gritter消息通知 <small>jquery.gritter.js</small></h1>
+      </div>
+      <div class="row">
+        <div class="span3 columns">
+          <h3>gritter消息通知</h3>
+          <p>
+         是一个小型的类似growl的jQuery消息通知插件。支持消息的点击事件绑定，通知消失CALLBACK等特性
+      </p>
+          <a href="assets/js/jquery.gritter.js" target="_blank" class="btn">Download file</a>
+        </div>
+        <div class="span9">
+            <div class="box">
+              <div class="box-header">
+                <span class="title">gritter消息通知</span>
+              </div>
+
+              <div class="box-content padded">
+                <a class="growl-info btn btn-blue" href="#">Info</a>
+                <a class="growl-success btn btn-green" href="#">Success</a>
+                <a class="growl-warn btn btn-gray" href="#">Warning</a>
+                <a class="growl-error btn btn-red" href="#">Error</a>
+              </div>
+            </div>
+            <h2>使用 jquery.gritter.js</h2>
+            <p>javascript绑定事件：</p>
+            <pre class="prettyprint linenums">
+$(".growl-success").click(function(e){
+    e.preventDefault();
+    $.gritter.add({
+        class_name:"success",
+        title:"&lt;i class='icon-ok-sign'&gt;&lt;/i&gt;his is a success message!",
+        text:"This will fade out after a certain amount of time."
+    });
+});</pre>
+            <p>参数 <code>class_name</code> ,我们预设了<code>success</code>,<code>warn</code>,<code>error</code>,<code>info</code>四种</p>
+            <p>gritter全局参数扩展：</p>
+            <pre class="prettyprint linenums">$.extend($.gritter.options,{position:"bottom-right"})</pre>
+            <div class="alert">
+                <STRONG>强烈建议</STRONG>
+                如果您正在使用它，请详细阅读下面给出的链接地址，它可以为你做更多让你惊讶的事情。
+            </div>
+          <p>更多更详细的API请参考：  <br/>
+            <a href="http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/" target="_blank">http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/</a><br/>
+            <a href="http://boedesign.com/demos/gritter/" target="_blank">http://boedesign.com/demos/gritter/</a>
+        </p>
+        </div>
+    </section>
+    <!-- highcharts
+    ================================================== -->
+    <section id="highcharts">
+      <div class="page-header">
+        <h1>绘图 <small>jquery.highcharts.js</small></h1>
+      </div>
+      <div class="row">
+        <div class="span3 columns">
+          <h3>highcharts绘图</h3>
+          <p>
+         Highcharts是一个制作图表的纯Javascript类库，主要特性如下：<br/>
+        兼容性：兼容当今所有的浏览器，包括iPhone、IE和火狐等等；<br/>
+        对个人用户完全免费；<br/>
+        纯JS，无BS；<br/>
+        支持大部分的图表类型：直线图，曲线图、区域图、区域曲线图、柱状图、饼装图、散布图；<br/>
+        跨语言：不管是PHP、Asp.net还是Java都可以使用，它只需要2个文件：一个是Highcharts的核心文件highcharts.js，还有exporting.js；<br/>
+        提示功能：鼠标移动到图表的某一点上有提示信息；<br/>
+        放大功能：选中图表部分放大，近距离观察图表；<br/>
+        易用性：无需要特殊的开发技能，只需要设置一下选项就可以制作适合自己的图表；<br/>
+        时间轴：可以精确到毫秒；
+      </p>
+          <a href="assets/js/jquery.highcharts.js" target="_blank" class="btn">Download file</a>
+        </div>
+        <div class="span9">
+            <div class="box">
+              <div class="box-header"><span class="title">综合图</span></div>
+              <div class="box-content padded">
+                <div id="hightcharts_combin"></div>
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="span6">
+                <div class="box">
+                  <div class="box-header"><span class="title">饼图A</span></div>
+                  <div class="box-content padded">
+                    <div id="hightcharts_pieA"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="span6">
+                <div class="box">
+                  <div class="box-header">
+                    <span class="title">饼图B</span>
+                    <ul class="box-toolbar">
+                      <li><a class="btn btn-blue btn-mini">占位占位啊!</a></li>
+                    </ul>
+                  </div>
+                  <div class="box-content padded">
+                    <div id="hightcharts_pieB"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-header"><span class="title">柱状图</span></div>
+              <div class="box-content padded">
+                <div id="hightcharts_column"></div>
+              </div>
+            </div>
+            <h2>使用 jquery.highcharts.js</h2>
+            <p>简单的饼状图、柱状图需加载JS2个文件</p>
+            <pre class="prettyprint linenums">
+    &lt;script src="../assets/js/highcharts.js"&gt;&lt;/script&gt;
+    &lt;script src="../assets/js/exporting.js"&gt;&lt;/script&gt;</pre>
+            <p>我的HTML是这样的：</p>
+            <pre class="prettyprint linenums">&lt;div id="hightcharts_combin"&gt;&lt;/div&gt;</pre>     
+            <p>通过JAVASCRIPT来取数据，传递参数：</p>
+            <pre class="prettyprint linenums">$('#hightcharts_combin').highcharts({
+            title: {text: '综合绘图'},
+            xAxis: {categories: ['苹果', '橘子', '香蕉', '李子', '梨']},
+            tooltip: {
+                formatter: function() {
+                    var s;
+                    if (this.point.name) { // the pie chart
+                        s = ''+
+                            this.point.name +': '+ this.y +' 消费水果占比';
+                    } else {
+                        s = ''+
+                            this.x  +': '+ this.y;
+                    }
+                    return s;
+                }
+            },
+            labels: {
+                items: [{
+                    html: '水果消费总量',
+                    style: {
+                        left: '40px',
+                        top: '8px',
+                        color: 'black'
+                    }
+                }]
+            },
+            series: [{
+                type: 'column',
+                name: '汤汤',
+                data: [3, 2, 1, 3, 4]
+            }, {
+                type: 'column',
+                name: '',
+                data: [2, 3, 5, 7, 6]
+            }, {
+                type: 'column',
+                name: '飞飞',
+                data: [4, 3, 3, 9, 0]
+            }, {
+                type: 'spline',
+                name: '平均',
+                data: [3, 2.67, 3, 6.33, 3.33],
+                marker: {
+                    lineWidth: 2,
+                    lineColor: Highcharts.getOptions().colors[3],
+                    fillColor: 'white'
+                }
+            }, {
+                type: 'pie',
+                name: 'Total consumption',
+                data: [{
+                    name: '汤汤',
+                    y: 13,
+                    color: Highcharts.getOptions().colors[0] // Jane's color
+                }, {
+                    name: '超超',
+                    y: 23,
+                    color: Highcharts.getOptions().colors[1] // John's color
+                }, {
+                    name: '飞飞',
+                    y: 19,
+                    color: Highcharts.getOptions().colors[2] // Joe's color
+                }],
+                center: [100, 80],
+                size: 100,
+                showInLegend: false,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
+        });</pre>
+            <div class="alert">
+                <STRONG>强烈建议</STRONG>
+                如果您正在使用它，请详细阅读下面给出的链接地址，highcharts是一款非常强大的绘图插件,它可以为你做更多让你惊讶的事情。
+            </div>
+          <p>更多更详细的API请参考：
+            <a href="http://www.highcharts.com/" target="_blank">http://www.highcharts.com/</a>
+        </p>
         </div>
     </section>
       <!-- Using Javascript w/ Bootstrap
@@ -2336,7 +3164,7 @@ $('.carousel').carousel({
       ================================================== -->
       <footer class="footer"> 
         <p class="pull-right"><a href="#">回到顶端</a></p>
-        <p>以上文档一部分翻译来源于BOOTSTRAP中文网等，请勿用于商业项目～！</p>
+        <p>BackendUI文档一部分翻译来源于<!-- <a href="http://www.bootcss.com/" target="_blank">BOOTSTRAP中文网</a> <a href="http://wrongwaycn.github.io/" target="_blank">http://wrongwaycn.github.io/</a> <a href="http://xiemin.me/bootstrap-2.2.2/" target="_blank">http://xiemin.me/bootstrap-2.2.2/</a> 等 -->互联网资源，请勿用于商业目的～！</p>
       </footer>
 
     </div><!-- /container -->
@@ -2378,7 +3206,279 @@ $('.carousel').carousel({
             $(".chzn-select").select2();
             $(".datepicker").datepicker({todayBtn:!0});
             $("form.validatable").validationEngine({promptPosition:"topLeft"});
-        })
+            //sparkline
+            $(".sparkline").each(function(){
+                var color = $(this).attr("data-color")||"#db6464";
+                $(this).sparkline("html",{type:"bar",barColor:color,height:"18px",barWidth:"5px",barSpacing:"2px",zeroAxis:!1});
+            });
+            //dataTables
+            $(".dTable").dataTable({
+                bJQueryUI:!1,
+                bAutoWidth:!1,
+                bSortClasses: true,
+                sPaginationType:"full_numbers",
+                sDom:'<"table-header"fl>t<"table-footer"ip>'});
+            });
+            //gritter
+            $(".growl-info").click(function(e){
+                e.preventDefault();
+                $.gritter.add({
+                    class_name:"info",
+                    title:"<i class='icon-info-sign'></i>This is a notice!",
+                    text:"This will fade out after a certain amount of time."
+                });
+            });
+            $(".growl-warn").click(function(e){
+                e.preventDefault();
+                $.gritter.add({
+                    class_name:"warn",
+                    title:"<i class='icon-warning-sign'></i>This is a warning!",
+                    text:"This will fade out after a certain amount of time."
+                });
+            });
+            $(".growl-error").click(function(e){
+                e.preventDefault();
+                $.gritter.add({
+                    class_name:"error",
+                    title:"<i class='icon-exclamation-sign'></i>This is an error!",
+                    text:"This will fade out after a certain amount of time."
+                });
+            });
+            $(".growl-success").click(function(e){
+                e.preventDefault();
+                $.gritter.add({
+                    class_name:"success",
+                    title:"<i class='icon-ok-sign'></i>his is a success message!",
+                    text:"This will fade out after a certain amount of time."
+                });
+            });
+            $.extend($.gritter.options,{position:"bottom-right"})
+
+            //绘图展示
+        $('#hightcharts_combin').highcharts({
+            chart: {
+            },
+            title: {
+                text: '综合绘图'
+            },
+            xAxis: {
+                categories: ['苹果', '橘子', '香蕉', '李子', '梨']
+            },
+            tooltip: {
+                formatter: function() {
+                    var s;
+                    if (this.point.name) { // the pie chart
+                        s = ''+
+                            this.point.name +': '+ this.y +' 消费水果占比';
+                    } else {
+                        s = ''+
+                            this.x  +': '+ this.y;
+                    }
+                    return s;
+                }
+            },
+            labels: {
+                items: [{
+                    html: '水果消费总量',
+                    style: {
+                        left: '40px',
+                        top: '8px',
+                        color: 'black'
+                    }
+                }]
+            },
+            series: [{
+                type: 'column',
+                name: '汤汤',
+                data: [3, 2, 1, 3, 4]
+            }, {
+                type: 'column',
+                name: '',
+                data: [2, 3, 5, 7, 6]
+            }, {
+                type: 'column',
+                name: '飞飞',
+                data: [4, 3, 3, 9, 0]
+            }, {
+                type: 'spline',
+                name: '平均',
+                data: [3, 2.67, 3, 6.33, 3.33],
+                marker: {
+                    lineWidth: 2,
+                    lineColor: Highcharts.getOptions().colors[3],
+                    fillColor: 'white'
+                }
+            }, {
+                type: 'pie',
+                name: 'Total consumption',
+                data: [{
+                    name: '汤汤',
+                    y: 13,
+                    color: Highcharts.getOptions().colors[0] // Jane's color
+                }, {
+                    name: '超超',
+                    y: 23,
+                    color: Highcharts.getOptions().colors[1] // John's color
+                }, {
+                    name: '飞飞',
+                    y: 19,
+                    color: Highcharts.getOptions().colors[2] // Joe's color
+                }],
+                center: [100, 80],
+                size: 100,
+                showInLegend: false,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
+        });
+        $('#hightcharts_pieA').highcharts({
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false
+                    },
+                    title: {
+                        text: '某某网站用户浏览器统计-2012'
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+                        percentageDecimals: 1
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                color: '#000000',
+                                connectorColor: '#000000',
+                                formatter: function() {
+                                    return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: '占比',
+                        data: [
+                            ['Firefox',   45.0],
+                            ['IE',       26.8],
+                            {
+                                name: 'Chrome',
+                                y: 12.8,
+                                sliced: true,
+                                selected: true
+                            },
+                            ['Safari',    8.5],
+                            ['Opera',     6.2],
+                            ['Others',   0.7]
+                        ]
+                    }]
+                });
+            $('#hightcharts_pieB').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: '某某网站用户浏览器统计-2012'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+                percentageDecimals: 1
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: '占比',
+                data: [
+                    ['Firefox',   45.0],
+                    ['IE',       26.8],
+                    {
+                        name: 'Chrome',
+                        y: 12.8,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Safari',    8.5],
+                    ['Opera',     6.2],
+                    ['Others',   0.7]
+                ]
+            }]
+        });
+        $('#hightcharts_column').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Historic World Population by Region'
+            },
+            subtitle: {
+                text: 'Source: Wikipedia.org'
+            },
+            xAxis: {
+                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Population (millions)',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' millions'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -100,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FAFAFA',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Year 1800',
+                data: [107, 31, 635, 203, 2]
+            }, {
+                name: 'Year 1900',
+                data: [133, 156, 947, 408, 6]
+            }, {
+                name: 'Year 2008',
+                data: [973, 914, 4054, 732, 34]
+            }]
+        });
     </script>
 
   </body>

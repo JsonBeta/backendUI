@@ -3745,7 +3745,10 @@
     	//gritter growl plugin
 		var Growl=function(){
 			var e = this;
-			return e.info=function(e){return e.class_name="info",e.title="<i class='icon-info-sign'></i> "+e.title,$.gritter.add(e)},e.warn=function(e){return e.class_name="warn",e.title="<i class='icon-warning-sign'></i> "+e.title,$.gritter.add(e)},e.error=function(e){return e.class_name="error",e.title="<i class='icon-exclamation-sign'></i> "+e.title,$.gritter.add(e)},e.success=function(e){return e.class_name="success",e.title="<i class='icon-ok-sign'></i> "+e.title,$.gritter.add(e)},e
+			return e.info=function(e){return e.class_name="info",e.title="<i class='icon-info-sign'></i> "+e.title,$.gritter.add(e)},
+			e.warn=function(e){return e.class_name="warn",e.title="<i class='icon-warning-sign'></i> "+e.title,$.gritter.add(e)},
+			e.error=function(e){return e.class_name="error",e.title="<i class='icon-exclamation-sign'></i> "+e.title,$.gritter.add(e)},
+			e.success=function(e){return e.class_name="success",e.title="<i class='icon-ok-sign'></i> "+e.title,$.gritter.add(e)},e
 		}();
 		$.extend($.gritter.options,{position:"bottom-right"})
 
