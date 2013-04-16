@@ -1293,6 +1293,7 @@
       <p>
 	一个简单的例子，可以用在多个页面中。
       </p>
+      <p>简洁风格的：</p>  
       <ul class="breadcrumb">
         <li class="active">首页</li>
       </ul>
@@ -1305,11 +1306,18 @@
         <li><a href="#">类库</a> <span class="divider">/</span></li>
         <li class="active">数据</li>
       </ul>
+      <p>小图标风格：</p>
+      <div class="breadcrumb-line navbar">
+            <ul class="breadcrumbs">
+                <li><a href="#"><i class="icon-home"></i>首页</a></li>
+                <li class="current"><i class="icon-edit"></i> 面包屑</li>
+            </ul>
+        </div>
     </div>
     <div class="span6">
       <h3>标记</h3>
       <p>
-	使用无序号的ul列表。
+	使用无序号的ul列表。简洁风格的：
       </p>
 <pre class="prettyprint linenums">
 &lt;ul class="breadcrumb"&gt;
@@ -1322,6 +1330,14 @@
   &lt;li class="active"&gt;数据&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
+    <p>小图标风格代码示例：</p>
+    <pre class="prettyprint linenums">
+&lt;div class="breadcrumb-line navbar"&gt;
+    &lt;ul class="breadcrumbs"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-home"&gt;&lt;/i&gt;首页&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="current"&gt;&lt;i class="icon-edit"&gt;&lt;/i&gt; 面包屑&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div></pre>
     </div>
   </div>
 

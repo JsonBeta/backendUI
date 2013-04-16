@@ -182,7 +182,7 @@ hr.soften {
 @media (min-width: 980px) {
   .subnav-fixed {
     position: fixed;
-    top: 44px;
+    top: 41px;
     left: 0;
     right: 0;
     z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
