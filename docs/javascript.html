@@ -82,6 +82,7 @@
             <li><a href="#collapse">折叠</a></li>
             <li><a href="#carousel">轮播</a></li>
             <li><a href="#typeahead">输入提醒</a></li>
+            <li><a href="#datepicker">日历</a></li>
           </ul>
         </div>
       </header>
@@ -3159,7 +3160,111 @@ $('.carousel').carousel({
         </div>
       </div>
     </section>
+    <!-- datepicker
+    ================================================== -->
+    <section id="datepicker">
+      <div class="page-header">
+        <h1>datepicker日历 <small>bootstrap-datepicker.js</small></h1>
+      </div>
+      <div class="row">
+        <div class="span3 columns">
+          <h3>datepicker</h3>
+          <p>
+         插件Datepicker是一个配置灵活的插件，我们可以自定义其展示方式，包括日期格式、语言、限制选择日期范围、添加相关按钮以及其它导航等
+      </p>
+          <a href="assets/js/bootstrap-datepicker.js" target="_blank" class="btn">Download file</a>
+        </div>
+        <div class="span9">
+            <div class="box">
+              <div class="box-header">
+                <span class="title">gritter消息通知</span>
+              </div>
 
+              <div class="box-content padded">
+                <input class="datepicker fill-up" type="text" placeholder="请选择日期">
+              </div>
+            </div>
+            <h2>使用 bootstrap-datepicker.js</h2>
+            <p>HTML代码示例：</p>
+            <pre class="prettyprint linenums">&lt;input class="datepicker" type="text" placeholder="请选择日期"&gt;</pre>
+            <p>JAVASCRIPT方法调用：</p>
+            <pre class="prettyprint linenums">$(".datepicker").datepicker({todayBtn:!0,language:"zh-CN",weekStart:1});</pre>
+            <p>参数说明</p>
+            <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">名称</th>
+               <th style="width: 100px;">参数类型</th>
+               <th style="width: 100px;">缺省</th>
+               <th>描述</th>
+             </tr>
+            </thead>
+            <tbody>
+              <tr>
+               <td>ming</td>
+               <td>string</td>
+               <td>'mm/dd/yyyy'</td>
+               <td>日期格式, 由d, dd, m, mm, yy, yyy来组合</td>
+             </tr>
+              <tr>
+               <td>weekStart</td>
+               <td>integer</td>
+               <td>0 以星期天默认为一周的第一天</td>
+               <td>定义每周的开始 , 0表示星期天 -  6表示星期六 </td>
+             </tr>
+              <tr>
+               <td>startDate</td>
+               <td>date</td>
+               <td>null</td>
+               <td>可以选择的最早日期;在设置的最早日期之前的日期被将被禁用;</td>
+             </tr>
+              <tr>
+               <td>endDate</td>
+               <td>date</td>
+               <td>null</td>
+               <td>可以选择的最晚日期; 在设置的最晚日期之后的日期被将被禁用;</td>
+             </tr>    
+              <tr>
+               <td>autoclose</td>
+               <td>boolean</td>
+               <td>false</td>
+               <td>选择一个日期时是否立即关闭日期选择</td>
+             </tr>      
+              <tr>
+               <td>startView</td>
+               <td>string</td>
+               <td>0, 'month'</td>
+               <td>默认打开日历时，显示的内容. 默认接收参数0 or 'month'显示当月; 1 or 'year'显示当年列表, 2 or 'decade'显示10年列表</td>
+             </tr>  
+              <tr>
+               <td>keyboardNavigation</td>
+               <td>boolean</td>
+               <td>true</td>
+               <td>是否允许通过键盘来选择日期</td>
+             </tr>  
+              <tr>
+               <td>language</td>
+               <td>string</td>
+               <td>en</td>
+               <td>默认为EN英文，如果想使用其他语言，必须预先在页面加载一个语言定义的JAVASCRIPT文件;此项目默认会加载中文汉化的JAVASCRIPT文件,你只需要在使用是将language设置为zh-CN即可</td>
+             </tr>
+             <tr>
+               <td>todayBtn</td>
+               <td>boolean</td>
+               <td>false</td>
+               <td>是否显示“今日按钮”</td>
+             </tr>                                             
+            </tbody>
+          </table>
+            <div class="alert">
+                <STRONG>强烈建议</STRONG>
+                如果您正在使用它，请详细阅读下面给出的链接地址，它可以为你做更多让你惊讶的事情。
+            </div>
+          <p>更多更详细的API请参考：  <br/>
+            <a href="http://vitalets.github.io/bootstrap-datepicker/" target="_blank">http://vitalets.github.io/bootstrap-datepicker/</a>
+        </p>
+        </div>
+    </section>
      <!-- Footer
       ================================================== -->
       <footer class="footer"> 
@@ -3204,7 +3309,7 @@ $('.carousel').carousel({
         $(function(){
             $("select.uniform, .check, .check :checkbox, input:radio, input:file, .dataTables_length select").uniform();
             $(".chzn-select").select2();
-            $(".datepicker").datepicker({todayBtn:!0});
+            $(".datepicker").datepicker({todayBtn:!0,language:"zh-CN",weekStart:1});
             $("form.validatable").validationEngine({promptPosition:"topLeft"});
             //sparkline
             $(".sparkline").each(function(){
