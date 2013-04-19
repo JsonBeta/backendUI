@@ -1252,12 +1252,12 @@ form.fill-up {
 		.box-sizing(border-box);
 	}
 }
-/*.input-append input[type="text"], .input-append input[type="password"], .input-append input[type="email"], .input-append input[type="number"], .input-prepend input[type="text"], .input-prepend input[type="password"], .input-prepend input[type="email"], .input-prepend input[type="number"] {
+.input-append input[type="text"], .input-append input[type="password"], .input-append input[type="email"], .input-append input[type="number"], .input-prepend input[type="text"], .input-prepend input[type="password"], .input-prepend input[type="email"], .input-prepend input[type="number"] {
 	height: 100%;
-	width: 100% - 200px;
+	width: 100%;
 	z-index: 1;
 	.border-radius(4px);
-}*/
+}
 .input-prepend input[type="text"], .input-prepend input[type="password"], .input-prepend input[type="email"], .input-prepend input[type="number"] {
 	padding-left: 45px;
 }
@@ -1280,8 +1280,8 @@ form.fill-up {
 .input-append *, .input-prepend * {
 	.box-sizing(border-box);
 }
-.input-append a.add-on, .input-append span.add-on, .input-prepend a.add-on, .input-prepend span.add-on {
-	/*min-width: 36px;
+.input-append a.add-on, .input-append span.add-on, .input-append .btn, .input-prepend a.add-on, .input-prepend span.add-on {
+	min-width: 36px;
 	color: #5a6573;
 	position: absolute;
 	height: 100%;
@@ -1290,8 +1290,9 @@ form.fill-up {
 	border: 1px solid #ccc;
 	#gradient > .vertical(@startColor: #f8f8f8, @endColor: #e8e8e8);
 	padding-left: 10px;
-	padding-right: 10px;*/
+	padding-right: 10px;
 }
+ .input-append .btn{right:0;}
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 	.box-shadow(~'0 1px 0 white');
 	/*.border-radius(0 4px 4px 0);*/
