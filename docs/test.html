@@ -1,0 +1,435 @@
+<!doctype html>
+<head>
+<meta name="viewport"
+	content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<title>订单风控系统</title>
+
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+	<!-- S 顶部导航 -->
+	
+
+<div class="sidebar-background"></div>
+<div class="navbar navbar-top navbar-inverse">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<a class="brand" href="#">订单风控系统</a>
+			<ul class="nav">
+				
+					<li  ><a
+						href="/bi-alarm-web/orderMonitor/showMonitorInfo.do"><i
+							class="icon-home"></i>首页</a></li>
+				
+					<li  ><a
+						href="/bi-alarm-web/orderMonitor/orderListOfOvertime.do?serial_type=1"><i
+							class="icon-home"></i>状态超时监控</a></li>
+				
+					<li  ><a
+						href="/bi-alarm-web/orderMonitor/listException.do?resion_type=25"><i
+							class="icon-home"></i>锁定或同步超时</a></li>
+				
+					<li  ><a
+						href="/bi-alarm-web/orderMonitor/listException.do?resion_type=21&serial_type=2"><i
+							class="icon-home"></i>状态流转异常监控</a></li>
+				
+					<li  ><a
+						href="/bi-alarm-web/orderMonitor/listException.do?resion_type=27"><i
+							class="icon-home"></i>订单信息异常预警</a></li>
+				
+					<li  ><a
+						href="/bi-alarm-web/orderMonitor/listException.do?resion_type=9,10"><i
+							class="icon-home"></i>订单发货单状态不同步</a></li>
+				
+					<li class="active" ><a
+						href="/bi-alarm-web/user/list.do"><i
+							class="icon-home"></i>用户及权限</a></li>
+				
+			</ul>
+			<!-- the new toggle buttons -->
+			<ul class="nav pull-right">
+				<li class="toggle-sidebar hidden-desktop"><a><i
+						class="icon-list-alt"></i></a></li>
+				<li class="toggle-primary-sidebar hidden-desktop hidden-tablet"><a><i
+						class="icon-th-list"></i></a></li>
+				<li class="collapsed hidden-desktop" data-toggle="collapse"
+					data-target=".nav-collapse"><a><i
+						class="icon-align-justify"></i></a></li>
+			</ul>
+			<div class="nav-collapse">
+				<ul class="nav full pull-right">
+					<li class="dropdown user-avatar">
+						<!-- the dropdown has a custom user-avatar class, this is the small avatar with the badge -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span>
+								<img class="menu-avatar" src="/bi-alarm-web/images/mi-logo.jpg"> <span>杨武林<i
+									class="icon-caret-down"></i></span> <span class="badge badge-dark-red">5</span>
+						</span>
+					</a>
+						<ul class="dropdown-menu">
+							<!-- the first element is the one with the big avatar, add a with-image class to it -->
+							<li class="with-image">
+								<div class="avatar">
+									<img src="/bi-alarm-web/images/mi-logo.jpg">
+								</div> <span>杨武林</span>
+							</li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-user"></i> <span>个人资料</span></a></li>
+							<li><a href="#"><i class="icon-cog"></i> <span>账户设置</span></a></li>
+							<li><a href="#"><i class="icon-envelope"></i> <span>消息</span>
+									<span class="label label-dark-red pull-right">5</span></a></li>
+							<li><a
+								href="/bi-alarm-web/site/logout.do"><i
+									class="icon-off"></i> <span>退出</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<!-- E 顶部导航 -->
+
+	<!-- S 侧边栏导航 -->
+	
+
+<div class="sidebar">
+	<!-- S 侧边栏导航__副导航 -->
+	<div class="secondary-sidebar">
+		<div class="secondary-sidebar">
+			<div class="area-top">
+				<ul class="inline">
+					<li>
+						<div class="avatar">
+							<img src="/bi-alarm-web/images/mi-logo.jpg">
+						</div>
+					</li>
+					<li>Welcome
+						<div class="title"></div>
+					</li>
+				</ul>
+			</div>
+			<div class="divider">
+				<span></span>
+			</div>
+			<ul class="nav nav-list bs-docs-sidenav">
+				
+					<li class="active" ><a
+						href="/bi-alarm-web/user/list.do"><i
+							class="icon-briefcase"></i><i class="icon-chevron-right"></i>用户管理</a></li>
+				
+					<li  ><a
+						href="/bi-alarm-web/menu/list.do"><i
+							class="icon-briefcase"></i><i class="icon-chevron-right"></i>菜单管理</a></li>
+				
+					<li  ><a
+						href="/bi-alarm-web22"><i
+							class="icon-briefcase"></i><i class="icon-chevron-right"></i>11</a></li>
+				
+			</ul>
+			<div class="divider">
+				<span></span>
+			</div>
+
+		</div>
+	</div>
+	<!-- E 侧边栏导航__副导航 -->
+</div>
+
+
+	<!-- E 侧边栏导航 -->
+
+	<!-- S 主要内容区域 -->
+	<div class="main-content">
+		<!-- S 内容导航 -->
+		
+
+<div class="container-fluid">
+
+	<div class="row-fluid">
+		<div class="breadcrumb-line navbar">
+			<ul class="breadcrumbs pull-left">
+				<li><a href="#"><i class="icon-home"></i>首页 </a></li>
+				
+					
+						<li class="current"><i class="icon-edit"></i> <a href="/bi-alarm-web#">用户及权限 </a></li>
+					
+					
+						<li class="current"><i class="icon-edit"></i><a href="/bi-alarm-web/user/list.do"> 用户管理 </a></li>
+					
+				
+
+			</ul>
+
+		</div>
+	</div>
+</div>
+		<!-- E 内容导航 -->
+		<div class="container-fluid hpadded">
+			<div class="row-fluid">
+				
+
+
+
+<div class="box">
+	<div class="box-header">
+		<a href="/bi-alarm-web/user/form.do"><span class="title"><i class="icon-plus"></i>新增用户</span></a>
+	</div>
+	<div class="box-content">
+		<table class="table table-normal table-condensed">
+			<thead>
+				<tr>
+					<th>操作</th>
+					<th>用户ID</th>
+					<th>用户名</th>
+					<th>状态</th>
+					<th>邮件</th>
+					<th>米聊号</th>
+					<th>米家ID</th>
+					<th>部门ID</th>
+					<th>最后一次登录时间</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					<tr>
+						<td>
+							<div class="btn-group">
+								<button class="btn btn-mini btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<i class="icon-cog"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">权限</a></li>
+									<li><a href="#">编辑</a></li>
+									<li><a href="#">禁用</a></li>
+								</ul>
+							</div>
+						</td>
+						<td class="  sorting_1">1</td>
+						<td>张涛</td>
+						<td>1</td>
+						<td>tonera@gmail.com</td>
+						<td>146798</td>
+						<td>0</td>
+						<td>16</td>
+						<td>0</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<div class="btn-group">
+								<button class="btn btn-mini btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<i class="icon-cog"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">权限</a></li>
+									<li><a href="#">编辑</a></li>
+									<li><a href="#">禁用</a></li>
+								</ul>
+							</div>
+						</td>
+						<td class="  sorting_1">2</td>
+						<td>杨大伟</td>
+						<td>1</td>
+						<td>ydw121@163.com</td>
+						<td>37491386</td>
+						<td>0</td>
+						<td>16</td>
+						<td>0</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<div class="btn-group">
+								<button class="btn btn-mini btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<i class="icon-cog"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">权限</a></li>
+									<li><a href="#">编辑</a></li>
+									<li><a href="#">禁用</a></li>
+								</ul>
+							</div>
+						</td>
+						<td class="  sorting_1">3</td>
+						<td>王子坤</td>
+						<td>1</td>
+						<td>zikun.ww@gmail.com</td>
+						<td>47888412</td>
+						<td>0</td>
+						<td>16</td>
+						<td>0</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<div class="btn-group">
+								<button class="btn btn-mini btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<i class="icon-cog"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">权限</a></li>
+									<li><a href="#">编辑</a></li>
+									<li><a href="#">禁用</a></li>
+								</ul>
+							</div>
+						</td>
+						<td class="  sorting_1">4</td>
+						<td>汤学旭</td>
+						<td>1</td>
+						<td>tangxuexu@xiaomi.com</td>
+						<td>202907</td>
+						<td>100</td>
+						<td>16</td>
+						<td>0</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<div class="btn-group">
+								<button class="btn btn-mini btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<i class="icon-cog"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">权限</a></li>
+									<li><a href="#">编辑</a></li>
+									<li><a href="#">禁用</a></li>
+								</ul>
+							</div>
+						</td>
+						<td class="  sorting_1">7</td>
+						<td>汤汤</td>
+						<td>1</td>
+						<td>202907</td>
+						<td>202907</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1363953811</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<div class="btn-group">
+								<button class="btn btn-mini btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<i class="icon-cog"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">权限</a></li>
+									<li><a href="#">编辑</a></li>
+									<li><a href="#">禁用</a></li>
+								</ul>
+							</div>
+						</td>
+						<td class="  sorting_1">8</td>
+						<td>丁钰峰</td>
+						<td>1</td>
+						<td>dingyufeng@xiaomi.com</td>
+						<td>35550723</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1364908451</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<div class="btn-group">
+								<button class="btn btn-mini btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<i class="icon-cog"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">权限</a></li>
+									<li><a href="#">编辑</a></li>
+									<li><a href="#">禁用</a></li>
+								</ul>
+							</div>
+						</td>
+						<td class="  sorting_1">9</td>
+						<td>杨武林</td>
+						<td>1</td>
+						<td>888</td>
+						<td>888</td>
+						<td>888</td>
+						<td>1</td>
+						<td>0</td>
+					</tr>
+				
+			</tbody>
+		</table>
+	</div>
+	<div class="box-footer">
+		<span class="footer">  <div class="dataTables_info">第1-7条，共7条</div> <div class="dataTables_paginate paging_full_numbers"> <a class="first paginate_button paginate_button_disabled" disabled='true'>首页</a>  <a class="first paginate_button paginate_button_disabled" disabled='true'>上一页</a> <a class="paginate_active">1</a> <a class="first paginate_button paginate_button_disabled" disabled='true'>下一页</a>  <a class="first paginate_button paginate_button_disabled" disabled='true'>末页</a> </div>
+		</span>
+	</div>
+</div>
+
+
+
+			</div>
+		</div>
+	</div>
+	<!-- E 主要内容区域 -->
+
+	<!-- S 底部 -->
+	
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"
+			aria-hidden="true">×</button>
+		<h3 id="myModalLabel">操作提示</h3>
+	</div>
+	<div class="modal-body">
+		<p id="submit_info">提示信息</p>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+	</div>
+</div>
+<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster-->
+    <!-- 通过CAT合并 UGLIFY 压缩BOOTSTRAP内置JS插件 包含以下文件 
+    jquery.js bootstrap-transition.js bootstrap-alert.js bootstrap-modal.js bootstrap-dropdown.js bootstrap-scrollspy.js bootstrap-tab.js bootstrap-tooltip.js bootstrap-popover.js bootstrap-button.js bootstrap-collapse.js bootstrap-carousel.js bootstrap-typeahead.js bootstrap-datepicker.js bootstrap-datepicker.zh-CN.js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- 表单美化插件 -->
+    <script src="assets/js/jquery.uniform.js"></script>
+    <!-- 非常强大的SELECT插件 http://ivaynberg.github.io/select2/ -->
+    <script src="assets/js/select2.js"></script>
+    <!-- jquery 日历插件 -->
+    <script src="assets/js/jquery.validationEngine.js"></script>
+    <script src="assets/js/jquery.validationEngine-zh_CN.js"></script>
+    <!-- 用来生成静态或动态波谱图表效果 -->
+    <script src="assets/js/jquery.sparkline.js"></script>
+    <!-- 多功能表格插件 -->
+    <script src="assets/js/jquery.dataTables.js"></script>
+    <!-- 相册 支持TOUCH -->
+    <script src="assets/js/touchTouch.jquery.js"></script>
+    <!-- 泡泡消息 -->
+    <script src="assets/js/jquery.gritter.js"></script>
+    <!-- highcharts绘图 包含highcharts.js exporting.js -->
+    <script src="assets/js/highcharts.js"></script>
+    <script src="assets/js/exporting.js"></script>
+    <!-- googel代码美化 -->
+    <script src="assets/js/google-code-prettify/prettify.js"></script>  
+    <!-- 页面应用层JS文件 -->
+    <script src="assets/js/application.js"></script>
+<script type="text/javascript">
+    $(function(){
+	   	$("form.validatable").validationEngine({promptPosition:"topRight"});
+    })
+</script>
+	<!-- E 底部 -->
+</body>
+</html>
