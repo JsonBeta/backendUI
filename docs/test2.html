@@ -1,0 +1,565 @@
+<!doctype html>
+<head>
+<meta name="viewport"
+	content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<title>小米网订单风险控制系统</title>
+
+<link
+	href="assets/css/bootstrap.css"
+	rel="stylesheet">
+	<link rel="shortcut icon" href="/bi-alarm-web/images/ico/favicon.ico">
+<link
+	href="assets/css/bootstrap-responsive.css"
+	rel="stylesheet">
+</head>
+<script
+	src="assets/js/jquery.js"></script>
+<script
+	src="assets/js/bootstrap-modal.js"></script>
+<body>
+<div class="sidebar-background"></div>
+<div class="navbar navbar-top navbar-inverse">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<a class="brand" href="#">小米网订单风险控制系统</a>
+			<ul class="nav">
+				
+					<li ><a
+						href="/bi-alarm-web/orderMonitor/showMonitorInfo.do"><i
+							class="icon-home"></i>首页</a></li>
+				
+					<li class="active"><a
+						href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1"><i
+							class="icon-home"></i>状态超时监控</a></li>
+				
+					<li ><a
+						href="/bi-alarm-web/orderMonitor/listException.do?resion=25"><i
+							class="icon-home"></i>锁定或同步超时</a></li>
+				
+					<li ><a
+						href="/bi-alarm-web/orderMonitor/listException.do?resion=21&serial_type=1"><i
+							class="icon-home"></i>状态流转异常监控</a></li>
+				
+					<li ><a
+						href="/bi-alarm-web/orderMonitor/listException.do?resion=27"><i
+							class="icon-home"></i>订单信息异常预警</a></li>
+				
+					<li ><a
+						href="/bi-alarm-web/orderMonitor/listException.do?resion=9,10"><i
+							class="icon-home"></i>订单发货单状态不同步</a></li>
+				
+					<li ><a
+						href="/bi-alarm-web/user/list.do"><i
+							class="icon-home"></i>用户及权限</a></li>
+				
+			</ul>
+			<!-- the new toggle buttons -->
+			<ul class="nav pull-right">
+				<li class="toggle-sidebar hidden-desktop"><a><i
+						class="icon-list-alt"></i></a></li>
+				<li class="toggle-primary-sidebar hidden-desktop hidden-tablet"><a><i
+						class="icon-th-list"></i></a></li>
+				<li class="collapsed hidden-desktop" data-toggle="collapse"
+					data-target=".nav-collapse"><a><i
+						class="icon-align-justify"></i></a></li>
+			</ul>
+			<div class="nav-collapse">
+				<ul class="nav full pull-right">
+					<li class="dropdown user-avatar">
+						<!-- the dropdown has a custom user-avatar class, this is the small avatar with the badge -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span>
+								<img class="menu-avatar"
+								src="/bi-alarm-web/images/mi-logo.jpg">
+								<span>杨武林<i class="icon-caret-down"></i></span> <span
+								class="badge badge-dark-red">5</span>
+						</span>
+					</a>
+						<ul class="dropdown-menu">
+							<!-- the first element is the one with the big avatar, add a with-image class to it -->
+							<li class="with-image">
+								<div class="avatar">
+									<img
+										src="/bi-alarm-web/images/mi-logo.jpg">
+								</div> <span>杨武林</span>
+							</li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-user"></i> <span>个人资料</span></a></li>
+							<li><a href="#"><i class="icon-cog"></i> <span>账户设置</span></a></li>
+							<li><a href="#"><i class="icon-envelope"></i> <span>消息</span>
+									<span class="label label-dark-red pull-right">5</span></a></li>
+							<li><a
+								href="/bi-alarm-web/site/logout.do"><i
+									class="icon-off"></i> <span>退出</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<!-- E 顶部导航 -->
+
+	<!-- S 侧边栏导航 -->
+	
+
+<div class="sidebar">
+	<!-- S 侧边栏导航__副导航 -->
+	<div class="secondary-sidebar">
+		<div class="secondary-sidebar">
+			<div class="area-top">
+				<ul class="inline">
+					<li>
+						<div class="avatar">
+							<img src="/bi-alarm-web/images/mi-logo.jpg">
+						</div>
+					</li>
+					<li>Welcome
+						<div class="title"></div>
+					</li>
+				</ul>
+			</div>
+			<div class="breadcrumb-line navbar"><ul class="breadcrumbs pull-left"><li>ddd</li></ul></div>
+			<ul class="nav nav-list bs-docs-sidenav">
+				
+					<li class="active" ><a
+						href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1"><i
+							class="icon-briefcase"></i><i class="icon-chevron-right"></i>订单状态超时</a></li>
+				
+					<li  ><a
+						href="/bi-alarm-web/orderMonitor/deliverTimeout.do?serial_type=2"><i
+							class="icon-briefcase"></i><i class="icon-chevron-right"></i>发货单状态超时</a></li>
+				
+			</ul>
+			<div class="divider">
+				<span></span>
+			</div>
+
+		</div>
+	</div>
+	<!-- E 侧边栏导航__副导航 -->
+</div>
+
+
+	<!-- E 侧边栏导航 -->
+
+	<!-- S 主要内容区域 -->
+	<div class="main-content">
+		<!-- S 内容导航 -->
+		
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="area-top">
+			<div class="pull-left header">
+				<i class="icon-edit icon-2x"></i> <span class="title">综合提醒区域</span>
+			</div>
+			<ul class="num-stats pull-right">
+				<li class="stat-red">
+					<ul class="inline">
+						<li class="hidden-phone glyph"><i class="icon-money"></i></li>
+						<li><span class="number">$44.233</span> 总收入</li>
+					</ul>
+				</li>
+				<li class="stat-green">
+					<ul class="inline">
+						<li class="hidden-phone glyph"><i class="icon-ok-circle"></i>
+						</li>
+						<li><span class="number">1513</span> 订单数</li>
+					</ul>
+				</li>
+				<li class="stat-blue">
+					<ul class="inline">
+						<li class="hidden-phone glyph"><i class="icon-plus"></i></li>
+						<li><span class="number">5305</span> 访问量</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="breadcrumb-line navbar">
+			<ul class="breadcrumbs pull-left">
+				<li><a href="#"><i class="icon-home"></i>首页 </a></li>
+				
+					
+						<li class="current"><i class="icon-edit"></i> <a
+							href="/bi-alarm-web#">状态超时监控 </a></li>
+					
+					
+						<li class="current"><i class="icon-edit"></i><a
+							href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1">
+								订单状态超时 </a></li>
+					
+				
+
+			</ul>
+
+		</div>
+	</div>
+</div>
+		<!-- E 内容导航 -->
+		<div class="container-fluid hpadded">
+			<div class="row-fluid">
+				
+
+
+
+
+
+
+
+<script type="text/javascript"> 
+function check() {
+	var serial_num = document.search.serial_num.value;
+	var pattern = /^(\d){16}$/;
+	if(!pattern.exec(serial_num) && serial_num != "") {
+		alert("请输入正确的订单号，数字且必须16位！");
+		return false
+	} else {
+		return true;		
+	}
+}
+</script>
+<div class="box">
+	<div class="box-header">
+		<span class="title">订单状态超时列表</span>
+	</div>
+	<div class="box-content">
+		<div class="table-header">
+			<div class="dataTables_filter" id="DataTables_Table_0_filter">
+				<form class="form-inline" name="search"
+						action="/bi-alarm-web/orderMonitor/orderTimeout.do">
+
+						<table class="table table-datatitle">
+							<tr>
+								<td><label>查询：</label></td>
+								<td><input id="serial_num" name="serial_num"
+									value="" type="text" placeholder="订单号" class="input-medium"> <input
+									id="serial_type" name="serial_type" type="hidden" value="1" /></td>
+								<td class="table-datatitle-noline"><select id="node_code" name="node_code" class="chzn-select">
+									<option value="">所有状态</option>
+									<option value="10001">待确认</option>
+									<option value="10002">已确认</option>
+									<option value="10003">等待支付</option>
+									<option value="10004">已支付</option>
+									<option value="10017">正在退款</option>
+									<option value="10020">已申请换货</option>
+									<option value="10021">正在换货</option>
+									<option value="10039">已退款</option>
+									<option value="10049">待通知仓库发货</option>
+									<option value="10050">已通知仓库发货</option>
+									<option value="10051">错误订单</option>
+									<option value="10052">合约机待审核</option>
+									<option value="10053">取消发货</option>
+								</select></td>
+								<td><button type="submit" class="btn btn-info" onclick="return check();">搜索</button></td>
+							</tr>
+						</table>
+
+					</form>
+			</div>
+			<div id="DataTables_Table_0_length" class="dataTables_length">
+				<label> <a href="#" title=""> <i class="icon-time"></i>
+						<span>截止时间:</span> <span>2013-04-25 15:49:01 </span>
+				</a>
+				</label>
+			</div>
+		</div>
+		<table class="table table-normal table-condensed">
+			<thead>
+				<tr>
+					<th>订单号</th>
+					<th>发货仓库</th>
+					<th>订单用户</th>
+					<th>订单是否锁定</th>
+					<th>订单总价</th>
+					<th>订单超时时间</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					
+						
+							<tr class="status-pending">
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426090039948">1130426090039948</a>
+								</td>
+								
+									<td class=" ">沈阳小米之家</td>
+								
+									<td class=" ">北京</td>
+								
+									<td class=" ">未锁定</td>
+								
+									<td class=" ">15.00</td>
+								
+								<td>0天8小时2分</td>
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426090039948">查看</a>
+								</td>
+							</tr>
+						
+					
+						
+							<tr class="status-pending">
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=5130426090027031">5130426090027031</a>
+								</td>
+								
+									<td class=" ">北京配送中心</td>
+								
+									<td class=" ">test</td>
+								
+									<td class=" ">未锁定</td>
+								
+									<td class=" ">1499.00</td>
+								
+								<td>0天8小时2分</td>
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=5130426090027031">查看</a>
+								</td>
+							</tr>
+						
+					
+						
+							<tr class="status-pending">
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426090013737">1130426090013737</a>
+								</td>
+								
+									<td class=" ">天津小米之家</td>
+								
+									<td class=" ">北京</td>
+								
+									<td class=" ">未锁定</td>
+								
+									<td class=" ">15.00</td>
+								
+								<td>0天8小时2分</td>
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426090013737">查看</a>
+								</td>
+							</tr>
+						
+					
+						
+							<tr class="status-pending">
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426080056189">1130426080056189</a>
+								</td>
+								
+									<td class=" ">北京配送中心</td>
+								
+									<td class=" ">张艳香</td>
+								
+									<td class=" ">未锁定</td>
+								
+									<td class=" ">1699.00</td>
+								
+								<td>0天8小时3分</td>
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426080056189">查看</a>
+								</td>
+							</tr>
+						
+					
+						
+							<tr class="status-pending">
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426080027339">1130426080027339</a>
+								</td>
+								
+									<td class=" ">北京配送中心</td>
+								
+									<td class=" ">张艳香</td>
+								
+									<td class=" ">未锁定</td>
+								
+									<td class=" ">1699.00</td>
+								
+								<td>0天8小时4分</td>
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426080027339">查看</a>
+								</td>
+							</tr>
+						
+					
+						
+							<tr class="status-pending">
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426080053980">1130426080053980</a>
+								</td>
+								
+									<td class=" ">北京配送中心</td>
+								
+									<td class=" ">张艳香</td>
+								
+									<td class=" ">未锁定</td>
+								
+									<td class=" ">1699.00</td>
+								
+								<td>0天8小时5分</td>
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426080053980">查看</a>
+								</td>
+							</tr>
+						
+					
+						
+							<tr class="status-pending">
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=5130425090008579">5130425090008579</a>
+								</td>
+								
+									<td class=" ">北京配送中心</td>
+								
+									<td class=" ">huangjin</td>
+								
+									<td class=" ">未锁定</td>
+								
+									<td class=" ">119.00</td>
+								
+								<td>0天8小时5分</td>
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=5130425090008579">查看</a>
+								</td>
+							</tr>
+						
+					
+						
+							<tr class="status-pending">
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426090044766">1130426090044766</a>
+								</td>
+								
+									<td class=" ">北京配送中心</td>
+								
+									<td class=" ">这些</td>
+								
+									<td class=" ">未锁定</td>
+								
+									<td class=" ">1599.00</td>
+								
+								<td>0天8小时6分</td>
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426090044766">查看</a>
+								</td>
+							</tr>
+						
+					
+						
+							<tr class="status-pending">
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426090057153">1130426090057153</a>
+								</td>
+								
+									<td class=" ">成都小米之家</td>
+								
+									<td class=" ">北京</td>
+								
+									<td class=" ">未锁定</td>
+								
+									<td class=" ">15.00</td>
+								
+								<td>0天8小时8分</td>
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426090057153">查看</a>
+								</td>
+							</tr>
+						
+					
+						
+							<tr class="status-pending">
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426090063715">1130426090063715</a>
+								</td>
+								
+									<td class=" ">成都小米之家</td>
+								
+									<td class=" ">北京</td>
+								
+									<td class=" ">未锁定</td>
+								
+									<td class=" ">69.00</td>
+								
+								<td>0天8小时8分</td>
+								<td><a
+									href="/bi-alarm-web/orderflow/flow.do?orderId=1130426090063715">查看</a>
+								</td>
+							</tr>
+						
+					
+				
+			</tbody>
+		</table>
+		<div class="table-footer">
+			 <div class="dataTables_info">第1-10条，共3072条</div> <div class="dataTables_paginate paging_full_numbers"> <a class="first paginate_button paginate_button_disabled" disabled='true'>首页</a>  <a class="first paginate_button paginate_button_disabled" disabled='true'>上一页</a> <a class="paginate_active">1</a> <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=2">2</a>  <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=3">3</a>  <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=4">4</a>  <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=5">5</a>  <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=6">6</a>  <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=7">7</a>  <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=8">8</a>  <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=9">9</a>  <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=10">10</a>  <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=2">下一页</a>  <a class="paginate_button" href="/bi-alarm-web/orderMonitor/orderTimeout.do?serial_type=1&pageIndex=308">末页</a> </div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+ $('#node_code').val();
+ $(function(){ $(".chzn-select").select2();})
+</script>
+
+			</div>
+		</div>
+	</div>
+	<!-- E 主要内容区域 -->
+
+	<!-- S 底部 -->
+	
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"
+			aria-hidden="true">×</button>
+		<h3 id="myModalLabel">操作提示</h3>
+	</div>
+	<div class="modal-body">
+		<p id="submit_info">提示信息</p>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+	</div>
+</div>
+<!-- end Modal -->
+
+<!-- Le javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap-transition.js"></script>
+<script src="assets/js/bootstrap-alert.js"></script>
+<script src="assets/js/bootstrap-dropdown.js"></script>
+<script src="assets/js/bootstrap-scrollspy.js"></script>
+<script src="assets/js/bootstrap-tab.js"></script>
+<script src="assets/js/bootstrap-tooltip.js"></script>
+<script src="assets/js/bootstrap-popover.js"></script>
+<script src="assets/js/bootstrap-button.js"></script>
+<script src="assets/js/bootstrap-collapse.js"></script>
+<script src="assets/js/bootstrap-carousel.js"></script>
+<script src="assets/js/bootstrap-typeahead.js"></script>
+
+
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/bootstrap-datepicker.zh-CN.js"></script>
+<script src="assets/js/jquery.uniform.js"></script>
+<script src="assets/js/select2.js"></script>
+<script src="assets/js/jquery.tagsinput.js"></script>
+<script src="assets/js/jquery.validationEngine.js"></script>
+<script src="assets/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="assets/js/jquery.easy-pie-chart.js"></script>
+<script src="assets/js/raphael.2.1.0.min.js"></script>
+<script src="assets/js/justgage.js"></script>
+<script src="assets/js/jquery.sparkline.js"></script>
+<script src="assets/js/jquery.dataTables.js"></script>
+<script src="assets/js/touchTouch.jquery.js"></script>
+<script src="assets/js/jquery.gritter.js"></script>
+	<!-- E 底部 -->
+</body>
+</html>
