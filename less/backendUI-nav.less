@@ -1647,4 +1647,67 @@ textarea {
 .the-icons,.icon-extend ul{
 	list-style:none;
 }
+.process-map{
+	ul{
+		&:after{content:"\0020";display:block;height:0;clear:both;overflow:hidden;visibility:hidden}
+		li{
+			float:left;
+			width:12%;
+			height:65px;
+			margin-bottom:10px;
+			list-style:none;
+			// Set the backgrounds
+			// -------------------------
+			&.primary strong {
+			  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+			}
+			// Warning appears are orange
+			&.warning strong {
+			  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+			}
+			// Danger and error appear as red
+			&.danger strong {
+			  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+			}
+			// Success appears as green
+			&.success strong {
+			  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+			}
+			// Info appears as a neutral blue
+			&.info strong {
+			  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+			}
+			// Inverse appears as dark gray
+			&.inverse strong {
+			  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+			}
+			&:last-child i{
+				display:none;
+			}
+		}
+		text-align:center;
+		strong{
+			display:block;
+			margin-bottom:5px;
+			.border-radius(25px);
+			padding:7px 0;
+			border:1px solid #ccc;
+			#gradient > .vertical(@startColor: #ffffff, @endColor: #e6e6e6);
+		}
+		p{
+			float:left;
+			&:first-child{
+				width:70%;
+			}
+			&:last-child{
+				width:30%;
+				margin-top:10px;
+			}
+		}
+		i{
+			font-size:25px;
+			color:#ccc;
+		}
+	}
+}
 
