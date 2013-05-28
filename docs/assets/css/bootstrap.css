@@ -9454,6 +9454,17 @@ a [class*=" icon-"] {
   padding: 0;
   color: #717e88;
 }
+.num-stats .num-stats-more-box {
+  display: none;
+  position: relative;
+}
+.num-stats .num-stats-more-box table {
+  width: 200%;
+  background-color: #fff;
+  position: absolute;
+  right: 100%;
+  top: 0;
+}
 .num-stats li {
   text-align: center;
   float: left;
