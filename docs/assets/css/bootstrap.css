@@ -9448,6 +9448,16 @@ a [class*=" icon-"] {
 .area-top .num-stats li {
   border: none;
 }
+.num-stats-more > li {
+  position: relative;
+}
+.num-stats-more > li > div {
+  width: 200%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
 .num-stats {
   list-style: none;
   margin: 0;
@@ -9456,14 +9466,9 @@ a [class*=" icon-"] {
 }
 .num-stats .num-stats-more-box {
   display: none;
-  position: relative;
 }
 .num-stats .num-stats-more-box table {
-  width: 200%;
   background-color: #fff;
-  position: absolute;
-  right: 100%;
-  top: 0;
 }
 .num-stats li {
   text-align: center;

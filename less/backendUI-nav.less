@@ -443,7 +443,16 @@ a [class*=" icon-"] {
 		}
 	}
 }
-
+.num-stats-more > li {
+	position:relative;
+	> div {
+		width:200%;
+		position:absolute;
+		right:0;
+		top:0;
+		z-index:999;
+	}
+}
 .num-stats {
 	list-style: none;
 	margin: 0;
@@ -451,13 +460,8 @@ a [class*=" icon-"] {
 	color: #717e88;
 	.num-stats-more-box{
 		display:none;
-		position:relative;
 		table{
-			width:200%;
 			background-color:#fff;
-			position:absolute;
-			right:100%;
-			top:0;
 		}
 	}
 	li {
