@@ -9413,7 +9413,8 @@ a [class*=" icon-"] {
   position: relative;
   margin-left: 201px;
 }
-.area-top {
+.area-top,
+.yii h1 {
   height: 60px;
   background-color: #f5f5f5;
   background-image: -moz-linear-gradient(top, #fafafa, #eeeeee);
@@ -9430,23 +9431,45 @@ a [class*=" icon-"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.area-top ul li {
+.area-top ul li,
+.yii h1 ul li {
   vertical-align: middle;
 }
-.area-top .header {
+.area-top .header,
+.yii h1 .header {
   font-size: 14px;
   margin-top: 7px;
 }
-.area-top .header > * {
+.area-top .header > *,
+.yii h1 .header > * {
   vertical-align: middle;
   color: #78808a;
   text-shadow: 0 1px #fff;
 }
-.area-top .num-stats {
-  margin-top: 5px;
-}
-.area-top .num-stats li {
+.area-top .num-stats li,
+.yii h1 .num-stats li {
   border: none;
+}
+.area-top .num-stats > li,
+.yii h1 .num-stats > li {
+  padding-top: 5px;
+  border-radius: 5px;
+}
+.area-top li.on,
+.yii h1 li.on {
+  -webkit-box-shadow: inset 0px 2px 1px #ccc;
+  -moz-box-shadow: inset 0px 2px 1px #ccc;
+  box-shadow: inset 0px 2px 1px #ccc;
+}
+.yii .grid-view table.items {
+  background: transparent;
+}
+.yii .grid-view table.items th {
+  background: none;
+  color: #333;
+}
+.yii .grid-view table.items th a {
+  color: #78808a;
 }
 .num-stats-more > li {
   position: relative;
@@ -9455,7 +9478,7 @@ a [class*=" icon-"] {
   width: 200%;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 43px;
   z-index: 999;
 }
 .num-stats {

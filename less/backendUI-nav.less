@@ -417,7 +417,7 @@ a [class*=" icon-"] {
 	position: relative;
 	margin-left: 201px;
 }
-.area-top {
+.area-top,.yii h1 {
 	height: 60px;
 	#gradient > .vertical(@startColor: #fafafa, @endColor: #eeeeee);
 	position: relative;
@@ -437,9 +437,29 @@ a [class*=" icon-"] {
 		text-shadow: 0 1px #fff;
 	}
 	.num-stats {
-		margin-top: 5px;
+		//margin-top: 5px;
 		li{
 			border:none;
+		}
+		> li{
+			padding-top:5px;
+			border-radius:5px;
+		}
+	}
+	li.on{
+		.box-shadow(~"inset 0px 2px 1px #ccc");
+	}
+}
+//yii bootstrap
+.yii{
+	.grid-view table.items{
+		background:transparent;
+		th{
+			background:none;
+			color:#333;
+			a{
+				color:#78808a;
+			}
 		}
 	}
 }
@@ -449,7 +469,7 @@ a [class*=" icon-"] {
 		width:200%;
 		position:absolute;
 		right:0;
-		top:0;
+		top:43px;
 		z-index:999;
 	}
 }
