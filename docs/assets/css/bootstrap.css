@@ -9413,8 +9413,7 @@ a [class*=" icon-"] {
   position: relative;
   margin-left: 201px;
 }
-.area-top,
-.yii h1 {
+.area-top {
   height: 60px;
   background-color: #f5f5f5;
   background-image: -moz-linear-gradient(top, #fafafa, #eeeeee);
@@ -9431,45 +9430,29 @@ a [class*=" icon-"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.area-top ul li,
-.yii h1 ul li {
+.area-top ul li {
   vertical-align: middle;
 }
-.area-top .header,
-.yii h1 .header {
+.area-top .header {
   font-size: 14px;
   margin-top: 7px;
 }
-.area-top .header > *,
-.yii h1 .header > * {
+.area-top .header > * {
   vertical-align: middle;
   color: #78808a;
   text-shadow: 0 1px #fff;
 }
-.area-top .num-stats li,
-.yii h1 .num-stats li {
+.area-top .num-stats li {
   border: none;
 }
-.area-top .num-stats > li,
-.yii h1 .num-stats > li {
+.area-top .num-stats > li {
   padding-top: 5px;
   border-radius: 5px;
 }
-.area-top li.on,
-.yii h1 li.on {
+.area-top li.on {
   -webkit-box-shadow: inset 0px 2px 1px #ccc;
   -moz-box-shadow: inset 0px 2px 1px #ccc;
   box-shadow: inset 0px 2px 1px #ccc;
-}
-.yii .grid-view table.items {
-  background: transparent;
-}
-.yii .grid-view table.items th {
-  background: none;
-  color: #333;
-}
-.yii .grid-view table.items th a {
-  color: #78808a;
 }
 .num-stats-more > li {
   position: relative;
@@ -11282,4 +11265,156 @@ textarea {
 .process-map ul i {
   font-size: 25px;
   color: #ccc;
+}
+.yii h1 {
+  height: 60px;
+  font-size: 18px;
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #fafafa, #eeeeee);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#eeeeee));
+  background-image: -webkit-linear-gradient(top, #fafafa, #eeeeee);
+  background-image: -o-linear-gradient(top, #fafafa, #eeeeee);
+  background-image: linear-gradient(to bottom, #fafafa, #eeeeee);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffeeeeee', GradientType=0);
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 10px 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.yii h1 ul li {
+  vertical-align: middle;
+}
+.yii h1 .header {
+  font-size: 14px;
+  margin-top: 7px;
+}
+.yii h1 .header > * {
+  vertical-align: middle;
+  color: #78808a;
+  text-shadow: 0 1px #fff;
+}
+.yii h1 .num-stats li {
+  border: none;
+}
+.yii h1 .num-stats > li {
+  padding-top: 5px;
+  border-radius: 5px;
+}
+.yii h1 li.on {
+  -webkit-box-shadow: inset 0px 2px 1px #ccc;
+  -moz-box-shadow: inset 0px 2px 1px #ccc;
+  box-shadow: inset 0px 2px 1px #ccc;
+}
+.yii .breadcrumbs {
+  color: #666;
+  height: 28px;
+  line-height: 28px;
+  -webkit-box-shadow: 0 1px 0 white,0 1px 0 white inset;
+  -moz-box-shadow: 0 1px 0 white,0 1px 0 white inset;
+  box-shadow: 0 1px 0 white,0 1px 0 white inset;
+  background-color: #ededed;
+  background-image: -moz-linear-gradient(top, #f4f4f4, #e3e3e3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#e3e3e3));
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #e3e3e3);
+  background-image: -o-linear-gradient(top, #f4f4f4, #e3e3e3);
+  background-image: linear-gradient(to bottom, #f4f4f4, #e3e3e3);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff4f4f4', endColorstr='#ffe3e3e3', GradientType=0);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 11px;
+  text-indent: 16px;
+}
+.yii .grid-view {
+  padding: 0 0 15px;
+}
+.yii .grid-view table.items {
+  background: transparent;
+  border: 0;
+}
+.yii .grid-view table.items tr.odd {
+  background: #f4f4f4;
+}
+.yii .grid-view table.items tr.selected {
+  background: #eae8e8;
+}
+.yii .grid-view table.items tr:hover {
+  background: #ECFBD4;
+}
+.yii .grid-view table.items tr.filters input {
+  width: 96%;
+}
+.yii .grid-view table.items th,
+.yii .grid-view table.items td {
+  border: 1px solid #ddd;
+}
+.yii .grid-view table.items th:first-child,
+.yii .grid-view table.items td:first-child {
+  border-left: 0;
+}
+.yii .grid-view table.items th {
+  background: none;
+  border-top: 1px solid #fff;
+  color: #333;
+}
+.yii .grid-view table.items th a {
+  color: #888;
+}
+.yii .grid-view table.items td {
+  padding: 0.6em;
+}
+.yii .grid-view .summary {
+  padding: 10px;
+}
+.yii .grid-view .pager {
+  padding-right: 10px;
+}
+.yii ul.yiiPager a:link,
+.yii ul.yiiPager a:visited {
+  background: #eee;
+  background-size: 100%;
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #f9f9f9, #eeeeee);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#eeeeee));
+  background-image: -webkit-linear-gradient(top, #f9f9f9, #eeeeee);
+  background-image: -o-linear-gradient(top, #f9f9f9, #eeeeee);
+  background-image: linear-gradient(to bottom, #f9f9f9, #eeeeee);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9f9f9', endColorstr='#ffeeeeee', GradientType=0);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #606060;
+  -webkit-box-shadow: 0 1px 0 #fff inset;
+  -moz-box-shadow: 0 1px 0 #fff inset;
+  box-shadow: 0 1px 0 #fff inset;
+  padding: 4px 12px;
+}
+.yii ul.yiiPager a:hover {
+  background: #e8e8e8;
+  background-size: 100%;
+  background-color: #f0f0f0;
+  background-image: -moz-linear-gradient(top, #f6f6f6, #e8e8e8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#e8e8e8));
+  background-image: -webkit-linear-gradient(top, #f6f6f6, #e8e8e8);
+  background-image: -o-linear-gradient(top, #f6f6f6, #e8e8e8);
+  background-image: linear-gradient(to bottom, #f6f6f6, #e8e8e8);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff6f6f6', endColorstr='#ffe8e8e8', GradientType=0);
+}
+.yii ul.yiiPager .selected a,
+.yii ul.yiiPager a:active {
+  background: #6f6f6f;
+  color: #fff;
+  border-color: #646464;
+  -webkit-box-shadow: 0 1px 2px #545454 inset,0 1px 0 #fff;
+  -moz-box-shadow: 0 1px 2px #545454 inset,0 1px 0 #fff;
+  box-shadow: 0 1px 2px #545454 inset,0 1px 0 #fff;
+  font-weight: 600;
+  text-shadow: none;
 }

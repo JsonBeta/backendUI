@@ -1,0 +1,121 @@
+//yii bootstrap
+.yii{
+	h1 {
+		height: 60px;
+		font-size:18px;
+		#gradient > .vertical(@startColor: #fafafa, @endColor: #eeeeee);
+		position: relative;
+		width: 100%;
+		margin:0;
+		padding: 10px 15px;
+		.box-sizing(border-box);
+		ul li {
+			vertical-align: middle;
+		}
+		.header {
+			font-size: 14px;
+			margin-top: 7px;
+		}
+		.header > * {
+			vertical-align: middle;
+			color: #78808a;
+			text-shadow: 0 1px #fff;
+		}
+		.num-stats {
+			//margin-top: 5px;
+			li{
+				border:none;
+			}
+			> li{
+				padding-top:5px;
+				border-radius:5px;
+			}
+		}
+		li.on{
+			.box-shadow(~"inset 0px 2px 1px #ccc");
+		}
+	}
+	.breadcrumbs {
+		color: #666;
+		height: 28px;
+		line-height:28px;
+		.box-shadow(~'0 1px 0 white,0 1px 0 white inset');
+		#gradient > .vertical(@startColor: #f4f4f4, @endColor: #e3e3e3);
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		font-size: 11px;
+		text-indent:16px;
+
+	}
+	.grid-view {
+		padding:0 0 15px;
+		table.items{
+			background:transparent;
+			border:0;
+			tr.odd{
+				background:#f4f4f4;
+			}
+			tr.selected{
+				background:#eae8e8;
+			}
+			tr:hover{
+				background:#ECFBD4;
+			}
+			tr.filters{
+				input{
+					width:96%;
+				}
+			}
+			th,td{
+				border:1px solid #ddd;
+				&:first-child{
+					border-left:0;
+				}
+			}
+			th{
+				background:none;
+				border-top:1px solid #fff;
+				color:#333;
+				a{
+					color:#888;
+				}
+			}
+			td{
+				padding:0.6em;
+			}
+		}
+		.summary{
+			padding:10px;
+		}
+		.pager{
+			padding-right: 10px;
+		}
+	}
+	ul.yiiPager{
+		a:link,a:visited{
+			background: #eee;
+		  background-size: 100%;
+		  #gradient > .vertical(@startColor: #f9f9f9, @endColor: #eeeeee);
+		  border: 1px solid #ccc;
+		  border-radius: @borderRadiusSmall;
+		  margin: 0 1px;
+		  cursor: pointer;
+		  color: #606060;
+		  .box-shadow(~'0 1px 0 #fff inset');
+		  padding:4px 12px;
+		}
+		a:hover{
+			background: #e8e8e8;
+			  background-size: 100%;
+			  #gradient > .vertical(@startColor: #f6f6f6, @endColor: #e8e8e8);
+		}
+		.selected a,a:active{
+			background: #6f6f6f;
+			color: #fff;
+			border-color: #646464;
+			.box-shadow(~'0 1px 2px #545454 inset,0 1px 0 #fff');
+			font-weight: 600;
+			text-shadow: none
+		  }
+	}
+}
