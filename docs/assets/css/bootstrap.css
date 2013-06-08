@@ -11463,3 +11463,6 @@ textarea {
   font-weight: 600;
   text-shadow: none;
 }
+.yii_box .input-append form {
+  height: 100%;
+}
