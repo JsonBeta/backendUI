@@ -11407,6 +11407,7 @@ textarea {
   padding: 0.6em;
 }
 .yii .grid-view .yii-pager {
+  overflow: hidden;
   padding-top: 15px;
 }
 .yii .grid-view .yii-pager .summary {
