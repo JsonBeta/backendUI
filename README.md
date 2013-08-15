@@ -9,5 +9,5 @@ To get started, checkout [https://github.com/JsonBeta/backendUI](https://github.
 
 ## 快速应用
 
-* [Download the latest release](/JsonBeta/backendUI/archive/master.zip).
+* [Download the latest release](https://github.com/JsonBeta/backendUI/archive/master.zip).
 * Clone the repo: `git clone https://github.com/JsonBeta/backendUI.git`.
