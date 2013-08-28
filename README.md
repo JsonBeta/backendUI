@@ -18,7 +18,7 @@ To get started, checkout [https://github.com/JsonBeta/backendUI](https://github.
 什么是backendUI？
 > backendUI是一套基于BOOTSTRAP源码编译，在不修改BOOTSTRAP原有API的基础上，提供WEB后台项目通用的UI组件；
 主要包括:LAYOUT TABLE FORM GRID BUTTONS ICONS CHARTS AND SO ON...
-综合效果预览:[docs/examples/apidoc.html](https://github.com/JsonBeta/backendUI/docs/examples/apidoc.html)
+综合效果预览:[docs/examples/apidoc.html](https://github.com/JsonBeta/backendUI/blob/master/docs/examples/apidocs.html)
 
 ### backendUI的使用场景？
 #### web后台项目
@@ -64,11 +64,11 @@ BackendUI提供的JS插件（按需放置全局LAYOUT模板底部）
 
 * 详细介绍
 
-> download backendUI的源码到本地后，找到 [`docs/index.html`](https://github.com/JsonBeta/backendUI/docs/index.html)此文件后，浏览器打开即可。 
+> download backendUI的源码到本地后，找到 [`docs/index.html`](https://github.com/JsonBeta/backendUI/blob/master/docs/index.html)此文件后，浏览器打开即可。 
 
 * examples 使用实例
 
-> 找到 `docs/examples/` 目录，[docs/examples/layout.html](https://github.com/JsonBeta/backendUI/docs/examples/layout.html) 此目录提供包括button,icon,grid,widgets等使用实例，可作为参考
+> 找到 `docs/examples/` 目录，[docs/examples/layout.html](https://github.com/JsonBeta/backendUI/blob/master/docs/examples/layout.html) 此目录提供包括button,icon,grid,widgets等使用实例，可作为参考
   ；另外建议将此目录下layout.html内容作为项目的layout模板
 
 ### 你需要编辑源码？
