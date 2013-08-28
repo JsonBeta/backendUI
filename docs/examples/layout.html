@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+  <meta charset="utf-8">
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>backendUI API docs</title>
+  <link href="../assets/css/bootstrap.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+	<!-- S 顶部导航 -->
+	<div class="navbar navbar-top navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="#">BackendUI 文档</a>
+			    <ul class="nav">
+			        <li class="active"><a href="#"><i class="icon-home"></i>首页</a></li>
+			        <li><a href="#about"><i class=" icon-share-alt"></i>入库</a></li>
+			        <li><a href="#contact"><i class="icon-reply"></i>出库</a></li>
+			        <li><a href="#contact"><i class="icon-sitemap"></i>系统数据</a></li>
+			        <li><a href="#contact"><i class="icon-bar-chart"></i>数据监控</a></li>
+			    	<li><a href="#contact"><i class="icon-random"></i>调货</a></li>
+					<li><a href="#contact"><i class="icon-truck"></i>物流</a></li>
+			    	<li><a href="#contact"><i class="icon-home"></i>用户管理</a></li>
+			    	<li><a href="#contact"><i class="icon-comments"></i>客服系统</a></li>
+			    	<li><a href="#contact"><i class="icon-home"></i>车间</a></li>
+			    	<li><a href="#contact"><i class="icon-user-md"></i>用户管理</a></li>
+			    </ul>
+      			<!-- the new toggle buttons -->
+		        <ul class="nav pull-right">
+		            <li class="toggle-sidebar hidden-desktop"><a><i class="icon-list-alt"></i></a></li>
+		            <li class="toggle-primary-sidebar hidden-desktop hidden-tablet"><a><i class="icon-th-list"></i></a></li>
+		            <li class="collapsed hidden-desktop" data-toggle="collapse" data-target=".nav-collapse"><a><i class="icon-align-justify"></i></a></li>
+		        </ul>
+				<div class="nav-collapse">
+			    	<ul class="nav full pull-right">
+			        	<li class="dropdown user-avatar">
+				            <!-- the dropdown has a custom user-avatar class, this is the small avatar with the badge -->
+				            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				              <span>
+				                <img class="menu-avatar" src="../../img/avatar1.jpg" /> <span>汤学旭 <i class="icon-caret-down"></i></span>
+				                <span class="badge badge-dark-red">5</span>
+				              </span>
+				            </a>
+				            <ul class="dropdown-menu">
+				            	<!-- the first element is the one with the big avatar, add a with-image class to it -->
+				            	<li class="with-image">
+				            		<div class="avatar">
+				            			<img src="../../img/avatar1.jpg" />
+				            		</div>
+				          			<span>汤汤</span>
+				           		</li>
+				            	<li class="divider"></li>
+				            	<li><a href="#"><i class="icon-user"></i> <span>个人资料</span></a></li>
+				            	<li><a href="#"><i class="icon-cog"></i> <span>账户设置</span></a></li>
+				            	<li><a href="#"><i class="icon-envelope"></i> <span>消息</span> <span class="label label-dark-red pull-right">5</span></a></li>
+				            	<li><a href="#"><i class="icon-off"></i> <span>退出</span></a></li>
+				            </ul>
+			       		</li>
+			        </ul>
+			      </div>
+			</div>
+		</div>
+	</div>
+	<!-- E 顶部导航 -->
+
+	<!-- S 侧边栏背景 -->
+	<div class="sidebar-background"></div>
+	<!-- E 侧边栏背景 -->
+
+	<!-- S 侧边栏导航 -->
+	<div class="sidebar">
+		<div class="area-top">
+	        <ul class="inline">
+	        	<li>
+		            <div class="avatar">
+		              <img src="../../img/avatar1.jpg">
+		            </div>
+	        	</li>
+	       		<li>
+		            Welcome
+		            <div class="title">John Smith</div>
+	       		</li>
+	        </ul>
+	    </div>
+	    <div class="divider"><span></span></div>
+		<ul class="nav nav-list bs-docs-sidenav">
+       		<li class="active"><a href="#"><i class="icon-home"></i><i class="icon-chevron-right"></i>欢迎页</a></li>
+      		<li><a href="#"><i class="icon-briefcase"></i><i class="icon-chevron-right"></i>超时发货单统计         </a></li>
+       		<li><a href="#"><i class="icon-bar-chart"></i><i class="icon-chevron-right"></i>仓库数据图表</a></li>
+      		<li><a href="#"><i class="icon-tasks"></i><i class="icon-chevron-right"></i>入库监控</a></li>
+     		<li><a href="#"><i class="icon-folder-close"></i><i class="icon-chevron-right"></i>备货参考</a></li>
+     		<li><a href="#"><i class="icon-cogs"></i><i class="icon-chevron-right"></i>发货单分布图</a></li>
+     		<li><a href="#"><i class="icon-th-large"></i><i class="icon-chevron-right"></i>调拨监控</a></li>
+     		<li><a href="#"><i class="icon-trophy"></i><i class="icon-chevron-right"></i>发货单查询</a></li>
+     		<li><a href="#"><i class="icon-umbrella"></i><i class="icon-chevron-right"></i>库存统计</a></li>
+     		<li><a href="#"><i class="icon-fire"></i><i class="icon-chevron-right"></i>库存统计新</a></li>
+     		<li><a href="#"><i class="icon-music"></i><i class="icon-chevron-right"></i>进销存统计</a></li>
+     		<li><a href="#"><i class="icon-facetime-video"></i><i class="icon-chevron-right"></i>发货单汇总统计</a></li>
+        </ul>
+	</div>
+	<!-- E 侧边栏导航 -->
+
+	<!-- S 主要内容区域 -->
+	<div class="main-content">
+		<div class="container-fluid">
+		    <div class="row-fluid">
+				<div class="area-top">
+			        <div class="pull-left header">
+			        	<i class="icon-edit icon-2x"></i>
+			       		<span class="title">主要内容区域</span>
+			        </div>
+			        <ul class="num-stats pull-right">
+			        	<li class="stat-red">
+			        		<ul class="inline">
+			         			<li class="hidden-phone glyph">
+			           				<i class="icon-money"></i>
+			          			</li>
+			           			<li>
+			                		<span class="number">$44.233</span> 总收入
+			              		</li>
+			            	</ul>
+			      		</li>
+					   	<li class="stat-green">
+					        <ul class="inline">
+					       		<li class="hidden-phone glyph">
+					        		<i class="icon-ok-circle"></i>
+					      		</li>
+					   			<li>
+					       			<span class="number">1513</span> 订单数
+					       		</li>
+					        </ul>
+						</li>
+			        	<li class="stat-blue">
+			       			<ul class="inline">
+			       				<li class="hidden-phone glyph">
+			             			<i class="icon-plus"></i>
+			         			</li>
+			            		<li>
+			        				<span class="number">5305</span> 访问量
+			      				</li>
+			   				</ul>
+			 			</li>
+			        </ul>
+				</div>
+		    </div>
+		    <div class="row-fluid">
+		  		<div class="breadcrumb-line navbar">
+			        <ul class="breadcrumbs pull-left">
+			      		<li><a href="#"><i class="icon-home"></i>首页</a></li>
+			    		<li class="current"><i class="icon-edit"></i> 面包屑</li>
+			        </ul>
+			        <ul class="nav nav-pills pull-right">
+			          <li>
+			            <a href="#" title="">
+			              <i class="icon-user"></i>
+			              <span>Users</span>
+			              <span class="badge badge-red">+44</span>
+			            </a>
+			          </li>
+			          <li><a href="#" title=""><i class="icon-list"></i><span>Orders</span> <span class="badge badge-green">+73</span></a></li>
+			          <li class="dropdown">
+			            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			              <i class="icon-th"></i> Projects <b class="caret"></b>
+			            </a>
+			            <ul class="dropdown-menu">
+			              <li><a href="#"><i class="icon-plus-sign"></i> New Project</a></li>
+			              <li><a href="#"><i class="icon-folder-open-alt"></i> Open Project</a></li>
+			              <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+			            </ul>
+			          </li>
+			        </ul>
+				</div>
+		    </div>
+  		</div>
+  		<div class="container-fluid hpadded">
+			<div class="row-fluid">
+				<div class="span12">
+					主要内容区域
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- E 主要内容区域 -->
+
+	<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <!-- 通过CAT合并 UGLIFY 压缩BOOTSTRAP内置JS插件 包含以下文件 
+    jquery.js bootstrap-transition.js bootstrap-alert.js bootstrap-modal.js bootstrap-dropdown.js bootstrap-scrollspy.js bootstrap-tab.js bootstrap-tooltip.js bootstrap-popover.js bootstrap-button.js bootstrap-collapse.js bootstrap-carousel.js bootstrap-typeahead.js bootstrap-datepicker.js bootstrap-datepicker.zh-CN.js-->
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+    <!-- backendUI提供的JAVASCRIPT插件，可以按需放置LAYOUT 底部
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- 表单美化插件 -->
+    <script src="../assets/js/jquery.uniform.js"></script>
+    <!-- 非常强大的SELECT插件 http://ivaynberg.github.io/select2/ -->
+    <script src="../assets/js/select2.js"></script>
+    <!-- jquery 日历插件 -->
+    <script src="../assets/js/jquery.validationEngine.js"></script>
+    <script src="../assets/js/jquery.validationEngine-zh_CN.js"></script>
+    <!-- 用来生成静态或动态波谱图表效果 -->
+    <script src="../assets/js/jquery.sparkline.js"></script>
+    <!-- 多功能表格插件 -->
+    <script src="../assets/js/jquery.dataTables.js"></script>
+    <!-- 相册 支持TOUCH -->
+    <script src="../assets/js/touchTouch.jquery.js"></script>
+    <!-- 泡泡消息 -->
+    <script src="../assets/js/jquery.gritter.js"></script>
+    <!-- highcharts绘图 包含highcharts.js exporting.js -->
+    <script src="../assets/js/highcharts.js"></script>
+    <script src="../assets/js/exporting.js"></script>
+</body>

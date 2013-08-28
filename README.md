@@ -60,8 +60,14 @@ BackendUI提供的JS插件（按需放置全局LAYOUT模板底部）
     <script src="assets/js/highcharts.js"></script>
     <script src="assets/js/exporting.js"></script>
     
-##使用文档
-download backendUI的源码到本地后，找到 `docs/index.html` 此文件后，浏览器打开即可。 
+##使用文档(如何快速构建页面结构)
+
+* 详细介绍
+> download backendUI的源码到本地后，找到 `docs/index.html` 此文件后，浏览器打开即可。 
+* examples 使用实例
+> 找到 `docs/examples/` 目录，次目录提供包括button,icon,grid,widgets等使用实例，可作为参考
+  ；另外建议将此目录下layout.html内容作为项目的layout模板
+
 ### 你需要编辑源码？
 #### 本地需要有LESS编译环境
 
