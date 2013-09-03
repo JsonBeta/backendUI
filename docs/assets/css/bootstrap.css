@@ -8821,18 +8821,14 @@ input[type="color"]:focus,
 .gritter-item-wrapper {
   position: relative;
   margin: 0 0 10px 0;
-  background: url('../images/ie-spacer.gif');
-  /* ie7/8 fix */
 }
 .gritter-top {
-  background: url(../images/gritter.png) no-repeat left -30px;
   height: 10px;
 }
 .hover .gritter-top {
   background-position: right -30px;
 }
 .gritter-bottom {
-  background: url(../images/gritter.png) no-repeat left bottom;
   height: 8px;
   margin: 0;
 }
@@ -8866,7 +8862,6 @@ input[type="color"]:focus,
   position: absolute;
   top: 5px;
   left: 3px;
-  background: url(../images/gritter.png) no-repeat left top;
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -8898,7 +8893,6 @@ input[type="color"]:focus,
 .gritter-light .gritter-bottom,
 .gritter-light .gritter-top,
 .gritter-light .gritter-close {
-  background-image: url(../images/gritter-light.png);
   color: #222;
 }
 .gritter-light .gritter-title {
@@ -10631,38 +10625,18 @@ form.fill-up * {
   padding-left: 10px;
   padding-right: 10px;
 }
-.input-append .btn {
-  right: 0;
-}
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
-  -webkit-box-shadow: 0 1px 0 white;
-  -moz-box-shadow: 0 1px 0 white;
-  box-shadow: 0 1px 0 white;
-  /*.border-radius(0 4px 4px 0);*/
-
-  font-size: 11px;
-  color: #858585;
-  padding: 0 0 0 5px;
-  border: 1px solid #d7d7d7;
-  display: inline-block;
-  background: #fdfdfd;
-  height: 26px;
-}
+/* .input-append .btn{right:0;}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	.box-shadow(~'0 1px 0 white');
+	.border-radius(0 4px 4px 0);
+	font-size: 11px;
+	color: #858585;
+	padding: 0 0 0 5px;
+	border: 1px solid #d7d7d7;
+	display: inline-block;
+	background: #fdfdfd;
+	height: 26px;
+}*/
 div.uploader {
   position: relative;
   overflow: hidden;
