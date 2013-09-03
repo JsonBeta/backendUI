@@ -132,3 +132,37 @@
 		}
 	}
 }
+.yii-sidenav {
+	padding:0;
+	> li > span {
+		display: block;
+		margin: 0 0 0;
+		padding: 8px 14px;
+		/*border: 1px solid #E5E5E5;
+		#gradient > .vertical(@startColor: #f8f8f8, @endColor: #e8e8e8);*/
+		> .icon-chevron-right{
+			float: right;
+			margin-top: 2px;
+			margin-right: -6px;
+			.opacity(25);
+		}
+		&:hover{
+			/*.box-shadow(~'0 1px 0 white,0 1px 0 white inset');*/
+			#gradient > .vertical(@startColor: #f8f8f8, @endColor: #e8e8e8);
+		}
+	}
+	> .active > span,> .active > span:hover{
+		/*.box-shadow(~'0 1px 0px #E29B1E, 0 1px 0 #F09900');*/
+		#gradient > .vertical(@startColor: #ffd972, @endColor: #ffba49);
+		text-shadow: 0 1px white;
+		border-bottom: 1px solid #CDCDCD;
+		color: #333;
+		a{
+			color: #333;
+		}
+		.icon-chevron-right{
+			color:#78808A;
+			.opacity(70);
+		}
+	}
+}

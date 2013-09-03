@@ -10625,18 +10625,37 @@ form.fill-up * {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* .input-append .btn{right:0;}
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-	.box-shadow(~'0 1px 0 white');
+.input-append .btn {
+  right: 0;
+}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  /*.box-shadow(~'0 1px 0 white');
 	.border-radius(0 4px 4px 0);
 	font-size: 11px;
-	color: #858585;
-	padding: 0 0 0 5px;
-	border: 1px solid #d7d7d7;
+	color: #858585;*/
+
+  padding: 0 0 0 5px;
+  /*border: 1px solid #d7d7d7;
 	display: inline-block;
-	background: #fdfdfd;
-	height: 26px;
-}*/
+	background: #fdfdfd;*/
+
+  height: 26px;
+}
 div.uploader {
   position: relative;
   overflow: hidden;
@@ -11442,4 +11461,60 @@ textarea {
 }
 .yii_box .input-append form {
   height: 100%;
+}
+.yii-sidenav {
+  padding: 0;
+}
+.yii-sidenav > li > span {
+  display: block;
+  margin: 0 0 0;
+  padding: 8px 14px;
+  /*border: 1px solid #E5E5E5;
+		#gradient > .vertical(@startColor: #f8f8f8, @endColor: #e8e8e8);*/
+
+}
+.yii-sidenav > li > span > .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: 0.25;
+  filter: alpha(opacity=25);
+}
+.yii-sidenav > li > span:hover {
+  /*.box-shadow(~'0 1px 0 white,0 1px 0 white inset');*/
+
+  background-color: #f2f2f2;
+  background-image: -moz-linear-gradient(top, #f8f8f8, #e8e8e8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8f8f8), to(#e8e8e8));
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #e8e8e8);
+  background-image: -o-linear-gradient(top, #f8f8f8, #e8e8e8);
+  background-image: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#ffe8e8e8', GradientType=0);
+}
+.yii-sidenav > .active > span,
+.yii-sidenav > .active > span:hover {
+  /*.box-shadow(~'0 1px 0px #E29B1E, 0 1px 0 #F09900');*/
+
+  background-color: #ffcd62;
+  background-image: -moz-linear-gradient(top, #ffd972, #ffba49);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd972), to(#ffba49));
+  background-image: -webkit-linear-gradient(top, #ffd972, #ffba49);
+  background-image: -o-linear-gradient(top, #ffd972, #ffba49);
+  background-image: linear-gradient(to bottom, #ffd972, #ffba49);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffd972', endColorstr='#ffffba49', GradientType=0);
+  text-shadow: 0 1px white;
+  border-bottom: 1px solid #CDCDCD;
+  color: #333;
+}
+.yii-sidenav > .active > span a,
+.yii-sidenav > .active > span:hover a {
+  color: #333;
+}
+.yii-sidenav > .active > span .icon-chevron-right,
+.yii-sidenav > .active > span:hover .icon-chevron-right {
+  color: #78808A;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
 }
