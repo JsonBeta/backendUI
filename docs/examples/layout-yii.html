@@ -204,11 +204,20 @@
   		</div>
   		<div class="container-fluid hpadded">
 			<div class="row-fluid">
-				<div class="span12">
-					主要内容区域
+				<div class="span6">
+					<!-- 主要内容区域:
+					&nbsp;&nbsp;Test: <input id="" type="text"  value="" style="width:120px;"  />
+					&nbsp;<a id="menuBtn" href="#" onclick="showMenu(); return false;">select</a> -->
+
+					<div class="input-append">
+		                <input class="span2 showMenu" id="menuVal" readonly size="16" type="text"><button class="btn showMenu" type="button">选择</button>
+		            </div>	
 				</div>
 			</div>
 		</div>
+	</div>
+	<div id="menuContent" class="menuContent">
+		<ul id="treeDemo" class="ztree" style="margin-top:0;width:180px;height:300px;"></ul>
 	</div>
 	<!-- E 主要内容区域 -->
 
@@ -242,4 +251,127 @@
     <!-- highcharts绘图 包含highcharts.js exporting.js -->
     <script src="../assets/js/highcharts.js"></script>
     <script src="../assets/js/exporting.js"></script>
+    
+    <script src="../assets/js/jquery.ztree.core-3.5.min.js"></script>
+    <script src="../assets/js/jquery.ztree.excheck-3.5.min.js"></script>
+    <SCRIPT type="text/javascript">
+		var setting = {
+			check: {
+				enable: true,
+				chkStyle: "radio",
+				radioType: "all"
+			},
+			view: {
+				dblClickExpand: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onClick: onClick,
+				onCheck: onCheck
+			}
+		};
+
+		var zNodes =[
+			{id:1, name:"北京"},
+			{id:2, name:"天津"},
+			{id:3, name:"上海"},
+			{id:6, name:"重庆"},
+			{id:4, name:"河北省", open:true, nocheck:true,
+				children: [
+					{ name:"武汉市", nocheck:true,
+						children: [
+							{ name:"武昌区"},
+							{ name:"洪山区", nocheck:true,
+								children: [
+									{ name:"东湖街道"},
+									{ name:"两方街道"},
+									{ name:"武大镇"}
+								]
+							},
+							{ name:"东西湖区"},
+							{ name:"江岸区"}
+						]
+					},
+					{ name:"父节点12 - 折叠", nocheck:true,
+						children: [
+							{ name:"叶子节点121"},
+							{ name:"叶子节点122"},
+							{ name:"叶子节点123"},
+							{ name:"叶子节点124"}
+						]
+					},
+					{id:41, name:"黄石市"},
+					{id:42, name:"十匽市"},
+					{id:43, name:"襄阳市"},
+					{id:44, name:"咸宁市"}
+				]
+			},
+			{id:5, name:"广东省", open:true, nocheck:true,
+				children:[
+					{id:51, name:"广州"},
+					{id:52, name:"深圳"},
+					{id:53, name:"东莞"},
+					{id:54, name:"佛山"}
+				]
+			},
+			{id:6, name:"福建省", open:true, nocheck:true,
+				children:[
+					{id:61, name:"福州"},
+					{id:62, name:"厦门"},
+					{id:63, name:"泉州"},
+					{id:64, name:"三明"}
+				]
+			}
+		 ];
+
+		function onClick(e, treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			zTree.checkNode(treeNode, !treeNode.checked, null, true);
+			return false;
+		}
+
+		function onCheck(e, treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getCheckedNodes(true),
+			v = "";
+			for (var i=0, l=nodes.length; i<l; i++) {
+				v += nodes[i].name + ",";
+			}
+			if (v.length > 0 ) v = v.substring(0, v.length-1);
+			var cityObj = $("#menuVal");
+			cityObj.attr("value", v);
+		}
+
+		function showMenu(obj,treeMenu) {
+
+			var objBox = obj.parent(),
+				objBoxOffset = objBox.offset();
+
+			treeMenu.css({left:objBoxOffset.left + "px", top:objBoxOffset.top + objBox.outerHeight() + "px"}).slideDown("fast");
+			treeMenu.find('.ztree').css({width:objBox.width() -10 + "px"});
+			$("body").bind("mousedown", onBodyDown);
+		}
+		function hideMenu() {
+			$("#menuContent").fadeOut("fast");
+			$("body").unbind("mousedown", onBodyDown);
+		}
+		function onBodyDown(event) {
+			if (!(event.target.id == "menuVal" || event.target.id == "menuContent" || $(event.target).parents("#menuContent").length>0)) {
+				hideMenu();
+			}
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$(".showMenu").bind("click",function(){
+				var target = $(this),
+					treeMenu = $("#menuContent");
+				showMenu(target,treeMenu);
+			})
+		});
+	</SCRIPT>
 </body>
