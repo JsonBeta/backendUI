@@ -231,7 +231,7 @@
 							                  <div class="note pull-right">请确保密码安全</div>
 							                </li>
 							                <li class="input">
-							                  <input type="file" name="img">
+							                  <input type="file" name="img"  placeholder="密码" >
 							                </li>
 							                <li>
 							               	<label>下拉式搜索：</label>
@@ -3042,7 +3042,7 @@
 
 		      </div>
 		    </div>
-		    <div id="modal-simple" class="modal hide fade">
+		    <div id="modal-simple" class="modal hide fade" tabindex="-1" data-width="760">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		        <h6 id="modal-tablesLabel">Modal Heading</h6>
@@ -3695,6 +3695,7 @@
     jquery.js bootstrap-transition.js bootstrap-alert.js bootstrap-modal.js bootstrap-dropdown.js bootstrap-scrollspy.js bootstrap-tab.js bootstrap-tooltip.js bootstrap-popover.js bootstrap-button.js bootstrap-collapse.js bootstrap-carousel.js bootstrap-typeahead.js bootstrap-datepicker.js bootstrap-datepicker.zh-CN.js-->
     <script src="../assets/js/bootstrap.min.js"></script>
 
+    <script src="../assets/js/bootstrap-modalmanager.js"></script>
     <!-- 表单美化插件 -->
     <script src="../assets/js/jquery.uniform.js"></script>
     <!-- 非常强大的SELECT插件 http://ivaynberg.github.io/select2/ -->
@@ -3717,6 +3718,7 @@
    <script type="text/javascript">
     $(function(){
 
+    	$.fn.modalmanager.defaults.resize = true;
     	//dataTables
 	    $(".dTable,.dTable-small").dataTable({
 	    	bJQueryUI:!1,
